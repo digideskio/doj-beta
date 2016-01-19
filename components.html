@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Components | User Experience Model (UXM) | nidirect</title>
+
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="favicon.ico" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/nidirect.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/nidirect-responsive.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/nidirect-uxm.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="jquery/jquery-ui.css" rel="stylesheet" />
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery/jquery.js" type="text/javascript"></script>
+    <script src="jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/uxm.js" type="text/javascript"></script>
+
+    <!-- html5 shim for ie8 and ie7 -->
+    <!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+    <!-- google analytics for uxm.nidirect.gov.uk -->
+    <!-- do not include in a transactional service without discussing with the transactional services manager first -->
+    <!-- <script type="text/javascript">
+		//<![CDATA[
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-26858713-1']);
+		_gaq.push(['_setDomainName', 'nidirect.gov.uk']);
+		_gaq.push(['_addIgnoredRef', 'nidirect.gov.uk']);
+		_gaq.push(['_gat._anonymizeIP']);
+		_gaq.push(['_setCustomVar', 1, 'Theme', 'Applications', 3]);
+		_gaq.push(['_setCustomVar', 2, 'Sub-theme', 'UXM', 3]);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		//]]>
+	</script> -->
+    <script type="text/javascript">
+        // <![CDATA[
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-26858713-2', 'nidirect.gov.uk');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+        // ]]>
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // remove the no-js class
+            $('body').removeClass('no-js');
+            $('div#txtProgDisclRBDiv').hide();
+            $('div#txtProgDisclDDDiv').hide();
+        });
+    </script>
+
+    <!--  MouseStats:Begin  -->
+    <script type="text/javascript">var MouseStats_Commands = MouseStats_Commands ? MouseStats_Commands : []; (function () { function b() { if (void 0 == document.getElementById("__mstrkscpt")) { var a = document.createElement("script"); a.type = "text/javascript"; a.id = "__mstrkscpt"; a.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www2") + ".mousestats.com/js/5/6/5688852133238908385.js?" + Math.floor((new Date).getTime() / 6E5); a.async = !0; a.defer = !0; (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(a) } } window.attachEvent ? window.attachEvent("onload", b) : window.addEventListener("load", b, !1); "complete" === document.readyState && b() })(); </script>
+    <!--  MouseStats:End  -->
+
+</head>
+<body class="no-js">
+    <div class="page">
+        <div class="skipnav"><a href="#skip-dest">Skip to content</a></div>
+
+        <header>
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="menu">Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+
+                        <a class="brand" href="http://www.nidirect.gov.uk">
+                            <img src="images/nidirect-logo-small-2x.png" alt="n i direct government services" width="120" height="28" />
+                        </a>
+
+                        <div class="nav-collapse collapse">
+                            <nav class="topnav">
+                                <ul>
+                                    <li><a href="index.html">
+                                        <abbr title="User Experience Model">UXM</abbr>
+                                        home</a></li>
+                                    <li class="dropdown">
+                                        <a data-target="#" href="principles.html" class="dropdown-toggle" data-toggle="dropdown">Principles<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="principles.html">Principles</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="principles.html#user-centered">Developing user-centric services</a></li>
+                                            <li><a href="principles.html#applying-the-uxm">Applying the UXM</a></li>
+                                            <li><a href="principles.html#writing-for-transactions">Writing for transactions</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown current">
+                                        <a data-target="#" href="components.html" class="dropdown-toggle" data-toggle="dropdown">Components<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="components.html#design">Design theme</a></li>
+                                            <li><a href="components.html#layout">Responsive layout</a></li>
+                                            <li><a href="components.html#sections">Sections</a></li>
+                                            <li><a href="components.html#typography">Typography</a></li>
+                                            <li><a href="components.html#headings">Headings</a></li>
+                                            <li><a href="components.html#forms">Form elements</a></li>
+                                            <li><a href="components.html#validation">Validation</a></li>
+                                            <li><a href="components.html#buttons">Buttons</a></li>
+                                            <li><a href="components.html#links">Links</a></li>
+                                            <li><a href="components.html#help">Help content</a></li>
+                                            <li><a href="components.html#skipnav">Skip navigation</a></li>
+                                            <li><a href="components.html#info-notice">Information notice</a></li>
+                                            <li><a href="components.html#tables">Tables</a></li>
+                                            <li><a href="components.html#pagination">Pagination</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a data-target="#" href="design-patterns.html" class="dropdown-toggle" data-toggle="dropdown">Design patterns<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="design-patterns.html">Design patterns</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="design-patterns.html#login-registration">Log in / Registration</a></li>
+                                            <li><a href="design-patterns.html#address-lookup1">Address lookup</a></li>
+                                            <li><a href="design-patterns.html#progress">Progress trackers</a></li>
+                                            <li><a href="design-patterns.html#date-controls">Date controls</a></li>
+                                            <li><a href="design-patterns.html#error-pages">Error pages</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a data-target="#" href="resources.html" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="resources.html">Resources</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="resources.html#starter-kit">Starter kit</a></li>
+                                            <li><a href="resources.html#policies">Policies</a></li>
+                                            <li><a href="resources.html#contacts">Contacts</a></li>
+                                            <li><a href="resources.html#reading">Further reading</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="branding">
+                <a href="http://www.nidirect.gov.uk">
+                    <img class="nidirectlogo" src="images/nidirect-logo-2x.png" alt="n i direct government services" width="173" height="57" /></a>
+                <div class="service-name">User Experience Model <span>(v1.3)</span></div>
+            </div>
+        </header>
+
+        <div class="content container">
+
+            <h1 id="skip-dest">Components</h1>
+            <p class="intro">This section outlines the layout, structure, visual appearance and other requirements for key components of nidirect online transactional services.</p>
+            <ul>
+                <li><a href="components.html#design">Design theme</a></li>
+                <li><a href="components.html#layout">Responsive layout</a></li>
+                <li><a href="components.html#sections">Sections</a></li>
+                <li><a href="components.html#typography">Typography</a></li>
+                <li><a href="components.html#headings">Headings</a></li>
+                <li><a href="components.html#forms">Form elements</a></li>
+                <li><a href="components.html#validation">Validation and error messages</a></li>
+                <li><a href="components.html#buttons">Buttons</a></li>
+                <li><a href="components.html#links">Links</a></li>
+                <li><a href="components.html#help">Help content</a></li>
+                <li><a href="components.html#skipnav">Skip navigation</a></li>
+                <li><a href="components.html#info-notice">Information notice</a></li>
+                <li><a href="components.html#tables">Tables</a></li>
+                <li><a href="components.html#pagination">Pagination</a></li>
+
+            </ul>
+
+            <h2 id="design">Design theme</h2>
+            <ul>
+                <li>The current
+                    <abbr title="User Interface">UI</abbr>
+                    theme for nidirect is flat, square and minimal</li>
+                <li>3D design such as rounded corners, gradients and shadows should be avoided (except where presented in this guide)</li>
+            </ul>
+
+            <h2 id="layout" class="uxm">Responsive layout</h2>
+
+            <ul>
+                <li>Three main layouts for the UXM are currently available, dependent on the available width of the device/window:
+					<ol>
+                        <li><a href="#layout-large">Large (980px and up)</a></li>
+                        <li><a href="#layout-medium">Medium (767px and below)</a></li>
+                        <li><a href="#layout-small">Small (480px and below)</a></li>
+                    </ol>
+                </li>
+                <li>These breakpoints match the breakpoints used in the responsive Bootstrap v2.3.2 layout, with some exceptions:
+					<ol>
+                        <li>On Bootstrap the top navigation changes to a menu button when the screen width is less than 979px. On the UXM the top navigation changes to a menu button when the screen width is less than 767px. To achieve this please note that the breakpoint on 'bootstrap-responsive.css' was changed (see line 952).</li>
+                        <li>The '1200px and up' layout is not required and should be excluded. If there are strong reasons why a layout larger than 980px is required then you must liaise with the <a href="resources.html#contacts">nidirect Transactional Services Manager</a>.</li>
+                        <li>There is an additional minor breakpoint in the UXM (between 768px and 979px). The styling and layout adjustments made by this breakpoint are insignificant and therefore not detailed.</li>
+                    </ol>
+                </li>
+                <li>The nidirect-responsive.css stylesheet should be positioned after the bootstrap-responsive.css stylesheet to apply correct inheritance
+					<code>&lt;link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" media="screen, projection" /&gt;<br />
+                        ...<br />
+                        &lt;link href="css/nidirect-responsive.css" rel="stylesheet" type="text/css" media="screen, projection" /&gt;
+                    </code>
+                </li>
+                <li>Resize your browser window to view each layout or refer to the key points below</li>
+            </ul>
+
+            <div class="info-notice">
+                Please note that the Bootstrap v2.3.2 live grid is not compatible with this version of the UXM. If you wish to implement a grid system please use the <a href="http://getbootstrap.com/2.3.2/scaffolding.html#fluidGridSystem">fluid grid system</a>.
+            </div>
+
+            <ul class="nav nav-tabs" id="layout-tabs">
+                <li class="active"><a href="#layout-large">Large</a></li>
+                <li><a href="#layout-medium">Medium</a></li>
+                <li><a href="#layout-small">Small</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="layout-large">
+                    <ul>
+                        <li>Displayed when the available screen width is 980px or greater</li>
+                        <li>The page canvas must be centered, be a maximum of 960px wide and have 30px left and right inner padding</li>
+                        <li><strong>Tip</strong> - set the inner padding and width using relative units for a fluid transition between layouts
+							<code>.content {<br />
+                                &nbsp;&nbsp;...<br />
+                                &nbsp;&nbsp;padding: 0 3.125% 32px 3.125%; /* 30px left and right padding @'large layout' */<br />
+                                &nbsp;&nbsp;width: 93.75%; /* 900 px @'large layout' */<br />
+                                }
+                            </code>
+                        </li>
+                        <li>The body background colour must be #F1F1F1</li>
+                        <li>Block level elements should left align to the nidirect logo, i.e. 30px inner padding</li>
+                        <li>The sides of the page canvas must present the following visual appearance
+							<code>border-left: 1px solid #D3D3D3;<br />
+                                border-right: 1px solid #D3D3D3;<br />
+                                box-shadow: 0 0 12px #888888;<br />
+                            </code>
+                        </li>
+                    </ul>
+
+                    <img src="images/uxm-layout-large.jpg" alt="" width="800" height="511" class="showcase" />
+
+                </div>
+
+                <div class="tab-pane" id="layout-medium">
+                    <ul>
+                        <li>Displayed when the available screen width is greater than 480px and less than 767px
+							<code>@media (max-width: 767px) { ...
+                            </code>
+                        </li>
+                        <li>The top navigation changes to a menu button</li>
+                        <li>The nidirect logo is replaced with a smaller version in the top navigation bar</li>
+                        <li>This logo does not display the additional 'government services' text</li>
+                        <li>The font size of the service name is reduced</li>
+                        <li>Inline validation is repositioned to below the input</li>
+                        <li>Items in the footer are positioned in two columns</li>
+                    </ul>
+
+                    <img src="images/uxm-layout-medium.png" alt="" width="600" height="735" class="showcase" />
+
+                </div>
+
+                <div class="tab-pane" id="layout-small">
+                    <ul>
+                        <li>Displayed when the available screen width is 480px or less
+						<code>@media (max-width: 480px) { ...
+                        </code>
+                        </li>
+                        <li>The word 'menu' is removed from the top navigation menu button</li>
+                        <li>Text and textarea form elements occupy the full width</li>
+                        <li>The sizes of headings is reduced, see the <a href="#headings">headings section</a> for more details</li>
+                        <li>The progress tracker should be hidden, see the <a href="design-patterns.html#progress">progress trackers</a> section for more details</li>
+                    </ul>
+
+                    <img src="images/uxm-layout-small.png" alt="" width="303" height="475" class="showcase" />
+
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $('#layout-tabs a').click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                })
+            </script>
+
+            <h3>Further reading</h3>
+            <ul>
+                <li><a href="http://getbootstrap.com/2.3.2/scaffolding.html#responsive">Scaffolding - responsive design (Bootstrap v2.3.2 docs)</a></li>
+            </ul>
+
+            <h2 id="sections" class="uxm">Sections</h2>
+            <p>All pages must include each of the following sections:</p>
+            <ul>
+                <li><a href="#head">Head section</a></li>
+                <li><a href="#top-nav">Top navigation and branding</a></li>
+                <li><a href="#main-body">Main body</a></li>
+                <li><a href="#footer">Footer</a></li>
+            </ul>
+
+            <img alt="The layout of the UXM can be divided into 3 distinct sections: top navigation and branding, main body and footer" class="showcase" src="images/uxm-sections.png" width="900" height="760" />
+
+            <h3 id="head">Head section (&lt;head&gt;)</h3>
+            <ul>
+                <li>The page/window title must include the page name, service name and 'nidirect':
+					<code>&lt;title&gt;[page name] | [service name] | nidirect&lt;/title&gt;</code>
+                </li>
+                <li>The [page name] for the page/window title must be the same as the primary heading on each page</li>
+                <li>The starting point for an nidirect transactional service is a page on the www.nidirect.gov.uk core site. Content on transactional services should not be indexed by search engines. Each page must include a 'noindex, nofollow' instruction for robots. A robots.txt file can be used as an alternative. If the transactional service contains genuine indexable content then please liaise with the <a href="resources.html#contacts">nidirect Transactional Services Manager</a>.
+					<code>&lt;meta name="robots" content="noindex, nofollow" /&gt;
+                    </code>
+                </li>
+                <li>Each page must include the nidirect favicon:
+					<code>&lt;link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" /&gt;
+						<br />
+                        &lt;link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /&gt;
+						<br />
+                        &lt;link rel="apple-touch-icon" href="favicon.ico" /&gt;
+                    </code>
+                    <a href="favicon.ico">Download the favicon (.ico 15KB)</a>
+                </li>
+                <li>When html 5 elements are used (eg &lt;header&gt;, &lt;nav&gt; and &lt;footer&gt;) then a suitable html5 'shiv' must be used to support these elements on Internet Explorer 8 and Internet Explorer 7
+					<code>&lt;!-- html5 shiv for ie8 and ie7 --&gt;<br />
+                        &lt;!--[if lt IE 9]&gt;<br />
+                        &lt;script src="js/html5shiv.js"&gt;&lt;/script&gt;<br />
+                        &lt;![endif]--&gt;<br />
+                    </code>
+                </li>
+            </ul>
+
+            <h3 id="top-nav-branding">Top navigation and branding</h3>
+
+            <img src="images/uxm-section-topnav-branding.png" width="900" height="123" alt="" class="showcase" />
+
+            <ul>
+                <li>Must include top navigation, nidirect logo and service name</li>
+                <li>Must have a 2px bottom border
+					<code>.header { border-bottom: 2px solid #CCCCCC; }</code>
+                </li>
+            </ul>
+
+            <h4 id="top-nav">Top navigation</h4>
+            <ul>
+                <li>Used to present utility links and other navigation (eg Shopping basket, Log-in / register)</li>
+                <li>Uses a modified version of the 'Responsive navbar' in Bootstrap v2.3.2</li>
+                <li>Links should always have link text (i.e. there should not be images or icons only)</li>
+                <li>Top navigation items must be agreed with the <a href="resources.html#contacts">nidirect Transactional Services Manager</a></li>
+                <li>The number of links must be kept to a minimum</li>
+                <li>Static and supporting content (eg 'Contact us', 'Prices') should reside on the relevant pages of the nidirect core site (www.nidirect.gov.uk), where possible</li>
+                <li>The first link must be a 'home' link which links to the start page of the service</li>
+                <li>The 'home' link must include the service name, eg Map shop home. The exact link text must be agreed with the <a href="resources.html#contacts">nidirect Transactional Services Manager</a></li>
+                <li>Font size must equate to 14px (set using relative values)</li>
+                <li>Text colour must be #0C1E63</li>
+                <li>Background colour must be #ECECEC</li>
+                <li>For the drop down menu:
+					<ul>
+                        <li>Links can be bundled into the drop down option when appropriate</li>
+                        <li>The label of the parent item should be clear and unambiguous</li>
+                        <li>The parent item must include the down arrow</li>
+                        <li>The link should be triggered on click or touch as opposed to hover</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav nav-tabs" id="top-nav-tabs">
+                <li class="active"><a href="#top-nav-large">Large</a></li>
+                <li><a href="#top-nav-medium">Medium</a></li>
+                <li><a href="#top-nav-small">Small</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="top-nav-large">
+                    <img src="images/uxm-topnav-large.png" width="800" height="40" alt="" class="showcase" />
+                    <ul>
+                        <li>Links must not wrap to additional lines</li>
+                        <li>Links must be right aligned</li>
+                        <li>Links must be vertically centered</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="top-nav-medium">
+                    <img src="images/uxm-topnav-medium.png" width="750" height="200" alt="" class="showcase" />
+                    <ul>
+                        <li>The top navigation changes to a menu button</li>
+                        <li>The top navigation items must expand and collapse when the menu button is triggered</li>
+                        <li>Items in the drop down menu(s) must expand and colapse when triggered</li>
+                        <li>The top navigation items must be left aligned to the nidirect logo</li>
+                        <li>The menu button must use the same background and foreground colours as the primary <a href="#buttons">button</a></li>
+                        <li>The menu button must be right aligned</li>
+                        <li>When the top navigation is collapsed the menu button should be vertically centered on the top navigation bar</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="top-nav-small">
+                    <img src="images/uxm-topnav-small.png" width="316" height="200" alt="" class="showcase" />
+                    <ul>
+                        <li>The behaviour of the menu button and styling of the top navigation items must be consistent as per the medium layout</li>
+                        <li>The menu button should not contain the word 'menu'</li>
+                        <li>The menu button should be the same height as the small nidirect logo and should vertically align with the top and bottom of the logo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $('#top-nav-tabs a').click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                })
+            </script>
+
+            <h4>nidirect logo</h4>
+            <ul>
+                <li>Must be displayed on the left</li>
+                <li>Must have alt text "n i direct government services"</li>
+                <li>Must link to http://www.nidirect.gov.uk</li>
+                <li>Block level elements should left align with the logo</li>
+            </ul>
+
+            <ul class="nav nav-tabs" id="logo-tabs">
+                <li class="active"><a href="#logo-large">Large</a></li>
+                <li><a href="#logo-medium-small">Medium / small</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="logo-large">
+                    <ul>
+                        <li>Must use the nidirect logo with the 'government services' text</li>
+                        <li>Must be displayed at 173px in width x 57px in height</li>
+                        <li>Must have a 30px white space protection zone, set using relative values (eg 3.125%)</li>
+                        <li>Should have a transparent background</li>
+                        <li>Should use a higher resolution image (346px x 114px) to provide greater clarity on high pixel ratio devices (eg Retina displays on iOS devices). Use html and css to set the dimensions:
+							<code>&lt;img class="nidirectlogo" src="images/nidirect-logo-2x.png" alt="n i direct government services" width="173" height="57" &gt;<br />
+                                <br />
+                                .nidirectlogo {<br />
+                                &nbsp;&nbsp;...<br />
+                                &nbsp;&nbsp;min-width: 173px;<br />
+                                &nbsp;&nbsp;width: 173px;<br />
+                                }
+                            </code>
+                        </li>
+                        <li><a href="images/nidirect-logo-2x.png">Download the high resolution (2x) nidirect logo for the large layout (.png 15KB)</a></li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="logo-medium-small">
+                    <ul>
+                        <li>Must use the nidirect logo without the additional 'government services' text</li>
+                        <li>Must be displayed at 120px in width x 28px in height</li>
+                        <li>Must be vertically centered on the top navigation bar</li>
+                        <li>Should have a transparent background</li>
+                        <li>Block level elements should continue to left align with the logo</li>
+                        <li>Should use a higher resolution image (240px x 55px) to provide greater clarity on high pixel ratio devices (eg Retina displays on iOS devices). Use html and css to set the dimensions:
+							<code>&lt;src="images/nidirect-logo-small-2x.png" alt="n i direct government services"  width="120" height="28"&gt;<br />
+                                <br />
+                                .navbar .brand img {<br />
+                                &nbsp;&nbsp;min-width: 120px;<br />
+                                &nbsp;&nbsp;width: 120px;<br />
+                                }
+                            </code>
+                        </li>
+                        <li><a href="images/nidirect-logo-small-2x.png">Download the high resolution (2x) nidirect logo for the medium and small layouts (.png 6KB)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $('#logo-tabs a').click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                })
+            </script>
+
+            <h4>Service name</h4>
+            <ul>
+                <li>The service name and exact wording must be agreed with the nidirect Transactional Services Manager</li>
+                <li>Must be displayed on the right</li>
+                <li>Must use the base font-family</li>
+                <li>The colour must be #0C1E63</li>
+            </ul>
+            <ul class="nav nav-tabs" id="service-name-tabs">
+                <li class="active"><a href="#service-name-large">Large</a></li>
+                <li><a href="#service-name-medium-small">Medium / small</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="service-name-large">
+                    <ul>
+                        <li>Must use a fixed font size of 28px</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="service-name-medium-small">
+                    <ul>
+                        <li>Must use a fixed font size of 24px</li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $('#service-name-tabs a').click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                })
+            </script>
+
+            <p>If there is any requirement for variation of this branding header (for commercial or other reasons) please discuss with the <a href="resources.html#contacts">nidirect Transactional Services Manager</a>.</p>
+
+            <h3 id="main-body">Main body</h3>
+            <img src="images/uxm-section-main-body.png" width="900" height="600" alt="" class="showcase" />
+
+            <ul>
+                <li>This area is the primary focus of the transactional service</li>
+                <li>Users must be able to complete key tasks and actions using as few clicks as possible</li>
+                <li>Key actions should be positioned 'above the fold'</li>
+                <li>Secondary tasks and options should not detract from the key focus of the page</li>
+                <li>A single column layout must be considered for the medium and small layouts</li>
+            </ul>
+
+            <h3 id="footer">Footer</h3>
+            <img src="images/uxm-section-footer.png" width="900" height="37" alt="" class="showcase" />
+            <ul>
+                <li>Used to present links to supplementary information. Additional links must be agreed with the <a href="resources.html#contacts">nidirect Transactional Services Manager</a></li>
+                <li>Font size must equate to 14px (set using relative values)</li>
+                <li>Text colour must be #0C1E63</li>
+                <li>Background colour must be #ECECEC</li>
+                <li>Items must be left aligned</li>
+                <li>Must contain the following links to the nidirect core website:
+					<ul>
+                        <li><a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" class="elink" title="link opens in a new browser window">&copy;  Crown copyright</a> (http://www.nidirect.gov.uk/crown-copyright)</li>
+                        <li><a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" class="elink" title="link opens in a new browser window">Terms and conditions</a> (http://www.nidirect.gov.uk/terms-and-conditions)</li>
+                        <li><a href="http://www.nidirect.gov.uk/privacy" target="_blank" class="elink" title="link opens in a new browser window">Privacy</a> (http://www.nidirect.gov.uk/privacy)</li>
+                        <li><a href="http://www.nidirect.gov.uk/cookies" target="_blank" class="elink" title="link opens in a new browser window">Cookies</a> (http://www.nidirect.gov.uk/cookies)</li>
+                    </ul>
+                </li>
+                <li>If there is any requirement for variation of these links (for example bespoke Terms and conditions) this must be discussed with the <a href="resources.html#contacts">nidirect Transactional Services Manager</a></li>
+            </ul>
+
+            <ul class="nav nav-tabs" id="footer-tabs">
+                <li class="active"><a href="#footer-large">Large</a></li>
+                <li><a href="#footer-medium-small">Medium / small</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="footer-large">
+                    <img src="images/uxm-section-footer-large.png" width="800" height="42" alt="" class="showcase" />
+                    <ul>
+                        <li>Items must not wrap to additional lines</li>
+                        <li>Items should be vertically centered</li>
+                        <li>Items should be separated by a right border
+							<code>border-right: 1px solid #BEBEBE;
+                            </code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="footer-medium-small">
+                    <img src="images/uxm-section-footer-medium-small.png" width="505" height="100" alt="" class="showcase" />
+                    <ul>
+                        <li>Items should be presented in two columns</li>
+                        <li>Items should be separated by a bottom border
+							<code>border-bottom: 1px solid #BEBEBE;
+                            </code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $('#footer-tabs a').click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                })
+            </script>
+
+            <h3>Further reading</h3>
+            <ul>
+                <li><a href="http://getbootstrap.com/2.3.2/components.html#navbar">Components - navbar (Bootstrap v2.3.2 docs)</a></li>
+                <li><a href="http://uxmovement.com/navigation/why-hover-menus-do-users-more-harm-than-good/">Why hover menus do users more harm than good (UX Movement)</a></li>
+                <li><a href="http://www.sitepoint.com/support-retina-displays/">5 Ways to support high-density Retina displays (Sitepoint)</a></li>
+            </ul>
+
+            <h2 id="typography" class="uxm">Typography</h2>
+            <ul>
+                <li>The base font stack for all elements, unless otherwise stated or presented, must be "Helvetica Neue", Helvetica, Arial, sans-serif
+					<code>font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;</code>
+                </li>
+                <li>Font sizes must be set using relative values eg em or rem</li>
+                <li>The minimum font size, unless otherwise stated or presented, must be 16px (set using relative units)</li>
+                <li>The base font colour for all text, unless otherwise stated or presented, is #2E2E2E</li>
+            </ul>
+
+            <h2 id="headings" class="uxm">Headings</h2>
+            <ul>
+                <li>Must follow a heading hierarchy</li>
+                <li>Heading font sizes must be set using relative units</li>
+                <li>All headings must use the colour #0C1E63</li>
+                <li>The 2px navy border presented above each &lt;h2&gt; in this UXM is to improve readability and must not be included in a transactional service</li>
+            </ul>
+
+            <ul class="nav nav-tabs" id="headings-tabs">
+                <li class="active"><a href="#headings-large-medium">Large / medium</a></li>
+                <li><a href="#headings-small">Small</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="headings-large-medium">
+                    <ul>
+                        <li>Heading 1 font size must equate to 32px</li>
+                        <li>Heading 2 font size must equate to 24px</li>
+                        <li>Heading 3 font size must equate to 20px and font-weight should be normal</li>
+                        <li>Heading 4 font size must equate to 16px</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="headings-small">
+                    <ul>
+                        <li>Heading 1 font size must equate to 24px</li>
+                        <li>Heading 2 font size must equate to 21px</li>
+                        <li>Heading 3 font size must equate to 18px and font-weight should be bold</li>
+                        <li>Heading 4 font size must equate to 16px</li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $('#headings-tabs a').click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                })
+            </script>
+
+
+            <h3>Primary heading</h3>
+            <ul>
+                <li>There must be only one primary heading on each page</li>
+                <li>Must be a h1
+					<code>&lt;h1 id="skip-dest"&gt;The primary heading&lt;/h1&gt;
+                    </code>
+                </li>
+                <li>Must indicate the purpose of each page</li>
+                <li>Must be different on each page</li>
+                <li>Must be less than 8 words in length</li>
+                <li>Should be the destination for <a href="#skipnav">skip navigation</a></li>
+            </ul>
+
+            <h3>Introductory paragraph</h3>
+            <ul>
+                <li>Should explain the purpose of the page, where appropriate</li>
+                <li>Should be marked up with class="intro"
+					<code>&lt;p class="intro"&gt; This is the introductory paragraph &lt;/p&gt;</code>
+                </li>
+            </ul>
+
+            <h2 id="forms" class="uxm">Form elements</h2>
+
+            <h3>Legends</h3>
+            <ul>
+                <li>Must be used to group together logically related form controls</li>
+                <li>Must be clear and unambiguous</li>
+                <li>Font size must equate to 24px (set using relative units)</li>
+                <li>Must extend the full width of the available canvas</li>
+                <li>Should include a 2px bottom border. <strong>Tip</strong> - use a relative value so that the border width scales on smaller devices:
+					<code>border-bottom: 0.0834em solid #CCCCCC;
+                    </code>
+                </li>
+            </ul>
+
+            <h3>Labels</h3>
+            <ul>
+                <li>Must be explicity associated with its input element</li>
+                <li>Must be positioned directly above text and drop down inputs</li>
+                <li>Must be positioned to the right of radio button and checkbox inputs</li>
+                <li>Must be as direct and unambiguous as possible</li>
+                <li>Must use #303030 as the text colour</li>
+                <li>Font size must equate to 16px (set using relative units)</li>
+                <li>Required information must include the required indicator inside the label
+					<code>&lt;label for="txt-email"&gt;
+						&lt;img src="images/required.gif" class="required" alt="Required information" width="11" height="10" />
+                        Email
+						&lt;/label&gt;
+                    </code>
+                </li>
+                <li><a href="images/required.gif">Download the required indicator (.gif 2KB)</a></li>
+            </ul>
+
+            <h3>Text inputs</h3>
+            <ul>
+                <li>Font size must equate to 16px (set using relative units)</li>
+                <li>Must use the base text colour</li>
+                <li>Must comply with the current nidirect UI theme, i.e. flat and square</li>
+                <li>Should not be presented over multiple columns</li>
+                <li>Should use the short class when appropriate (eg postcode)</li>
+            </ul>
+
+            <ul class="nav nav-tabs" id="text-inputs-tabs">
+                <li class="active"><a href="#text-inputs-large-medium">Large / medium</a></li>
+                <li><a href="#text-inputs-small">Small</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="text-inputs-large-medium">
+                    <ul>
+                        <li>Must have a minimum height that equates to 32px (set using relative units)</li>
+                        <li>Should be 344px wide</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="text-inputs-small">
+                    <ul>
+                        <li>Should have a minimum height that equates to 40px (set using relative units)</li>
+                        <li>Should occupy the full available width
+							<code>textarea, input[type="text"], etc... {<br />
+                                &nbsp;&nbsp;box-sizing: border-box;<br />
+                                &nbsp;&nbsp;-moz-box-sizing: border-box;<br />
+                                &nbsp;&nbsp;-webkit-box-sizing: border-box;<br />
+                                &nbsp;&nbsp;width: 100%;<br />
+                                }
+                            </code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $('#text-inputs-tabs a').click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                })
+            </script>
+
+            <h3>Drop downs (&lt;select&gt;)</h3>
+            <ul>
+                <li>Must use the base font colour and font size</li>
+                <li>Should not be presented over multiple columns</li>
+                <li>Drop downs are preferred when:
+					<ul>
+                        <li>there are a large number of items (eg 5 or more)</li>
+                        <li>the options can be easily guessed, i.e. they follow a conventional, obvious or sequential pattern (eg titles, countries, months, numbers)</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav nav-tabs" id="select-tabs">
+                <li class="active"><a href="#select-large-medium">Large / medium</a></li>
+                <li><a href="#select-small">Small</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="select-large-medium">
+                    <ul>
+                        <li>Must have a minimum height that equates to 32px (set using relative units)</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="select-small">
+                    <ul>
+                        <li>Should have a minimum height that equates to 40px (set using relative units)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $('#select-tabs a').click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                })
+            </script>
+
+            <h3>Radio buttons</h3>
+            <p>Radio buttons can aid form filling as available options are permanently visible for users to easily consider them. They are preferred when:</p>
+            <ul>
+                <li>the answers are Yes or No</li>
+                <li>there are a small number of options (eg less than 5)</li>
+                <li>the options cannot be easily guessed, i.e. they do not follow a conventional, obvious or sequential pattern (eg Landlord type, Leasing type)</li>
+                <li>you want to emphasise options up front</li>
+                <li>the options are sentences</li>
+            </ul>
+
+            <h3>Checkboxes</h3>
+            <ul>
+                <li>Should be used if there is only one available option (eg confirming terms and conditions)</li>
+                <li>Should be given priority over a multiple select input</li>
+            </ul>
+
+            <form>
+                <fieldset>
+                    <legend>Form example</legend>
+
+                    <div>
+                        <label for="txt-textinput">
+                            <img src="images/required.gif" class="required" alt="Required information" />
+                            Text input example
+                        </label>
+                        <input id="txt-textinput" type="text" maxlength="50" />
+                    </div>
+
+                    <div>
+                        <label for="txt-textinput-short">
+                            <img src="images/required.gif" class="required" alt="Required information" />
+                            Text input example - short
+                        </label>
+                        <input id="txt-textinput-short" type="text" maxlength="10" class="short" />
+                    </div>
+
+                    <div>
+                        <label for="ddl_title">Drop down example</label>
+                        <select name="ddl_title" id="ddl_title">
+                            <option value="0">--- Please select ---</option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Dr">Dr</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="txt_additional_info">
+                            Text area example
+							<br />
+                            <label id="divNomDetail" class="indent" style="font-size: small;">(500 characters maximum)</label>
+                        </label>
+                        <textarea name="txt_additional_info" rows="4" cols="20" id="txt_additional_info"
+                            onblur="lostfocus(this, 'divNomDetail', 500)" onchange="return validateLimit(this, 'divNomDetail', 500, 'change')"
+                            onkeyup="return validateLimit(this, 'divNomDetail', 500, 'keyup')" onfocus="return validateLimit(this, 'divNomDetail', 500, 'focus')"></textarea>
+                    </div>
+
+                    <div class="radio">
+                        <p class="form-label">Radio button example</p>
+                        <input id="rbn_0" type="radio" name="rbn_0" value="Yes" />
+                        <label for="rbn_0">Yes</label>
+                        <input id="rbn_1" type="radio" name="rbn_0" value="No" />
+                        <label for="rbn_1">No</label>
+                        <input id="rbn_2" type="radio" name="rbn_0" value="Unknown" />
+                        <label for="rbn_2">Don't know</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <p class="form-label">Checkbox example</p>
+                        <input id="chk_a" type="checkbox" name="chk_a" value="Checkbox A" />
+                        <label for="chk_a">Checkbox A</label>
+
+                        <input id="chk_b" type="checkbox" name="chk_b" value="Checkbox B" />
+                        <label for="chk_b">Checkbox B</label>
+
+                        <input id="chk_c" type="checkbox" name="chk_c" value="Checkbox C" />
+                        <label for="chk_c">Checkbox C</label>
+
+                        <input id="chk_d" type="checkbox" name="chk_d" value="Checkbox D" />
+                        <label for="chk_d">Checkbox D</label>
+                    </div>
+
+                    <div id="rbProgDisclDiv" class="radio">
+                        <label for="rbn_title">
+                            Progressive disclosure example - using radio buttons</label>
+                        <label class="radio inline" for="rbYes">
+                            <input id="rbYes" type="radio" value="Yes" name="rbProgDiscl" onclick="rbProgDisclSelect();" />
+                            Yes</label>
+                        <label class="radio inline" for="rbNo">
+                            <input id="rbNo" type="radio" value="No" name="rbProgDiscl" onclick="rbProgDisclSelect();" />
+                            No</label>
+                    </div>
+                    <div id="txtProgDisclRBDiv">
+                        <label for="txt-textinput-short">
+                            Additional question</label>
+                        <input id="txtProgDisclRB" type="text" maxlength="10" class="short" />
+                    </div>
+
+                    <div id="ddlProgDisclDiv">
+                        <label for="ddl_title">
+                            Progressive disclosure example - using drop down</label>
+                        <select name="ddlProgDiscl" id="ddlProgDiscl" onchange="ddlProgDisclSelect()">
+                            <option value="0">--- Please select ---</option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div id="txtProgDisclDDDiv">
+                        <label for="txt-textinput-short">
+                            Additional question</label>
+                        <input id="txtProgDisclDD" type="text" maxlength="10" class="short" />
+                    </div>
+
+                </fieldset>
+            </form>
+
+            <h3>Further reading</h3>
+            <ul>
+                <li><a href="http://www.w3.org/TR/WCAG-TECHS/H44.html">Using label elements to associate text labels with form controls (W3C)</a></li>
+                <li><a href="http://baymard.com/blog/drop-down-usability">Drop-down usability: when you should (and shouldn't) use them (Baymard Institute)</a></li>
+                <li><a href="http://www.nngroup.com/articles/checkboxes-vs-radio-buttons/">Checkboxes vs. radio buttons (Nielsen Norman Group)</a></li>
+                <li><a href="http://www.uxforthemasses.com/forms-usability/">How to improve the usability (and conversion rate) of your forms (UX for the masses)</a></li>
+                <li><a href="http://uxdesign.smashingmagazine.com/2011/11/08/extensive-guide-web-form-usability">An extensive guide to web form usability (Smashing Magazine)</a></li>
+                <li><a href="http://alistapart.com/article/sensibleforms">Sensible forms: A form usability checklist (A List Apart)</a></li>
+                <li><a href="http://www.thatwebguyblog.com/post/15-steps-towards-better-form-usability">15 steps towards better form usability (That Web Guy)</a></li>
+                <li><a href="http://css-tricks.com/box-sizing/">Box sizing (CSS-tricks)</a></li>
+            </ul>
+
+            <h2 id="validation" class="uxm">Validation and error messages</h2>
+
+            <ul>
+                <li>A summary list of all errors must be presented at the top of the page</li>
+                <li>Each error in the summary should link to the field that contains the error</li>
+                <li>Error text must provide clear advice on how to fix the issue</li>
+                <li>When validation has been triggered the primary heading and &lt;title&gt; element must contain the word 'error'
+					<code>&lt;h1&gt;[Primary heading] &lt;span class="heading-error"&gt;error&lt;/span&gt;&lt;/h1&gt;</code>
+                    <code>&lt;title&gt;Error - [page name] | [service name] | nidirect&lt;/title&gt;</code>
+                </li>
+                <li>Validation must be processed server side</li>
+                <li>See example below for nidirect's styling and presentation requirements</li>
+            </ul>
+
+            <h3>Inline validation</h3>
+
+            <ul class="nav nav-tabs" id="inline-validation-tabs">
+                <li class="active"><a href="#inline-validation-large-medium">Large / medium</a></li>
+                <li><a href="#inline-validation-small">Small</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="inline-validation-large-medium">
+                    <ul>
+                        <li>Inline validation messages should be positioned to the right of the inputs</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="inline-validation-small">
+                    <ul>
+                        <li>Inline validation messages should be positioned below the inputs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $('#inline-validation-tabs a').click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                })
+            </script>
+
+
+            <h3>Client-side validation</h3>
+            <ul>
+                <li>Encouraged to help minimise server load</li>
+                <li>Real-time feedback is encouraged, providing it occurs <strong>after</strong> the user has answered the question</li>
+                <li>JavaScript popup messages should be avoided</li>
+                <li>Must be accessible and unobtrusive</li>
+            </ul>
+
+            <div class="error-summary">
+                <p>Please review and correct the following errors:</p>
+                <ul>
+                    <li><a href="#q1">Please enter your first name(s)</a></li>
+                    <li><a href="#q2">Your surname contains invalid characters - please use letters and numbers only</a></li>
+                    <li><a href="#q3">Your email address is not valid - please enter in the correct format (eg someone@somewhere.com)</a></li>
+                    <li><a href="#q6">Please provide additional information</a></li>
+                    <li><a href="#q5">Please select your favourite animal</a></li>
+                    <li><a href="#q4">Please select your favourite colour(s)</a></li>
+                </ul>
+            </div>
+
+            <form>
+                <fieldset>
+                    <legend>Validation example</legend>
+
+                    <div id="q7">
+                        <label for="ddl_title2">Title</label>
+                        <img src="images/error-icon.png" alt="error" width="20" height="20" class="error-icon" />
+                        <select name="ddl_title2" id="ddl_title2" class="input-error">
+                            <option value="0">--- Please select ---</option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Dr">Dr</option>
+                        </select>
+                        <div class="inline-error">
+                            <div class="arrow"></div>
+                            <div class="inline-error-content">
+                                <p>Please select your title</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="q1">
+                        <label for="txt_firstname">
+                            <img src="images/required.gif" class="required" alt="Required information" />
+                            First name(s)
+                        </label>
+                        <img src="images/error-icon.png" alt="error" width="20" height="20" class="error-icon" />
+                        <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname" class="input-error" />
+                        <div class="inline-error">
+                            <div class="arrow"></div>
+                            <div class="inline-error-content">
+                                <p>Please enter your first name(s)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="q2">
+                        <label for="txt_surname">
+                            <img src="images/required.gif" class="required" alt="Required information" />
+                            Surname
+                        </label>
+                        <img src="images/error-icon.png" alt="error" width="20" height="20" class="error-icon" />
+                        <input name="txt_surname" type="text" maxlength="50" id="txt_surname" class="input-error" value="*$%" />
+                        <div class="inline-error">
+                            <div class="arrow"></div>
+                            <div class="inline-error-content">
+                                <p>Your surname contains invalid characters</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="q3">
+                        <label for="txt_ratepayer_email">Email address</label>
+                        <img src="images/error-icon.png" alt="error" width="20" height="20" class="error-icon" />
+                        <input name="txt_ratepayer_email" type="text" value="a@acom" maxlength="50" id="txt_ratepayer_email" class="input-error" />
+                        <div class="inline-error">
+                            <div class="arrow"></div>
+                            <div class="inline-error-content">
+                                <p>Your email address is not valid</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="q6">
+                        <label for="txt_additional_info2">
+                            <img src="images/required.gif" class="required" alt="Required information" />
+                            Additional information
+						<br />
+                            <small>(1,000 characters maximum, plain text only)</small>
+                            <img src="images/error-icon.png" alt="error" width="20" height="20" class="error-icon" />
+                        </label>
+                        <textarea name="txt_additional_info2" rows="4" cols="20" id="txt_additional_info2" class="input-error"></textarea>
+
+                        <div class="inline-error">
+                            <div class="arrow"></div>
+                            <div class="inline-error-content">
+                                <p>Please provide additional information</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="q5" class="radio">
+                        <p class="form-label">
+                            <img src="images/required.gif" class="required" alt="Required information" />
+                            What is your favourite animal?
+                        </p>
+                        <img src="images/error-icon.png" alt="error" width="20" height="20" class="error-icon" />
+                        <div class="error-inner">
+                            <input id="rbn_dog" type="radio" name="rbn_0" value="Yes" />
+                            <label for="rbn_dog">Dog</label>
+                            <input id="rbn_cat" type="radio" name="rbn_0" value="No" />
+                            <label for="rbn_cat">Cat</label>
+                            <input id="rbn_horse" type="radio" name="rbn_0" value="No" />
+                            <label for="rbn_horse">Horse</label>
+                            <input id="rbn_other" type="radio" name="rbn_0" value="Unknown" />
+                            <label for="rbn_other">Something else / don't know</label>
+                        </div>
+
+                        <div class="inline-error">
+                            <div class="arrow"></div>
+                            <div class="inline-error-content">
+                                <p>Please select your favourite animal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="q4" class="checkbox">
+                        <p class="form-label" id="lbl_chk_nature_of_change">
+                            <img src="images/required.gif" class="required" alt="Required information" />
+                            What are you favourite colours?
+						<br />
+                            <small class="indent">(select all that apply)</small>
+                        </p>
+                        <img src="images/error-icon.png" alt="error" width="20" height="20" class="error-icon" />
+                        <div class="error-inner">
+
+                            <input id="chk-00" type="checkbox" name="chk-00" value="Red" />
+                            <label for="chk-00">Red</label>
+
+                            <input id="chk-01" type="checkbox" name="chk-01" value="Yellow" />
+                            <label for="chk-01">Yellow</label>
+
+                            <input id="chk-02" type="checkbox" name="chk-02" value="Green" />
+                            <label for="chk-02">Green</label>
+
+                            <input id="chk-03" type="checkbox" name="chk-03" value="Blue" />
+                            <label for="chk-03">Blue</label>
+                        </div>
+                        <div class="inline-error">
+                            <div class="arrow"></div>
+                            <div class="inline-error-content">
+                                <p>Please select your favourite colour(s)</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </fieldset>
+            </form>
+
+            <h3>Further reading</h3>
+            <ul>
+                <li><a href="http://www.w3.org/TR/WCAG-TECHS/SCR32.html">Providing client-side validation and adding error text via the DOM (W3C)</a></li>
+                <li><a href="http://alistapart.com/article/inline-validation-in-web-forms/">Inline validation in web forms (A List Apart)</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/Unobtrusive_JavaScript">Unobtrusive JavaScript (Wikipedia)</a></li>
+            </ul>
+
+            <h2 id="buttons" class="uxm">Buttons</h2>
+
+            <ul>
+                <li>Buttons should be used sparingly</li>
+                <li>The box size, text size and colours presented above must be matched</li>
+                <li>The font size of the standard button must equate to 18px (set using relative units)</li>
+                <li>Form reset buttons must not be used</li>
+                <li>Previous and next buttons in a wizard step should be positioned on the left</li>
+                <li>Classes can be applied to inputs, buttons and anchors</li>
+                <li>Use the 'btn-large' class for large buttons (font size equates to 20px)
+					<code>&lt;input type="button" class="btn btn-primary btn-large" value="Large button" /&gt;
+                    </code>
+                </li>
+                <li>Use the 'btn-small' class for small buttons (font size equates to 14px)
+					<code>&lt;input type="button" class="btn btn-primary btn-small" value="Small button" /&gt;
+                    </code>
+                </li>
+            </ul>
+
+            <h3>Primary button</h3>
+            <input type="button" class="btn btn-primary" value="Primary" />
+            <code>&lt;input type="button" class="btn btn-primary" value="Primary" /&gt;</code>
+            <ul>
+                <li>The blue button is the primary button used for positive form actions such as 'log in', 'next' or 'continue' in a wizard or 'submit' or 'finish' at the end of the process</li>
+                <li>Avoid having multiple primary form actions on a single page</li>
+            </ul>
+
+            <h3>Secondary button</h3>
+            <input type="button" class="btn" value="Secondary" />
+            <code>&lt;input type="button" class="btn" value="Secondary" /&gt;</code>
+            <ul>
+                <li>The grey button should be used for secondary actions such as returning to a previous step</li>
+                <li>There can be multiple secondary actions on a single page</li>
+            </ul>
+
+            <h3>Call to action button</h3>
+            <input type="button" class="btn btn-call-to-action" value="Call to action" />
+            <code>&lt;input type="button" class="btn btn-call-to-action" value="Call to action" /&gt;</code>
+            <ul>
+                <li>The green button is the 'call to action' button</li>
+                <li>It should be used sparingly in a transactional service and should never be used more than once on a page</li>
+                <li>It should only be used to bring the user's attention to the key action of that page where other competing actions can be safely ignored</li>
+                <li>Directional arrows should only be used in exceptional cases</li>
+                <li>Examples include 'Start now' or 'Create an account'</li>
+                <li>Can be implemented using either the UXM semantic class name (btn-call-to-action) or the Bootstrap class name (btn-success)</li>
+            </ul>
+
+            <h3>Warning button</h3>
+            <input type="button" class="btn btn-warning" value="Warning" />
+            <code>&lt;input type="button" class="btn btn-warning" value="Warning" /&gt;</code>
+            <ul>
+                <li>The red button should be used for actions that are irreversible, such as delete</li>
+                <li>Position them away from the other actions</li>
+                <li>Make the action reversible / 'undoable' or if that isn't possible, use an alert to check that the user really wants to do this</li>
+                <li>Can be implemented using either the UXM semantic class name (btn-warning) or the Bootstrap class name (btn-danger)</li>
+            </ul>
+
+            <h3>Colours</h3>
+            <div class="btn-swatch primary-colour">
+                Primary<br />
+                #008FC5
+            </div>
+            <div class="btn-swatch secondary-colour">
+                Secondary<br />
+                #999999
+            </div>
+            <div class="btn-swatch success-colour">
+                Call to action<br />
+                #629512
+            </div>
+            <div class="btn-swatch warning-colour">
+                Warning<br />
+                #A61A00
+            </div>
+            <div class="clearfix"></div>
+
+            <h4>Hover and active states</h4>
+            <div class="btn-swatch primary-colour-hover">
+                Primary<br />
+                #00AAE5
+            </div>
+            <div class="btn-swatch secondary-colour-hover">
+                Secondary<br />
+                #666666
+            </div>
+            <div class="btn-swatch success-colour-hover">
+                Call to action<br />
+                #6EA614
+            </div>
+            <div class="btn-swatch warning-colour-hover">
+                Warning<br />
+                #C91F00
+            </div>
+            <div class="clearfix"></div>
+
+            <h3>Directional buttons</h3>
+            <ul>
+                <li>Should be used to signify moving back and forward through a process eg a checkout process, or registration steps</li>
+                <li>Use the 'arrowr' or 'arrowl' class to include the appropriate directional arrow
+					<code>&lt;input type="button" class="btn btn-primary arrowr" value="Next" /&gt;
+						<br />
+                        &lt;input type="button" class="btn btn-primary arrowl" value="Back" /&gt;
+                    </code>
+                </li>
+            </ul>
+            <table class="standard unfixed">
+                <tr>
+                    <th>Button</th>
+                    <th>Usage</th>
+                    <th>Code</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="btn btn-primary arrowr" value="Next"></td>
+                    <td>Should be used to move to the next step in a wizard or stepped process.</td>
+                    <td><code>&lt;input type="button" class="btn btn-primary arrowr" value="Next" /&gt;</code></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="btn arrowl" value="Back"></td>
+                    <td>Should be used to move to the previous step in a wizard or stepped process.</td>
+                    <td><code>&lt;input type="button" class="btn arrowl" value="Back" /&gt;</code></td>
+                </tr>
+            </table>
+            <h4>Examples</h4>
+            <p>Some common examples and variations:</p>
+            <p>
+                <input type="button" class="btn arrowl" value="Back" />
+                <input type="button" class="btn btn-primary arrowr" value="Next" />
+                <button type="button" class="btn btn-call-to-action">Get started</button>
+                <input type="button" class="btn btn-secondary" value="Close" />
+                <input type="button" class="btn btn-primary arrowr" value="Continue to payment" />
+                <input type="button" class="btn btn-warning" value="Cancel" />
+                <input type="button" class="btn btn-primary" value="Login" />
+                <a class="btn btn-call-to-action">Create an account</a>
+                <input type="button" class="btn btn-danger" value="Delete" />
+                <input type="button" class="btn btn-primary" value="Submit" />
+                <input type="button" class="btn btn-call-to-action arrowr" value="Confirm and proceed" />
+                <a class="btn btn-primary">Add to basket</a>
+                <br />
+                <input type="button" class="btn btn-primary btn-small" value="Edit" />
+                <a class="btn btn-warning btn-small">Remove</a>
+                <button type="button" class="btn btn-call-to-action btn-small">Add to basket</button>
+            </p>
+
+            <h2 id="links">Links</h2>
+
+            <ul>
+                <li>Links that break session or affect the flow or customer journey should be avoided</li>
+                <li>Links to websites other than nidirect.gov.uk should be avoided where possible</li>
+                <li>Links to other sites that cannot be avoided and break user session:
+					<ul>
+                        <li>must open in a new browser window</li>
+                        <li>must include the new window icon</li>
+                        <li>must include appropriate text in the title attribute
+							<code>&lt;a href="http://www.nidirect.gov.uk/cookies" target="_blank" class="elink" title="link opens in a new browser window"&gt;cookies&lt;/a&gt;<br />
+                            </code>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="images/new-window.gif">Download the new window icon (.gif 1KB)</a>
+                <li>Links should not be self referencing</li>
+                <li>Links in the header or footer:
+					<ul>
+                        <li>must not be underlined</li>
+                        <li>must be underlined on hover</li>
+                        <li>must be coloured #0C1E63</li>
+                    </ul>
+                </li>
+                <li>Links in the main body:
+					<ul>
+                        <li>must be underlined</li>
+                        <li>must be coloured #027EB8</li>
+                        <li>must be coloured #0C1E63 on hover</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Links or buttons?</h3>
+            <ul>
+                <li>In general buttons are used to <em>do something</em>, such as adding, changing or deleting data, exceptions for the nidirect UXM include:
+					<ul>
+                        <li>Starting or moving forward or back through a wizard style process</li>
+                        <li>'Call to action' links</li>
+                    </ul>
+                </li>
+                <li>Links should be used to <em>go somewhere</em></li>
+            </ul>
+
+            <h3>Further reading</h3>
+            <ul>
+                <li><a href="http://www.w3.org/TR/WCAG-TECHS/G200.html">Opening new windows and tabs from a link only when necessary (W3C)</a></li>
+                <li><a href="http://www.w3.org/TR/WCAG-TECHS/H33.html">Supplementing link text with the title attribute (W3C)</a></li>
+                <li><a href="http://getlevelten.com/blog/randall-knutson/design-decisions-buttons-vs-links-fight">Design Decisions: Buttons vs Links. Fight! (Level Ten Interactive)</a></li>
+            </ul>
+
+            <h2 id="help" class="uxm">Help content</h2>
+            <ul>
+                <li>Essential information needed to complete the input, such as an expected format, must be positioned inside the &lt;label&gt; element, see example below</li>
+                <li>Supplementary help content should be presented using a progressive disclosure mechanism (eg a hide / reveal or tooltip) and positioned above the input in the
+                    <abbr title="Document Object Model">DOM</abbr></li>
+                <li>Refer to the <a href="principles.html#writing-help-text">writing help text</a> section for related guidance</li>
+            </ul>
+
+            <h3>Inline help example</h3>
+            <form>
+                <div>
+                    <label for="txt-birthplace">
+                        <img src="images/required.gif" class="required" alt="Required information" width="11" height="10" />
+                        Place of birth
+						<span class="hint">You must provide at least the town or city of birth</span>
+                    </label>
+                    <input id="txt-birthplace" type="text" maxlength="50" />
+                </div>
+
+                <br />
+                <code>&lt;label for="txt-birthplace"&gt;<br />
+                    &lt;img class="required" alt="Required information" src="images/required.gif" width="11" height="10"&gt;<br />
+                    Place of birth<br />
+                    &lt;span class="hint"&gt;You must provide at least the town or city of birth.&lt;/span&gt;<br />
+                    &lt;/label&gt;
+                </code>
+                <br />
+                <h3>Progressive help example</h3>
+                <div>
+                    <a id="imageDivLink" href="javascript:toggle('toggleText', 'imageDivLink');">
+                        <img class="help-caret" src="images/arrow-down.png">This is an example of displaying help using progressive disclosure.</a>
+                    <div id="toggleText" style="display: none" class="help-content">
+                        <p class="prog-help-p">Help text will go here.</p>
+                    </div>
+                </div>
+            </form>
+
+            <h2 id="skipnav" class="uxm">Skip navigation</h2>
+            <ul>
+                <li>Must be used to give screen reader and keyboard users the option to bypass recurring navigation or repeated blocks of content (eg top navigation, branding, progress tracker etc)</li>
+                <li>The link must be positioned at the top of the page
+					<code>...<br />
+                        &lt;div class="page"&gt;<br />
+                        &nbsp;&nbsp;&lt;div class="skipnav"&gt;&lt;a href="#skip-dest"&gt;Skip to content&lt;/a&gt;&lt;/div&gt;<br />
+                        &nbsp;&nbsp;&lt;header&gt;<br />
+                        &nbsp;&nbsp;...
+                    </code>
+                </li>
+                <li>The skip link destination should be the primary heading
+					<code>&lt;h1 id="skip-dest"&gt;Components&lt;/h1&gt;
+                    </code>
+                </li>
+                <li>The link must be hidden using css
+					<code>.skipnav {<br />
+                        &nbsp;&nbsp;background-color: #0C1E63;<br />
+                        }
+					<br />
+                        .skipnav a {<br />
+                        &nbsp;&nbsp;display: block;<br />
+                        &nbsp;&nbsp;font-size: 16px;<br />
+                        &nbsp;&nbsp;line-height: 2em;<br />
+                        &nbsp;&nbsp;padding: 0 30px;<br />
+                        &nbsp;&nbsp;position: absolute;<br />
+                        &nbsp;&nbsp;text-align: center;<br />
+                        &nbsp;&nbsp;top: -999em;<br />
+                        }
+                    </code>
+                </li>
+                <li>The link should become visible with keyboard focus
+					<code>.skipnav a:focus {<br />
+                        &nbsp;&nbsp;color: #0C1E63;<br />
+                        &nbsp;&nbsp;position: relative;<br />
+                        &nbsp;&nbsp;top: 0;<br />
+                        }
+                    </code>
+                </li>
+            </ul>
+
+            <h3>Further reading</h3>
+            <ul>
+                <li><a href="http://webaim.org/techniques/skipnav#focus">Skip navigation links - Links that become visible with keyboard focus (Web AIM)</a></li>
+                <li><a href="http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G1">Adding a link at the top of each page that goes directly to the main content area (W3C)</a></li>
+            </ul>
+
+            <h2 id="info-notice" class="uxm">Information notice</h2>
+
+            <ul>
+                <li>Used to highlight important messages</li>
+                <li>Should be used sparingly</li>
+            </ul>
+
+            <code>&lt;div class="info-notice"&gt;This is an information notice.&lt;/div&gt;
+            </code>
+            <div class="info-notice">This is an information notice.</div>
+
+
+
+            <code>&lt;div class="info-notice"&gt;After completing each stage your information is automatically saved.&lt;/div&gt;
+            </code>
+            <div class="info-notice">After completing each stage your information is automatically saved.</div>
+
+            <div class="clearfix"></div>
+
+            <h2 id="tables" class="uxm">Tables</h2>
+            <ul>
+                <li>Should only be used to display data or structured information</li>
+                <li>Should not be used for layout purposes</li>
+                <li>Three table styles are available: column headings, row headings and column and row headings, see examples below</li>
+                <li>Use the 'fixed' class for equally spaced columns
+					<code>&lt;table class="standard fixed"&gt;
+                    </code>
+                </li>
+                <li>Use the 'unfixed' class for automatically spaced columns
+					<code>&lt;table class="standard unfixed"&gt;
+                    </code>
+                </li>
+            </ul>
+            <h3>Column headings</h3>
+            <table class="standard unfixed">
+                <tr>
+                    <th scope="col">Band</th>
+                    <th scope="col">CO<sub>2</sub> emission (g/km)</th>
+                    <th scope="col">12 months rate &#163;</th>
+                    <th scope="col">6 months rate &#163;</th>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>Up to 100</td>
+                    <td>0.00</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>101-110</td>
+                    <td>0.00</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>111-120</td>
+                    <td>0.00</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>121-130</td>
+                    <td>0.00</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>131-140</td>
+                    <td>125.00</td>
+                    <td>68.75</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>141-150</td>
+                    <td>140.00</td>
+                    <td>77.00</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>151-165</td>
+                    <td>175.00</td>
+                    <td>96.25</td>
+                </tr>
+                <tr>
+                    <td>H</td>
+                    <td>166-175</td>
+                    <td>285.00</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>I</td>
+                    <td>176-185</td>
+                    <td>335.00</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>J</td>
+                    <td>186-200</td>
+                    <td>475.00</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>K</td>
+                    <td>201-225</td>
+                    <td>620.00</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>226-255</td>
+                    <td>840.00</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>Over 255</td>
+                    <td>1,065.00</td>
+                    <td>N/A</td>
+                </tr>
+            </table>
+            <h3>Row headings</h3>
+            <table class="standard fixed">
+                <tr>
+                    <th scope="row">Nearest town</th>
+                    <td>Aughnacloy</td>
+                </tr>
+                <tr>
+                    <th scope="row">Area/length</th>
+                    <td>9.3 hectares</td>
+                </tr>
+                <tr>
+                    <th scope="row">Species</th>
+                    <td>rainbow trout and pike</td>
+                </tr>
+                <tr>
+                    <th scope="row">Season</th>
+                    <td>1 February to 31 December</td>
+                </tr>
+                <tr>
+                    <th scope="row">Daily bag limit</th>
+                    <td>four trout per rod
+						<br />
+                        one pike per person
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Size limit</th>
+                    <td>minimum takeable size 24.5cm</td>
+                </tr>
+                <tr>
+                    <th scope="row">Boats</th>
+                    <td>fishing is permitted from non-mechanical boats only</td>
+                </tr>
+                <tr>
+                    <th scope="row">Licence</th>
+                    <td>DCAL Game Rod Licence (even when fishing for pike)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Permit</th>
+                    <td>DCAL Game Permit (even when fishing for pike)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Facilities for people with a disability</th>
+                    <td>see below</td>
+                </tr>
+            </table>
+            <h3>Column and row headings</h3>
+            <table class="standard fixed">
+                <tr>
+                    <th>&nbsp;</th>
+                    <th scope="col">Full test &#163;</th>
+                    <th scope="col">Retest &#163;</th>
+                </tr>
+                <tr>
+                    <th scope="row">Class I Motor Bicycle</th>
+                    <td>22.00</td>
+                    <td>14.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Class II Motor Bicycle</th>
+                    <td>22.00</td>
+                    <td>14.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Class III Light Motor Vehicle</th>
+                    <td>30.50</td>
+                    <td>18.50</td>
+                </tr>
+                <tr>
+                    <th scope="row">Class IV Motor Car and Heavy Motor Car</th>
+                    <td>30.50</td>
+                    <td>18.50</td>
+                </tr>
+                <tr>
+                    <th scope="row">Class V LPCV</th>
+                    <td>41.50</td>
+                    <td>19.50</td>
+                </tr>
+            </table>
+            <br />
+            <br />
+
+            <h2 id="pagination" class="uxm">Pagination</h2>
+
+            <ul>
+                <li>long lists of similar looking data, such as search results, are difficult to make sense of</li>
+                <li>present the data grouped across multiple pages, with a consistent number of items per page</li>
+                <li>the number of items per page should be considered on a case by case basis</li>
+                <li>provide an easy to use set of controls to navigate the pages</li>
+                <li>display how many items make up the overall data set, how many pages the items are broken up into, and which page is currently being viewed.</li>
+                <li>first and last links are confusing and should not be used</li>
+            </ul>
+
+            <h3>First page</h3>
+            <div class="paginationuxm">
+                <ul>
+                    <li class="disabled">
+                        <span aria-hidden="true">Previous</span>
+                    </li>
+                    <li class="active"><span>1</span></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li class="disabled"><span>...</span></li>
+                    <li><a href="#">6</a></li>
+                    <li>
+                        <a aria-label="Next" href="#">
+                            <span aria-hidden="true">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <br>
+
+            <h3>Middle page</h3>
+            <div class="paginationuxm">
+                <ul>
+                    <li>
+                        <a aria-label="Previous" href="#">
+                            <span aria-hidden="true">Previous</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="active"><span>3</span></li>
+                    <li><a href="#">4</a></li>
+                    <li class="disabled"><span>...</span></li>
+                    <li><a href="#">6</a></li>
+                    <li>
+                        <a aria-label="Next" href="#">
+                            <span aria-hidden="true">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <br>
+
+            <div class="paginationuxm">
+                <ul>
+                    <li>
+                        <a aria-label="Previous" href="#">
+                            <span aria-hidden="true">Previous</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li class="disabled"><span>...</span></li>
+                    <li><a href="#">3</a></li>
+                    <li class="active"><span>4</span></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li>
+                        <a aria-label="Next" href="#">
+                            <span aria-hidden="true">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <br>
+
+            <h3>Last page</h3>
+
+            <div class="paginationuxm">
+                <ul>
+                    <li>
+                        <a aria-label="Previous" href="#">
+                            <span aria-hidden="true">Previous</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li class="disabled"><a href="#">...</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="active"><span>6</span></li>
+                    <li class="disabled">
+                        <span aria-hidden="true">Next</span>
+                    </li>
+                </ul>
+            </div>
+            <br>
+
+            <h3>Large number of pages</h3>
+
+            <div class="paginationuxm">
+                <ul>
+                    <li>
+                        <a aria-label="Previous" href="#">
+                            <span aria-hidden="true">Previous</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li class="disabled"><a>...</a></li>
+                    <li><a href="#">22</a></li>
+                    <li class="active"><span>23</span></li>
+                    <li><a href="#">24</a></li>
+                    <li class="disabled"><span>...</span></li>
+                    <li><a href="#">50</a></li>
+                    <li>
+                        <a aria-label="Next" href="#">
+                            <span aria-hidden="true">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <br />
+
+            <h3>Further reading</h3>
+            <a href="http://uxmovement.com/navigation/avoid-the-pains-of-pagination/">Avoid the Pains of Pagination</a>
+            <br />
+            <br />
+
+
+        </div>
+        <footer class="footer">
+            <ul>
+                <li><a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" class="elink" title="link opens in a new browser window">&copy;  Crown copyright</a></li>
+                <li><a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" class="elink" title="link opens in a new browser window">Terms and conditions</a></li>
+                <li><a href="http://www.nidirect.gov.uk/privacy" target="_blank" class="elink" title="link opens in a new browser window">Privacy</a></li>
+                <li><a href="http://www.nidirect.gov.uk/cookies" target="_blank" class="elink" title="link opens in a new browser window">Cookies</a></li>
+                <li><a href="release-notes.html">Release notes</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- scroll to top plugin used to improve readability of UXM content only -->
+    <!-- this plugin has been disabled for touch devices -->
+    <!-- this plugin should be removed for a transctional servcie -->
+    <script type="text/javascript" src="js/scrolltopcontrol.js">
+	/*
+	Scroll To Top Control script- &#169; Dynamic Drive DHTML code library (www.dynamicdrive.com)
+	This notice MUST stay intact for legal use
+	Visit Project Page at http://www.dynamicdrive.com for full source code
+	*/
+    </script>
+</body>
+</html>

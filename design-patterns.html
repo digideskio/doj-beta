@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Design patterns | User Experience Model (UXM) | nidirect</title>
+
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="favicon.ico" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/nidirect.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/nidirect-responsive.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/nidirect-uxm.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="jquery/jquery-ui.css" rel="stylesheet" />
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery/jquery.js" type="text/javascript"></script>
+    <script src="jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/uxm.js" type="text/javascript"></script>
+
+    <!-- html5 shim for ie8 and ie7 -->
+    <!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // show / hide the select address
+            $('div#select-address').hide();
+
+            $('button#find-address').click(function () {
+                $('div#select-address').fadeIn(800);
+            });
+
+            // demonstrate the address fields being populated
+            $('div#select-address select').click(function () {
+                $('#txt_house-no-example').val('1A');
+                $('#txt_street-example').val('Henrietta Street');
+                $('#txt_town-example').val('Belfast');
+                $('#ddl_country-example').val('1');
+                $('#txt_enter-postcode-example').val('BT2 8LW');
+            });
+
+            // remove the no-js class
+            $('body').removeClass('no-js');
+
+            // datepicker
+            $('#txtAppt').datepicker({
+                inline: true,
+                dateFormat: "dd/mm/yy",
+                showOn: 'both', buttonImageOnly: true, buttonImage: 'images/dateicon_padding2.png',
+                buttonText: "Select date"
+            });
+            $(".ui-datepicker-trigger").css('cursor', 'pointer');
+        });
+    </script>
+
+    <!-- google analytics for uxm.nidirect.gov.uk -->
+    <!-- do not include in a transactional service without discussing with the transactional services manager first -->
+    <!-- <script type="text/javascript">
+		//<![CDATA[
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-26858713-1']);
+		_gaq.push(['_setDomainName', 'nidirect.gov.uk']);
+		_gaq.push(['_addIgnoredRef', 'nidirect.gov.uk']);
+		_gaq.push(['_gat._anonymizeIP']);
+		_gaq.push(['_setCustomVar', 1, 'Theme', 'Applications', 3]);
+		_gaq.push(['_setCustomVar', 2, 'Sub-theme', 'UXM', 3]);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		//]]>
+	</script> -->
+    <script type="text/javascript">
+        // <![CDATA[
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-26858713-2', 'nidirect.gov.uk');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+        // ]]>
+    </script>
+
+    <!--  MouseStats:Begin  -->
+    <script type="text/javascript">var MouseStats_Commands = MouseStats_Commands ? MouseStats_Commands : []; (function () { function b() { if (void 0 == document.getElementById("__mstrkscpt")) { var a = document.createElement("script"); a.type = "text/javascript"; a.id = "__mstrkscpt"; a.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www2") + ".mousestats.com/js/5/6/5688852133238908385.js?" + Math.floor((new Date).getTime() / 6E5); a.async = !0; a.defer = !0; (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(a) } } window.attachEvent ? window.attachEvent("onload", b) : window.addEventListener("load", b, !1); "complete" === document.readyState && b() })(); </script>
+    <!--  MouseStats:End  -->
+
+</head>
+<body class="no-js">
+    <div class="page">
+        <div class="skipnav"><a href="#skip-dest">Skip to content</a></div>
+
+        <header>
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="menu">Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+
+                        <a class="brand" href="http://www.nidirect.gov.uk">
+                            <img src="images/nidirect-logo-small-2x.png" alt="n i direct government services" width="120" height="28" />
+                        </a>
+
+                        <div class="nav-collapse collapse">
+                            <nav class="topnav">
+                                <ul>
+                                    <li><a href="index.html">
+                                        <abbr title="User Experience Model">UXM</abbr>
+                                        home</a></li>
+                                    <li class="dropdown">
+                                        <a data-target="#" href="principles.html" class="dropdown-toggle" data-toggle="dropdown">Principles<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="principles.html">Principles</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="principles.html#user-centered">Developing user-centric services</a></li>
+                                            <li><a href="principles.html#applying-the-uxm">Applying the UXM</a></li>
+                                            <li><a href="principles.html#writing-for-transactions">Writing for transactions</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a data-target="#" href="components.html" class="dropdown-toggle" data-toggle="dropdown">Components<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="components.html">Components</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="components.html#design">Design theme</a></li>
+                                            <li><a href="components.html#layout">Responsive layout</a></li>
+                                            <li><a href="components.html#sections">Sections</a></li>
+                                            <li><a href="components.html#typography">Typography</a></li>
+                                            <li><a href="components.html#headings">Headings</a></li>
+                                            <li><a href="components.html#forms">Form elements</a></li>
+                                            <li><a href="components.html#validation">Validation</a></li>
+                                            <li><a href="components.html#buttons">Buttons</a></li>
+                                            <li><a href="components.html#links">Links</a></li>
+                                            <li><a href="components.html#help">Help content</a></li>
+                                            <li><a href="components.html#skipnav">Skip navigation</a></li>
+                                            <li><a href="components.html#info-notice">Information notice</a></li>
+                                            <li><a href="components.html#tables">Tables</a></li>
+                                            <li><a href="components.html#pagination">Pagination</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown current">
+                                        <a data-target="#" href="design-patterns.html" class="dropdown-toggle" data-toggle="dropdown">Design patterns<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="design-patterns.html#login-registration">Log in / Registration</a></li>
+                                            <li><a href="design-patterns.html#address-lookup1">Address lookup</a></li>
+                                            <li><a href="design-patterns.html#progress">Progress trackers</a></li>
+                                            <li><a href="design-patterns.html#date-controls">Date controls</a></li>
+                                            <li><a href="design-patterns.html#error-pages">Error pages</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a data-target="#" href="resources.html" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="resources.html">Resources</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="resources.html#starter-kit">Starter kit</a></li>
+                                            <li><a href="resources.html#policies">Policies</a></li>
+                                            <li><a href="resources.html#contacts">Contacts</a></li>
+                                            <li><a href="resources.html#reading">Further reading</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="branding">
+                <a href="http://www.nidirect.gov.uk">
+                    <img class="nidirectlogo" src="images/nidirect-logo-2x.png" alt="n i direct government services" width="173" height="57" /></a>
+                <div class="service-name">User Experience Model <span>(v1.3)</span></div>
+            </div>
+        </header>
+
+        <div class="content container">
+
+            <h1 id="skip-dest">Design patterns</h1>
+            <p class="intro">This section provides guidance and examples for common scenarios found in nidirect services.</p>
+            <ul>
+                <li>
+                    <a href="#login-registration">Log in / Registration</a>
+                    <ul>
+                        <li><a href="#registration">Registration</a></li>
+                        <li><a href="#log-in">Log in</a></li>
+                    </ul>
+                </li>
+                <li><a href="#address-lookup1">Address lookup</a></li>
+                <li><a href="#progress">Progress trackers</a></li>
+            </ul>
+
+            <h2 id="login-registration">Log in / registration</h2>
+            <ul>
+                <li>Log in systems should only be built when absolutely necessary and must be approved in advance by the <a href="contacts.html">nidirect Transactional Services Manager</a></li>
+                <li>Essential reading: <a href="https://www.gov.uk/service-manual/making-software/logins.html">User accounts and logins (GOV.UK Service Design Manual)</a></li>
+            </ul>
+
+            <h3 id="registration">Registration</h3>
+            <ul>
+                <li>Only information that is absolutely necessary to create an account should be requested</li>
+                <li>Please note that the font size of &lt;legend&gt; has been reduced to provide hierarchical presentation in this document. The font size as defined on the <a href="components.html#forms">forms section</a> of the components page should be used</li>
+            </ul>
+
+            <!-- ### registration form start ### -->
+            <form id="registerform">
+                <fieldset>
+                    <legend class="uxm">About you</legend>
+                    <div class="small">
+                        <label for="ddl_title">Title</label>
+                        <select name="ddl_title" id="ddl_title" class="short">
+                            <option value="0">--- Please select ---</option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Dr">Dr</option>
+                            <option value="Other">None</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="txt_occupancyid">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            First name
+                        </label>
+                        <input id="txt_occupancyid" type="text" maxlength="10" />
+                    </div>
+                    <div>
+                        <label for="txt_address1">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            Last name
+                        </label>
+                        <input type="text" id="txt_address1" maxlength="50" />
+                    </div>
+                    <div>
+                        <label for="txt_email1">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            Email
+							<span class="hint">Your email address will be used as your login</span>
+                        </label>
+                        <input id="txt_email1" maxlength="50" type="text" />
+                    </div>
+                    <div id="div_mobile">
+                        <label for="txt_mobile">
+                            Contact number
+                        </label>
+                        <input id="txt_mobile" maxlength="50" type="text" />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="uxm">Your password</legend>
+                    <div>
+                        <label for="txt_password">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            Password
+                        </label>
+                        <input id="Password1" maxlength="50" type="password" />
+                    </div>
+                    <div>
+                        <label for="txt_confirm_password">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            Confirm password
+                        </label>
+                        <input id="txt_confirm_password" maxlength="50" type="password" />
+                    </div>
+                </fieldset>
+                <!--
+				<fieldset>
+					<legend class="uxm">Security question</legend>
+					<p>Please provide a secret question and answer to help if you forget your password.</p>
+					<div>
+						<label for="txt_password">
+							<img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+							Secret question
+						</label>
+						<input id="txt_secret-question" maxlength="50" type="password" />
+					</div>
+					<div>
+						<label for="txt_secret-answer">
+							<img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+							Secret answer
+						</label>
+						<input id="txt_secret-answer" maxlength="50" type="text" />
+					</div>
+				</fieldset>
+				-->
+                <div>
+                    <input type="submit" value="Create account" class="btn btn-primary" />
+                </div>
+            </form>
+            <!-- ### registration form end ### -->
+
+            <h3 id="log-in">Log in</h3>
+            <ul>
+                <li>Visitors should be presented with the option to register</li>
+                <li>There should be a clear link for visitors who have forgotten their username/password</li>
+                <li>Inline validation should be positioned below the inputs</li>
+                <li>Use example below, when appropriate</li>
+            </ul>
+
+            <!-- ### login form start ### -->
+            <form class="loginform">
+                <fieldset id="login">
+                    <legend>Log in</legend>
+                    <div>
+                        <label for="txt_email2">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            Email
+                        </label>
+                        <input id="txt_email2" type="email" maxlength="50" class="text" />
+                    </div>
+                    <div>
+                        <label for="txt_password">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            Password
+                        </label>
+                        <input id="txt_password" maxlength="50" type="password" class="text" />
+                        <p class="forgot-password"><a href="#">I've forgotten my username or password</a></p>
+                    </div>
+                    <input type="submit" value="Log in" class="btn btn-primary" />
+                </fieldset>
+                <fieldset id="register">
+                    <legend>Register</legend>
+                    <div>
+                        <input type="button" class="btn btn-success" value="Create an account" id="create-account" />
+                    </div>
+                </fieldset>
+            </form>
+            <!-- ### login form end ### -->
+
+            <h2 id="address-lookup1" class="uxm">Address lookup</h2>
+
+            <ul>
+                <li>The example below uses 'unobtrusive JavaScript' to present address / postcode lookup functionality</li>
+                <li>The lookup functionality is considered 'value-added' and is therefore only presented when JavaScript is available</li>
+                <li>The standard address fields can be completed with JavaScript off</li>
+                <li>Note the following code and components:
+					<ul>
+                        <li>The body element has a 'no-js' class
+							<code>&lt;body class="no-js"&gt;
+                            </code>
+                        </li>
+                        <li>The address lookup div is hidden using css (i.e. the div is hidden when JavaScript is not available)
+							<code>.no-js  div#address-lookup{
+									display: none;
+								}
+                            </code>
+                        </li>
+                        <li>JQuery is used to remove the 'no-js' class (i.e. the div is shown when JavaScript is available)
+							<code>// remove the no-js class<br />
+                                $('body').removeClass('no-js');
+                            </code>
+                        </li>
+                        <li>JQuery is used to show the select address input
+						<code>&lt;script type="text/javascript"&gt;<br />
+                            $(document).ready(function () {<br />
+                            &nbsp;&nbsp;$('div#select-address').hide();<br />
+                            &nbsp;&nbsp;$('button#find-address').click(function () {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;$('div#select-address').fadeIn(800);<br />
+                            &nbsp;&nbsp;});<br />
+                            });<br />
+                            &lt;/script&gt;
+                        </code>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>Please note that the font size of &lt;legend&gt; has been reduced to provide hierarchical presentation in this document. The font size as defined on the <a href="components.html#forms">forms section</a> of the components page should used.</li>
+            </ul>
+
+            <!-- ### address lookup start ### -->
+
+
+            <form>
+                <fieldset>
+                    <legend class="uxm">Address lookup example</legend>
+
+                    <div id="address-lookup" class="no-js">
+                        <div>
+                            <label for="txt_postcode-example">
+                                Postcode
+								<span class="hint">To find your address please enter a valid NI postcode and select find address</span>
+                            </label>
+                            <input type="text" id="txt_postcode-example" maxlength="8" class="short" value="BT2 8LW" />
+                            <button class="btn btn-primary btn-small btn-inline" id="find-address" type="button">Find address</button>
+                        </div>
+
+                        <div id="select-address">
+                            <label for="choose-address">Select address</label>
+                            <select name="select-address" id="choose-address" size="5">
+                                <option value="1a Henrietta Street, BELFAST, BT2 8LW">1a Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="1b Henrietta Street, BELFAST, BT2 8LW">1b Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="2 Henrietta Street, BELFAST, BT2 8LW">2 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="3a Henrietta Street, BELFAST, BT2 8LW">3a Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="3b Henrietta Street, BELFAST, BT2 8LW">3b Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="4 Henrietta Street, BELFAST, BT2 8LW">4 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="5 Henrietta Street, BELFAST, BT2 8LW">5 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="6 Henrietta Street, BELFAST, BT2 8LW">6 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="7 Henrietta Street, BELFAST, BT2 8LW">7 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="8 Henrietta Street, BELFAST, BT2 8LW">8 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="9 Henrietta Street, BELFAST, BT2 8LW">9 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="10 Henrietta Street, BELFAST, BT2 8LW">10 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="11 Henrietta Street, BELFAST, BT2 8LW">11 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="12 Henrietta Street, BELFAST, BT2 8LW">12 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="13 Henrietta Street, BELFAST, BT2 8LW">13 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="14 Henrietta Street, BELFAST, BT2 8LW">14 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="15 Henrietta Street, BELFAST, BT2 8LW">15 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="16 Henrietta Street, BELFAST, BT2 8LW">16 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="17 Henrietta Street, BELFAST, BT2 8LW">17 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="18 Henrietta Street, BELFAST, BT2 8LW">18 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="19 Henrietta Street, BELFAST, BT2 8LW">19 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="20 Henrietta Street, BELFAST, BT2 8LW">20 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="22 Henrietta Street, BELFAST, BT2 8LW">22 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="24 Henrietta Street, BELFAST, BT2 8LW">24 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="26 Henrietta Street, BELFAST, BT2 8LW">26 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="28 Henrietta Street, BELFAST, BT2 8LW">28 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="30 Henrietta Street, BELFAST, BT2 8LW">30 Henrietta Street, BELFAST, BT2 8LW</option>
+                                <option value="None">None</option>
+                            </select>
+                        </div>
+
+                        <p>If you cannot find your address, or you live outside of Northern Ireland, please enter your details below.</p>
+                    </div>
+
+                    <div>
+                        <label for="txt_house-no-example">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            Building name or number
+                        </label>
+                        <input id="txt_house-no-example" maxlength="50" type="text" />
+                    </div>
+                    <div>
+                        <label for="txt_street-example">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            Address line 1
+                        </label>
+                        <input id="txt_street-example" maxlength="50" type="text" />
+                    </div>
+                    <div>
+                        <label for="txt_town-example">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            Address line 2
+                        </label>
+                        <input id="txt_town-example" maxlength="50" type="text" />
+                    </div>
+                    <div>
+                        <label for="txt_county-example">
+                            Address line 3
+                        </label>
+                        <input id="txt_county-example" maxlength="50" type="text" />
+                    </div>
+                    <div>
+                        <label for="ddl_country-example">
+                            Country
+                        </label>
+                        <select name="ddl_country" id="ddl_country-example">
+                            <option value="0">--- Please select ---</option>
+                            <optgroup label="Frequently used countries">
+                                <option value="1">Northern Ireland</option>
+                                <option value="2">England</option>
+                                <option value="3">Scotland</option>
+                                <option value="4">Wales</option>
+                                <option value="5">Republic of Ireland</option>
+                                <option value="6">Canada</option>
+                                <option value="7">United States of America</option>
+                            </optgroup>
+                            <optgroup label="All countries">
+                                <option value="8">Afganistan</option>
+                                <option value="9">Andorra</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="txt_enter-postcode-example">
+                            <img src="images/required.gif" class="required" width="11" height="10" alt="Required information" />
+                            Postcode
+                        </label>
+                        <input id="txt_enter-postcode-example" maxlength="50" type="text" class="short" />
+                    </div>
+                </fieldset>
+            </form>
+            <!-- ### postcode lookup end ### -->
+
+            <h2 id="progress" class="uxm">Progress trackers</h2>
+            <ul>
+                <li>Used to guide the visitor through a number of steps to complete a specific process, typically a multi-step form or a checkout/payment process</li>
+                <li>Must be horizontally centered above the primary heading (&lt;h1&gt;)</li>
+                <li>Must not wrap to more than one line </li>
+                <li>Should be considered if there are 3 or more steps</li>
+                <li>If there are a large number steps (eg 8 or above) then you should reconsider the process/journey</li>
+                <li>If the page/window title and primary heading are repeated on each step of a multi-step form then the current step and total steps must be included
+					<code>&lt;title&gt;Step 2 | Order a birth certificate | nidirect&lt;/title&gt;<br />
+                        &lt;h1 id="skip-dest"&gt;Order a birth certificate (Step 2 of 7)&lt;/h1&gt;
+                    </code>
+                </li>
+                <li>The progress tracker can be hidden from view on the small and/or medium layouts if there is not enough screen real estate <strong>and</strong> the primary heading contains both the current and total step numbers (eg Step 2 of 6)</li>
+                <li>Must use the visual styling as per the examples below</li>
+            </ul>
+
+            <h3>Labelled tracker</h3>
+            <p>A labelled step tracker is preferred when:</p>
+            <ul>
+                <li>all steps can be easily defined using one or two words</li>
+                <li>visitors can easily guess the purpose of each step from its label</li>
+                <li>the steps follow a familiar or known convention (eg a checkout or payment process)</li>
+                <li>there are a small number of steps (eg 5 or less)</li>
+                <li>there is enough screen real estate to present each step without the progress tracker looking cluttered, confusing or wraps to additional lines</li>
+            </ul>
+
+            <div class="info-notice visible-phone">Examples and code for labelled progress trackers are not available on small screen devices.</div>
+
+            <div class="progress-tracker hidden-phone">
+                <ol>
+                    <li class="active"><span>Basket</span></li>
+                    <li><span>Delivery</span></li>
+                    <li><span>Payment</span></li>
+                    <li><span>Review and confirm</span></li>
+                </ol>
+            </div>
+
+            <code class="hidden-phone">&lt;div class="progress-tracker hidden-phone"&gt;<br />
+                &nbsp;&nbsp;&lt;ol&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="active"&gt;&lt;span&gt;Basket&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;span&gt;Delivery&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;span&gt;Payment&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;span&gt;Review and confirm&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&lt;/ol&gt;<br />
+                &lt;/div&gt; 
+            </code>
+
+            <div class="progress-tracker hidden-phone">
+                <ol>
+                    <li class="active"><span>Landlord details</span></li>
+                    <li class="active"><span>Properties</span></li>
+                    <li class="active"><span>Declaration</span></li>
+                    <li><span>Summary</span></li>
+                    <li><span>Payment</span></li>
+                </ol>
+            </div>
+
+            <code class="hidden-phone">&lt;div class="progress-tracker hidden-phone"&gt;<br />
+                &nbsp;&nbsp;&lt;ol&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="active"&gt;&lt;span&gt;Landlord details&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="active"&gt;&lt;span&gt;Properties&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="active"&gt;&lt;span&gt;Declaration&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;span&gt;Summary&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;span&gt;Payment&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&lt;/ol&gt;<br />
+                &lt;/div&gt; 
+            </code>
+
+            <h3>Numbered tracker</h3>
+            <p>A numbered step tracker is preferred when:</p>
+            <ul>
+                <li>the individual steps cannot be easily defined using one or two words</li>
+                <li>visitors cannot easily guess the purpose of each step from its label</li>
+                <li>the steps do not follow a familiar or known convention</li>
+                <li>there are a large number of steps (eg 6 or more)</li>
+            </ul>
+            <div class="progress-tracker">
+                <ol>
+                    <li class="active"><span>1</span></li>
+                    <li class="active"><span>2</span></li>
+                    <li class="active"><span>3</span></li>
+                    <li class="active"><span>4</span></li>
+                    <li><span>5</span></li>
+                    <li><span>6</span></li>
+                </ol>
+            </div>
+
+            <code>&lt;div class="progress-tracker"&gt;<br />
+                &nbsp;&nbsp;&lt;ol&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="active"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="active"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="active"&gt;&lt;span&gt;4&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;span&gt;5&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;span&gt;6&lt;/span&gt;&lt;/li&gt;<br />
+                &nbsp;&nbsp;&lt;/ol&gt;<br />
+                &lt;/div&gt;
+            </code>
+
+            <h3>Further reading</h3>
+            <ul>
+                <li><a href="http://www.smashingmagazine.com/2010/01/15/progress-trackers-in-web-design-examples-and-best-design-practices/">Progress trackers in web design: Examples and best practices (Smashing Magazine)</a></li>
+            </ul>
+
+            <h2 id="date-controls" class="uxm">Date controls</h2>
+            <p>Not all dates are the same. Choose a format appropriate for the kind of date you're asking about.</p>
+
+            <h3>Memorable dates</h3>
+            <p>For capturing memorable dates like dates of birth, the simplest option is to provide inputs to select the day and month, and then a text field to type in the year.</p>
+
+            <form>
+                <fieldset>
+                    <div class="form-date">
+                        <div class="form-date-day">
+                            <label for="dob-day">Day</label>
+                            <select name="day" id="day" onchange="" class="input-small" style="width: 70px">
+                                <option value="0">&mdash;</option>
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </div>
+                        <div class="form-date-month">
+                            <label for="dob-month">Month</label>
+                            <select name="month" id="month" onchange="" class="input-small" style="width: 120px">
+                                <option value="0">&mdash;</option>
+                                <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        <div class="form-date-year">
+                            <label for="dob-year">Year</label>
+                            <input autocomplete="off" id="year1" name="year1" type="text" maxlength="4" class="input-small" placeholder="YYYY" style="width: 90px; min-width: 90px" />
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <h3>Approximate dates</h3>
+            <p>If you don't need an exact date and users are likely to struggle to remember it (for example the date you started your first job), make sure you allow users to enter approximate dates like 'June 1996'.</p>
+            <form>
+                <fieldset>
+                    <div class="form-date">
+                        <div class="form-date-month">
+                            <label for="dob-month">Month</label>
+                            <select name="month" id="Select1" onchange="" class="input-small" style="width: 120px">
+                                <option value="0">&mdash;</option>
+                                <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        <div class="form-date-year">
+                            <label for="dob-year">Year</label>
+                            <input autocomplete="off" id="Text1" name="year1" type="text" maxlength="4" class="input-small" placeholder="YYYY" style="width: 90px; min-width: 90px" />
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <h3>Calendar controls</h3>
+            <p>Calendar controls are only appropriate for near past or future dates, where the day of the week is relevant. Their main use case is for appointment booking.</p>
+
+            <form>
+                <fieldset>
+                    <input id="txtAppt" type="text" maxlength="10" class="short" placeholder="DD/MM/YYYY" />
+                </fieldset>
+            </form>
+
+            <div id="dateformat">
+                <h3>Formatting dates</h3>
+                <p>The default date format to use is this one:</p>
+                <ul>
+                    <li>8 July 2014</li>
+                </ul>
+                <p>Periods of time should be formatted like this:</p>
+                <ul>
+                    <li>8 July to 9 August</li>
+                </ul>
+            </div>
+
+            <h2 id="error-pages" class="uxm">Error Pages</h2>
+            
+            <ul>
+                <li>every error, regardless of who is to blame, results in a bad user experience</li>
+                <li>effectively designed error pages can help to nullify that experience</li>
+                <li>error messages should sound like they are written by humans - for humans</li>
+                <li>where possible, an error page should give the user options on what to do next</li>
+            </ul>
+
+            <h3>Not found (404) error message</h3>
+
+            <p>The 404 or 'not found' error message is an HTTP standard response code indicating that the client was able to communicate with a given server, but the server could not find what was requested. The web site hosting server will typically generate a "404 Not Found" web page when a user attempts to follow a broken or dead link</p>
+            <img src="images/404.PNG" width="800" class="showcase" />
+
+            <h3>Internal server (500) error message</h3>
+            <p>The 500 or 'internal server' error message is an error generated by the Web server. It basically means something has gone wrong, but the server cannot be more specific about the error condition in its response to the client. In addition to the 500 error notified back to the client, the Web server should generate some kind of internal error log which gives more details of what went wrong.</p>
+            <img src="images/servererror.PNG" width="800" class="showcase" />
+
+            <h3>Session error message</h3>
+            <p>The session error message will appear after a defined period of client inactivity, or in cases when the user attempts to click the back button after a transaction is complete.
+            Guidance provided by OWASP on <a href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Session_Expiration">session expiration</a> recommends that the period of client inactivity should be dependent on how critical the web application and its data are, and can range from 2 to 5 minutes for high-value applications to 15 to 30 minutes for low risk applications.
+            </p>
+            
+            <img src="images/sessionerror.PNG" width="800" class="showcase" />
+
+            <h3>General error message</h3>
+            <p>The general error message is designed to cover 'catch-all' errors not covered by either the 404 or 500 error messages.</p>
+            <img src="images/error.PNG" width="800" class="showcase" />
+
+        </div>
+        <footer class="footer">
+            <ul>
+                <li><a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" class="elink" title="link opens in a new browser window">&copy;  Crown copyright</a></li>
+                <li><a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" class="elink" title="link opens in a new browser window">Terms and conditions</a></li>
+                <li><a href="http://www.nidirect.gov.uk/privacy" target="_blank" class="elink" title="link opens in a new browser window">Privacy</a></li>
+                <li><a href="http://www.nidirect.gov.uk/cookies" target="_blank" class="elink" title="link opens in a new browser window">Cookies</a></li>
+                <li><a href="release-notes.html">Release notes</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- scroll to top plugin used to improve readability of UXM content only -->
+    <!-- this plugin has been disabled for touch devices -->
+    <!-- this plugin should be removed for a transctional servcie -->
+    <script type="text/javascript" src="js/scrolltopcontrol.js">
+	/*
+	Scroll To Top Control script- &#169; Dynamic Drive DHTML code library (www.dynamicdrive.com)
+	This notice MUST stay intact for legal use
+	Visit Project Page at http://www.dynamicdrive.com for full source code
+	*/
+    </script>
+</body>
+</html>

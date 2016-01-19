@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Principles | User Experience Model (UXM) | nidirect</title>
+
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="favicon.ico" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/nidirect.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/nidirect-responsive.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="css/nidirect-uxm.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="jquery/jquery-ui.css" rel="stylesheet" />
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery/jquery.js" type="text/javascript"></script>
+    <script src="jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/uxm.js" type="text/javascript"></script>
+
+    <!-- html5 shim for ie8 and ie7 -->
+    <!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+    <!-- google analytics for uxm.nidirect.gov.uk -->
+    <!-- do not include in a transactional service without discussing with the transactional services manager first -->
+    <!-- <script type="text/javascript">
+		//<![CDATA[
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-26858713-1']);
+		_gaq.push(['_setDomainName', 'nidirect.gov.uk']);
+		_gaq.push(['_addIgnoredRef', 'nidirect.gov.uk']);
+		_gaq.push(['_gat._anonymizeIP']);
+		_gaq.push(['_setCustomVar', 1, 'Theme', 'Applications', 3]);
+		_gaq.push(['_setCustomVar', 2, 'Sub-theme', 'UXM', 3]);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		//]]>
+	</script> -->
+    <script type="text/javascript">
+        // <![CDATA[
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-26858713-2', 'nidirect.gov.uk');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+        // ]]>
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // remove the no-js class
+            $('body').removeClass('no-js');
+        });
+    </script>
+
+    <!--  MouseStats:Begin  -->
+    <script type="text/javascript">var MouseStats_Commands = MouseStats_Commands ? MouseStats_Commands : []; (function () { function b() { if (void 0 == document.getElementById("__mstrkscpt")) { var a = document.createElement("script"); a.type = "text/javascript"; a.id = "__mstrkscpt"; a.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www2") + ".mousestats.com/js/5/6/5688852133238908385.js?" + Math.floor((new Date).getTime() / 6E5); a.async = !0; a.defer = !0; (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(a) } } window.attachEvent ? window.attachEvent("onload", b) : window.addEventListener("load", b, !1); "complete" === document.readyState && b() })(); </script>
+    <!--  MouseStats:End  -->
+
+</head>
+<body class="no-js">
+    <div class="page">
+        <div class="skipnav"><a href="#skip-dest">Skip to content</a></div>
+
+        <header>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="menu">Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+
+                        <a class="brand" href="http://www.nidirect.gov.uk">
+                            <img src="images/nidirect-logo-small-2x.png" alt="n i direct government services" width="120" height="28" />
+                        </a>
+
+                        <div class="nav-collapse collapse">
+                            <nav class="topnav">
+                                <ul>
+                                    <li><a href="index.html">
+                                        <abbr title="User Experience Model">UXM</abbr>
+                                        home</a></li>
+                                    <!-- <li><a href="principles.html">Principles</a></li>
+									<li><a href="components.html">Components</a></li>
+									<li><a href="design-patterns.html">Design patterns</a></li>
+									<li><a href="resources.html">Resources</a></li>-->
+                                    <li class="dropdown current">
+                                        <a data-target="#" href="principles.html" class="dropdown-toggle" data-toggle="dropdown">Principles<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="principles.html#user-centered">Developing user-centric services</a></li>
+                                            <li><a href="principles.html#applying-the-uxm">Applying the UXM</a></li>
+                                            <li><a href="principles.html#writing-for-transactions">Writing for transactions</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a data-target="#" href="components.html" class="dropdown-toggle" data-toggle="dropdown">Components<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="components.html">Components</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="components.html#design">Design theme</a></li>
+                                            <li><a href="components.html#layout">Responsive layout</a></li>
+                                            <li><a href="components.html#sections">Sections</a></li>
+                                            <li><a href="components.html#typography">Typography</a></li>
+                                            <li><a href="components.html#headings">Headings</a></li>
+                                            <li><a href="components.html#forms">Form elements</a></li>
+                                            <li><a href="components.html#validation">Validation</a></li>
+                                            <li><a href="components.html#buttons">Buttons</a></li>
+                                            <li><a href="components.html#links">Links</a></li>
+                                            <li><a href="components.html#help">Help content</a></li>
+                                            <li><a href="components.html#skipnav">Skip navigation</a></li>
+                                            <li><a href="components.html#info-notice">Information notice</a></li>
+                                            <li><a href="components.html#tables">Tables</a></li>
+                                            <li><a href="components.html#pagination">Pagination</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a data-target="#" href="design-patterns.html" class="dropdown-toggle" data-toggle="dropdown">Design patterns<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="design-patterns.html">Design patterns</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="design-patterns.html#login-registration">Log in / Registration</a></li>
+                                            <li><a href="design-patterns.html#address-lookup1">Address lookup</a></li>
+                                            <li><a href="design-patterns.html#progress">Progress trackers</a></li>
+                                            <li><a href="design-patterns.html#date-controls">Date controls</a></li>
+                                            <li><a href="design-patterns.html#error-pages">Error pages</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a data-target="#" href="resources.html" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="resources.html">Resources</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="resources.html#starter-kit">Starter kit</a></li>
+                                            <li><a href="resources.html#policies">Policies</a></li>
+                                            <li><a href="resources.html#contacts">Contacts</a></li>
+                                            <li><a href="resources.html#reading">Further reading</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="branding">
+                <a href="http://www.nidirect.gov.uk">
+                    <img class="nidirectlogo" src="images/nidirect-logo-2x.png" alt="n i direct government services" width="173" height="57" /></a>
+                <div class="service-name">User Experience Model <span>(v1.3)</span></div>
+            </div>
+        </header>
+
+        <div class="content container">
+
+            <h1 id="skip-dest">Principles</h1>
+
+            <p class="intro">
+                Contractors, developers and
+                <abbr title="Northern Ireland Civil Service">NICS</abbr>
+                Service Managers are encouraged to read and understand the principles for building transactional services on nidirect.
+            </p>
+
+            <ul>
+                <li><a href="#user-centered">Developing user-centric online services</a></li>
+                <li><a href="#applying-the-uxm">Applying the UXM</a></li>
+                <li><a href="#writing-for-transactions">Writing for transactions</a></li>
+            </ul>
+
+            <h2 id="user-centered">Developing user centered online services (draft)</h2>
+            <p>Online transactional services for nidirect must be built around the needs of users and should follow the principles below:</p>
+            <ol>
+                <li>Put user needs before government needs</li>
+                <li>Research - make decisions based on evidence</li>
+                <li>Keep it simple yet intuitive - reduce unnecessary mental effort by the user</li>
+                <li>Only ask for information needed to complete the transaction</li>
+                <li>Adopt an iterative design process - prototype, test and repeat</li>
+                <li>Test with actual users</li>
+            </ol>
+
+            <h2 id="applying-the-uxm" class="uxm">Applying the UXM</h2>
+            <p>To develop applications that comply fully with the nidirect UXM, we recommend that developers use the HTML/CSS and JS templates and examples provided in the <a href="resources.html#starter-kit">UXM starter kit</a>.</p>
+            <p>If developers wish to use their own html/css framework other than that provided in the UXM they must comply with the following principles:</p>
+            <ul>
+                <li>The design of the UXM, in terms of the layout, structure (HTML), styling (CSS) and behaviour (JS), must be matched as closely as possible.</li>
+                <li>Developers must use the UXM as a reference point. Use the developer tools in your favourite browser to inspect the HTML/CSS/JS of the UXM and also refer to guidance for UXM <a href="components.html">components</a> and <a href="design-patterns.html">design patterns</a>. It is unlikely that direct support will be provided.</li>
+                <li>Any deviation from the UXM visual design as presented here and in the UXM starter kit will be treated as a defect unless the deviation has been planned and agreed with the <a href="resources.html#contacts">nidirect Transactional Services Manager</a>.</li>
+                <li>This UXM should also be applied to Commercial Off The Shelf (COTS) products, where possible. Advice should be sought from the <a href="resources.html#contacts">nidirect Transactional Services Manager</a> prior to commencing design changes.</li>
+            </ul>
+
+            <p>Links for further reading have been provided to help aid understanding.</p>
+
+            <h3>Twitter Bootstrap</h3>
+            <p>
+                This initial version of the UXM is (loosely) built upon Twitter Bootstrap v2.3.2.  However, not all components available in Twitter Bootstrap are available to use in the UXM. The components available for nidirect transactional services can be found on the <a href="components.html">components page</a>
+            .
+			<p>Whilst the list of available components and alignment with Twitter Bootstrap is expected to grow in future versions of the UXM, specific requests can be made to the  <a href="resources.html#contacts">nidirect Transactional Services Manager.</a></p>
+
+            <h4>Further reading</h4>
+            <ul>
+                <li><a href="http://getbootstrap.com">Twitter Bootstrap</a>
+            </ul>
+
+            <h3>Browser support</h3>
+
+            <p>Transactional services built for nidirect must be tested and be fully compliant on the following browsers:</p>
+
+            <h4>Desktop</h4>
+            <ul>
+                <li>Internet Explorer 8+ - Windows</li>
+                <li>Google Chrome (latest version) - Windows and Mac OS X</li>
+                <li>Mozilla Firefox (latest version) - Windows and Mac OS X</li>
+                <li>Apple Safari (latest version) - Windows and Mac OS X</li>
+            </ul>
+
+            <h4>Small screen devices</h4>
+            <ul>
+                <li>Apple Safari (latest version) - iOS 6 and iOS 7</li>
+                <li>Google Chrome (latest version) - Android 4.x</li>
+                <li>Android browser - Android 4.x</li>
+            </ul>
+
+            <p>This list is based on statistics from www.nidirect.gov.uk and represents over 95% of all desktop browsers. The remaining browsers are individually insignificant. Where 'latest version' is listed, it means the latest stable version plus one version back, as these browsers regularly self-update.</p>
+
+            <h2 id="writing-for-transactions" class="uxm">Writing for transactions</h2>
+
+            <h3 id="writing-microcopy">Writing microcopy</h3>
+            <p>Microcopy is the term given to the short words or phrases used during transactions, for things like buttons, form labels, help text, alerts and questions.</p>
+
+            <h4>General guidance</h4>
+            <ul>
+                <li>Think about your audience</li>
+                <li>Use sentence case</li>
+                <li>Keep the language simple. Don't use long or complicated words when easy or short ones will do – use 'buy' instead of 'purchase', 'about' instead of 'approximately', 'like' instead of 'such as', 'record' instead of 'index'</li>
+                <li>Avoid using jargon, for example technical or legal language</li>
+                <li>Use an active voice (not passive), for example, 'Complete the section below', or 'Check that your details are correct'</li>
+                <li>Use 'you' not 'they' when giving instructions or confirming a successful transaction, for example, 'Your payment has been accepted'</li>
+                <li>Avoid Americanisms and American spelling</li>
+                <li>Don't use abbreviations which could be confusing or misinterpreted – Co, Tel and No. should be written in full as county, telephone or phone, and number</li>
+                <li>Don't use 'please' on labels - but give polite, clear, short instructions</li>
+                <li>Don't use colons after labels</li>
+                <li>Don't add 'your' to labels, for example: 'Your name', 'Your address', unless you have a page with multiple people where you need to differentiate - for example: 'your name', 'partner name'</li>
+                <li>You can use contractions like 'you'll' instead of 'you will', or 'don't' instead of 'do not'</li>
+            </ul>
+
+            <h4 id="asking-for-personal-details">Asking for personal details</h4>
+            <ul>
+                <li>'First name' not 'Christian name'</li>
+                <li>'Middle names'</li>
+                <li>'Last name' not 'Family name'</li>
+                <li>'Age'</li>
+                <li>'Date of birth' (not 'DOB')</li>
+            </ul>
+
+            <h3 id="writing-help-text">Writing help text</h3>
+            <p>Your first strategy when it comes to help text is to design a service that's so intuitive it doesn't need any. For this reason it helps to stick to interface design conventions where possible. Avoid innovation for its own sake - the real innovation is an easy to use government service.</p>
+
+            <p>Sometimes though, users need a little help. Here are some ways of providing it.</p>
+
+            <h4 id="inline-help">Inline help</h4>
+            <form>
+                <div>
+                    <label for="txt-textinput">
+                        <img src="images/required.gif" class="required" alt="Required information" />
+                        Telephone
+						<span class="hint">Include your country code</span>
+                    </label>
+                    <input id="txt-textinput" type="text" maxlength="50" />
+                </div>
+            </form>
+
+            <p>Use this to provide examples for unfamiliar information requests or formats.</p>
+
+            <h4 id="progressive-disclosure">Progressive disclosure</h4>
+            <p>This refers to help that appear on a page when the user interacts with a link, but remains hidden otherwise. It's useful for delivering important help to some users, without distracting or confusing everyone else. For this reason it's particularly useful for dealing with edge case user scenarios.</p>
+
+            <h4 id="pop-up-help-window">Pop-up help window</h4>
+            <p>This is the nuclear option and should only be considered as a last resort. Popups or lightboxes should ONLY be used for delivering help relating to the concepts or terminology involved in a service or transaction. If you're using one to explain how to USE a service then you need to go back and make the interface more intuitive.</p>
+
+            <h3 id="transaction-start-pages">Transaction start pages</h3>
+            <p>The start point for any nidirect.gov.uk transaction should be a start page on the nidirect.gov.uk core site. Users should not be able to jump to a later page in the service via some other means (eg Google).</p>
+
+            <p>The start page should be designed in conjunction with the <a href="resources.html#contacts">nidirect Central Editorial Team</a> to meet the following goals.</p>
+
+            <h4 id="describe-the-service">Describe the service</h4>
+            <p>The page should include the name of the service, expressed as an action if possible ('Renew your passport', 'Claim for disability allowance', 'Book a driving test' etc.). If needed, it should include a very brief description of the service.</p>
+
+            <h4 id="set-expectations">Set expectations</h4>
+            <p>People will tend to base their expectations of what a transaction involves on their experience of other digital transactions, for example, online shopping and banking.</p>
+            <p>If your service has features that do not match these expectations then users should be informed of this as early on as possible, ideally on the start screen.</p>
+            <p>Users should be told about any financial costs or long waiting periods involved. If they'll be asked to provide relatively obscure information they’ll need to know so they can get it ready.</p>
+            <p>If there are specific eligibility requirements for the service let people know. If the eligibility requirements are complex you should discuss additional explanatory text with the <a href="resources.html#contacts">nidirect Central Editorial Team</a> at the outset.</p>
+            <p>It's better to ask a few questions up front (and explain why you're doing this) than to let people invest time and effort in a transaction only to discover part way through that they're not eligible to use it.</p>
+
+            <h3 id="transaction-end-pages">Transaction end pages</h3>
+            <p>The end point of any transaction should, where feasible, be a page on the www.nidirect.gov.uk domain.</p>
+            <p>This page should be designed in conjunction with the <a href="resources.html#contacts">nidirect Central Editorial Team</a> and should let the user know:</p>
+
+            <ul>
+                <li>that they have successfully completed the transaction</li>
+                <li>what further actions they need to perform, and when</li>
+                <li>what further actions they can expect from the service, and when</li>
+                <li>who they should contact with any queries or complaints</li>
+                <li>about any related information and services</li>
+            </ul>
+
+            <h3 id="further-reading">Further reading</h3>
+            <ul>
+                <li><a href="http://www.formsthatwork.com/TheArtOfWritingVeryLittle">The art of writing very little (Forms that work)</a></li>
+                <li><a href="http://uxdesign.smashingmagazine.com/2013/06/17/five-ways-prevent-bad-microcopy/">Five ways to prevent bad microcopy (Smashing Magazine)</a></li>
+                <li><a href="https://www.gov.uk/designprinciples/styleguide">Government Digital Service Content principles (GOV.UK)</a></li>
+            </ul>
+            <p><small>Credit: <a href="https://www.gov.uk/service-manual/user-centered-design/resources/writing-for-transactions.html">https://www.gov.uk/service-manual/user-centered-design/resources/writing-for-transactions.html</a></small></p>
+
+        </div>
+
+        <footer class="footer">
+            <ul>
+                <li><a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" class="elink" title="link opens in a new browser window">&copy;  Crown copyright</a></li>
+                <li><a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" class="elink" title="link opens in a new browser window">Terms and conditions</a></li>
+                <li><a href="http://www.nidirect.gov.uk/privacy" target="_blank" class="elink" title="link opens in a new browser window">Privacy</a></li>
+                <li><a href="http://www.nidirect.gov.uk/cookies" target="_blank" class="elink" title="link opens in a new browser window">Cookies</a></li>
+                <li><a href="release-notes.html">Release notes</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- scroll to top plugin used to improve readability of UXM content only -->
+    <!-- this plugin has been disabled for touch devices -->
+    <!-- this plugin should be removed for a transctional servcie -->
+    <script type="text/javascript" src="js/scrolltopcontrol.js">
+	/*
+	Scroll To Top Control script- &#169; Dynamic Drive DHTML code library (www.dynamicdrive.com)
+	This notice MUST stay intact for legal use
+	Visit Project Page at http://www.dynamicdrive.com for full source code
+	*/
+    </script>
+
+</body>
+</html>
