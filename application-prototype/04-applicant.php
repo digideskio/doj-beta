@@ -7,6 +7,8 @@
 <div class="content container">
     <h1>Applicant's details</h1>
 
+    <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
+
     <form action="post">
         <fieldset>
             <div class="control-group">
@@ -116,7 +118,7 @@
 
 
         <div class="button-group">
-            <a href="03.php" class="btn btn-secondary arrowl">Back</a> <a href="04-applicant-address.php" class="btn btn-primary arrowr">Next</a>
+            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="04-applicant-address.php" class="btn btn-primary arrowr">Next</a>
         </div>
     </form>
 

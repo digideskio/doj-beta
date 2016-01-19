@@ -5,11 +5,11 @@ function toggle() {
     var imageEle = document.getElementById("imageDivLink");
     if (ele.style.display == "block") {
         ele.style.display = "none";
-        imageEle.innerHTML = '<img class="help-caret" src="images/arrow-down.png">This is an example of displaying help using progressive disclosure.';
+        imageEle.innerHTML = '<img class="help-caret" src="/images/arrow-down.png">This is an example of displaying help using progressive disclosure.';
     }
     else {
         ele.style.display = "block";
-        imageEle.innerHTML = '<img class="help-caret" src="images/arrow-up.png">This is an example of displaying help using progressive disclosure.';
+        imageEle.innerHTML = '<img class="help-caret" src="/images/arrow-up.png">This is an example of displaying help using progressive disclosure.';
     }
 }
 
