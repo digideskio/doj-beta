@@ -7,9 +7,6 @@
 <div class="content container">
     <h1>Do you want to nominate a representative?</h1>
     <p class="text">
-      If you are over 18 and able to handle your own affairs you may still ask someone to act as your representative in all matters related to your claim for compensation.
-    </p>
-    <p class="text">
       If you choose someone to represent you we will send all correspondence (letters and so on) direct to them. You are still responsible for the information your representative gives us.
     </p>
     <form action="post">
