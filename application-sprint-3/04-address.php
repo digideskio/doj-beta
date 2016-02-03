@@ -1,15 +1,15 @@
 <?php
     $bodyclass = "";
-    $documenttitle = "Apply for compensation &middot; Representative's contact details";
+    $documenttitle = "Apply for compensation &middot; Victim's address";
     include_once("../includes/header-app-prototype.php");
 ?>
 
 <div class="content container">
-    <h1>Representative's contact details</h1>
+    <h1>Claimant's contact details</h1>
 
     <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
 
-    <form action="post">
+    <form action="post" class="form">
             <fieldset>
                     <div class="control-group">
                         <label class="form-label"><img class="required" src="/images/required.gif"> Address line 1</label>
@@ -303,7 +303,7 @@
 
 
         <div class="button-group">
-            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a onclick='alert("Journey complete")'; class="btn btn-primary arrowr">Next</a>
+            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="05-nominate-rep.php" class="btn btn-primary arrowr">Next</a>
         </div>
     </form>
 

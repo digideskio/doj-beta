@@ -1,11 +1,11 @@
 <?php
     $bodyclass = "";
-    $documenttitle = "Apply for compensation &middot; Applicant's details";
+    $documenttitle = "Apply for compensation &middot; Representative's details";
     include_once("../includes/header-app-prototype.php");
 ?>
 
 <div class="content container">
-    <h1>Applicant's details</h1>
+    <h1>Representative's details</h1>
 
     <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
 
@@ -50,24 +50,49 @@
             <div class="control-group">
                 <label class="form-label" for="ddl_title">
                     <img src="/images/required.gif" class="required" alt="Required information">
-                    Your relationship to the claimant</label>
+                    Organisation</label>
                 <select name="ddl_title" id="ddl_title">
                     <option value="0">--- Please select ---</option>
-                    <option value="Mr">I work for Victim Support NI</option>
-                    <option value="Mrs">I work for Citizens Advice</option>
-                    <option value="Miss">I am a Solicitor</option>
-                    <option value="Miss">Relative</option>
-                    <option value="Friend">Friend</option>
+                    <option value="Mr">Victim Support NI</option>
+                    <option value="Mrs">Citizens Advice</option>
+                    <option value="Miss">Solicitor</option>
+                    <option value="Miss">Relative or friend</option>
                     <option value="Miss">Other</option>
                 </select>
             </div>
+
+            <div class="control-group">
+                <label class="form-label" for="txt_firstname">
+                    Other organisation / name of firm
+                </label>
+                <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
+            </div>
+
+            <div class="control-group">
+                <label class="form-label" for="txt_firstname">
+                    Document exchange (DX) number
+                </label>
+                <span class="hint">If you are a solicitor, please fill in your DX number</span>
+                <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
+            </div>
+
+            <div class="control-group">
+                <label class="form-label" for="txt_firstname">
+                    Your reference number
+                </label>
+                <span class="hint">If you want us to give a reference number when we write to you</span>
+                <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
+            </div>
+
+
+
 
         </fieldset>
 
 
 
         <div class="button-group">
-            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="04-applicant-relationship.php" class="btn btn-primary arrowr">Next</a>
+            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="07-rep-address.php" class="btn btn-primary arrowr">Next</a>
         </div>
     </form>
 

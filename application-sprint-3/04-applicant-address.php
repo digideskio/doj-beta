@@ -1,22 +1,22 @@
 <?php
     $bodyclass = "";
-    $documenttitle = "Apply for compensation &middot; Representative's contact details";
+    $documenttitle = "Apply for compensation &middot; Applicant's contact details";
     include_once("../includes/header-app-prototype.php");
 ?>
 
 <div class="content container">
-    <h1>Representative's contact details</h1>
+    <h1>Applicant's contact details</h1>
 
     <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
 
     <form action="post">
             <fieldset>
                     <div class="control-group">
-                        <label class="form-label"><img class="required" src="/images/required.gif"> Address line 1</label>
+                        <label class="form-label"><img class="required" src="../Images/required.gif"> Address line 1</label>
                         <input data-val="true" data-val-length="Address line 1 must be between 2 and 100 characters" data-val-length-max="100" data-val-length-min="2" data-val-required="Enter address line 1" id="AddressLine1" name="AddressLine1" type="text" value="">
                     </div>
                     <div class="control-group">
-                        <label class="form-label"><img class="required" src="/images/required.gif"> Address line 2</label>
+                        <label class="form-label"><img class="required" src="../Images/required.gif"> Address line 2</label>
                         <input data-val="true" data-val-length="Address line 2 must be between 2 and 100 characters" data-val-length-max="100" data-val-length-min="2" data-val-required="Enter address line 2" id="AddressLine2" name="AddressLine2" type="text" value="">
                     </div>
                     <div class="control-group">
@@ -28,7 +28,7 @@
                         <input data-val="true" data-val-length="Postcode must be less than 10 characters" data-val-length-max="10" id="Postcode" name="Postcode" type="text" value="">
                     </div>
                     <div class="control-group dropdown-wide">
-                        <label class="form-label"><img class="required" src="/images/required.gif"> Country</label>
+                        <label class="form-label"><img class="required" src="../Images/required.gif"> Country</label>
                         <select data-val="true" data-val-required="Select a country" id="Country" name="Country"><option value="">-- Please select --</option>
             <optgroup label="Frequently used countries">
             <option value="Northern&nbsp;Ireland">Northern&nbsp;Ireland</option>
@@ -303,7 +303,7 @@
 
 
         <div class="button-group">
-            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a onclick='alert("Journey complete")'; class="btn btn-primary arrowr">Next</a>
+            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="05-nominate-rep.php" class="btn btn-primary arrowr">Next</a>
         </div>
     </form>
 

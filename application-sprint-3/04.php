@@ -1,15 +1,18 @@
 <?php
     $bodyclass = "";
-    $documenttitle = "Apply for compensation &middot; Representative's details";
+    $documenttitle = "Apply for compensation &middot; Victim's details";
     include_once("../includes/header-app-prototype.php");
 ?>
 
 <div class="content container">
-    <h1>Representative's details</h1>
+    <h1>Claimant's details</h1>
+
+    <p class="text">The claimant is the person claiming compensation.</p>
 
     <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
 
-    <form action="post">
+
+    <form action="post" class="form">
         <fieldset>
             <div class="control-group">
                 <label class="form-label" for="ddl_title">
@@ -26,6 +29,7 @@
             </div>
             <div class="control-group">
                 <label class="form-label" for="txt_firstname">
+                    <img src="/images/required.gif" class="required" alt="Required information">
                     Other title
                 </label>
                 <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
@@ -46,53 +50,61 @@
                 <!-- <span class="validation-error">name is required</span> -->
                 <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
             </div>
-
+            <div class="control-group">
+                <label class="form-label" for="txt_firstname">
+                    Other surnames
+                </label>
+                <span class="hint">Maiden name or other surnames you have used</span>
+                <!-- <span class="validation-error">name is required</span> -->
+                <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
+            </div>
             <div class="control-group">
                 <label class="form-label" for="ddl_title">
                     <img src="/images/required.gif" class="required" alt="Required information">
-                    Organisation</label>
+                    Marital status</label>
                 <select name="ddl_title" id="ddl_title">
                     <option value="0">--- Please select ---</option>
-                    <option value="Mr">Victim Support NI</option>
-                    <option value="Mrs">Citizens Advice</option>
-                    <option value="Miss">Solicitor</option>
-                    <option value="Miss">Relative or friend</option>
+                    <option value="Mr">Single</option>
+                    <option value="Mrs">Married</option>
+                    <option value="Miss">Widowed</option>
+                    <option value="Ms">Divorced</option>
+                    <option value="Dr">Separated</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="form-label" for="ddl_title">
+                    <img src="/images/required.gif" class="required" alt="Required information">
+                    Gender</label>
+                <select name="ddl_title" id="ddl_title">
+                    <option value="0">--- Please select ---</option>
+                    <option value="Mr">Female</option>
+                    <option value="Mrs">Male</option>
                     <option value="Miss">Other</option>
                 </select>
             </div>
+            <fieldset><label class="form-label"><img src="/images/required.gif" alt="Indicates a required field"> Date of birth</label><div class="form-date"><div class="form-group"><label for="dob-day">Day</label><input autocomplete="Off" class="input-small" id="DobDay" maxlength="2" name="DobDay" placeholder="DD" type="text" value=""></div><div class="form-group"><label for="dob-month">Month</label><input autocomplete="Off" class="input-small" id="DobMonth" maxlength="2" name="DobMonth" placeholder="MM" type="text" value=""></div><div class="form-group"><label for="dob-year">Year</label><input autocomplete="Off" class="input-small" id="DobYear" maxlength="4" name="DobYear" placeholder="YYYY" type="text" value=""></div></div></fieldset>
 
             <div class="control-group">
                 <label class="form-label" for="txt_firstname">
-                    Other organisation
+                    National Insurance number
                 </label>
-                <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
+                <span class="hint">It's on your National Insurance card, benefit letter, payslip or P60. <br>For example, 'QQ 12 34 56 C'</span>
+                <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
             </div>
 
             <div class="control-group">
                 <label class="form-label" for="txt_firstname">
-                    Document exchange (DX) number
+                    Occupation
                 </label>
-                <span class="hint">If you are a solicitor, please fill in your DX number</span>
-                <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
+                <!-- <span class="validation-error">name is required</span> -->
+                <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
             </div>
-
-            <div class="control-group">
-                <label class="form-label" for="txt_firstname">
-                    Your reference number
-                </label>
-                <span class="hint">If you want us to give a reference number when we write to you</span>
-                <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
-            </div>
-
-
-
-
         </fieldset>
 
 
 
         <div class="button-group">
-            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="07-rep-address.php" class="btn btn-primary arrowr">Next</a>
+            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="04-address.php" class="btn btn-primary arrowr">Next</a>
         </div>
     </form>
 

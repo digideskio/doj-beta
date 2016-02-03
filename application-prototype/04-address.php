@@ -12,10 +12,6 @@
     <form action="post">
             <fieldset>
                     <div class="control-group">
-                        <label class="form-label"><img class="required" src="/images/required.gif"> Building name or number</label>
-                        <input data-val="true" data-val-length="Building name or number must be between 1 and 100 characters" data-val-length-max="100" data-val-length-min="1" data-val-required="Enter building name or number" id="BuildingNameOrNumber" name="BuildingNameOrNumber" type="text" value="">
-                    </div>
-                    <div class="control-group">
                         <label class="form-label"><img class="required" src="/images/required.gif"> Address line 1</label>
                         <input data-val="true" data-val-length="Address line 1 must be between 2 and 100 characters" data-val-length-max="100" data-val-length-min="2" data-val-required="Enter address line 1" id="AddressLine1" name="AddressLine1" type="text" value="">
                     </div>
