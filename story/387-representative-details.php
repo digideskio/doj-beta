@@ -93,7 +93,7 @@
                 <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
             </div>
 
-            <div class="control-group">
+            <div class="control-group not-required">
                 <label class="form-label" for="txt_firstname">
                     Document exchange (DX) number
                 </label>
@@ -101,7 +101,7 @@
                 <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
             </div>
 
-            <div class="control-group">
+            <div class="control-group not-required">
                 <label class="form-label" for="txt_firstname">
                     Your reference number
                 </label>
@@ -131,6 +131,7 @@
 function validateInputs() {
     $('.control-group').addClass('validation');
     $('.control-group .validation-error,.validation-summary').removeClass('js-hidden');
+    $('.control-group.not-required').removeClass('validation');
 }
 function unvalidateInputs() {
     $('.control-group').removeClass('validation');

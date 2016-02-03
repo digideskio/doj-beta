@@ -113,7 +113,7 @@
             <fieldset class="control-group" id="8"><label class="form-label"><img src="/images/required.gif" alt="Indicates a required field"> Date of birth</label>
                 <span class="validation-error js-hidden">Enter a date of birth ** Date of birth must be a date in the past</span><div class="form-date"><div class="form-group"><label for="dob-day">Day</label><input autocomplete="Off" class="input-small" id="DobDay" maxlength="2" name="DobDay" placeholder="DD" type="text" value=""></div><div class="form-group"><label for="dob-month">Month</label><input autocomplete="Off" class="input-small" id="DobMonth" maxlength="2" name="DobMonth" placeholder="MM" type="text" value=""></div><div class="form-group"><label for="dob-year">Year</label><input autocomplete="Off" class="input-small" id="DobYear" maxlength="4" name="DobYear" placeholder="YYYY" type="text" value=""></div></div></fieldset>
 
-            <div class="control-group">
+            <div class="control-group not-required">
                 <label class="form-label" for="txt_firstname">
                     National Insurance number
                 </label>
@@ -121,7 +121,7 @@
                 <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
             </div>
 
-            <div class="control-group">
+            <div class="control-group not-required">
                 <label class="form-label" for="txt_firstname">
                     Occupation
                 </label>
@@ -147,6 +147,7 @@
 function validateInputs() {
     $('.control-group').addClass('validation');
     $('.control-group .validation-error,.validation-summary').removeClass('js-hidden');
+    $('.control-group.not-required').removeClass('validation');
 }
 function unvalidateInputs() {
     $('.control-group').removeClass('validation');
