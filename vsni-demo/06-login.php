@@ -24,17 +24,17 @@
         <input name="__RequestVerificationToken" type="hidden" value="zWjIOyzgPzbGuv76H4MA3mfiAQIFm5cJ9MUXoKXoXdAuOHKo-d69COIAm36iZqGGB8m9A5W5sDb2bXgZjA4lXJBI3F8bvVt4KUmI308GRmM1">
 
         <div>
-            <img src="/imagess/required.gif" alt="Required"> Indicates a required field
+            <img src="/images/required.gif" alt="Required"> Indicates a required field
         </div>
 
         <div class="control-group ">
-            <label class="form-label" for="Username"><img alt="Required information" src="/imagess/required.gif"> Email address </label>
+            <label class="form-label" for="Username"><img alt="Required information" src="/images/required.gif"> Email address </label>
 
             <input class="text-box single-line" id="Username" name="Username" type="text" value="g.dempsey@kainos.com">
         </div>
 
         <div class="control-group ">
-            <label class="form-label" for="Password"><img alt="Required information" src="/imagess/required.gif"> Password </label>
+            <label class="form-label" for="Password"><img alt="Required information" src="/images/required.gif"> Password </label>
 
             <input autocomplete="off" id="Password" name="Password" type="password" value="password">
         </div>
