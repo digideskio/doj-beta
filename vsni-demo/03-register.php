@@ -179,7 +179,7 @@ These classes area input the wrong CSS file in the UXM, so are excluded from the
         </div>
 
         <div class="control-group ">
-            <label class="form-label" for="FirstName"><img alt="Required information" src="/Images/required.gif"> First name </label>
+            <label class="form-label" for="FirstName"><img alt="Required information" src="/images/required.gif"> First name </label>
 
             <input class="text-box single-line" id="FirstName" name="FirstName" type="text" value="">
         </div>
@@ -191,13 +191,13 @@ These classes area input the wrong CSS file in the UXM, so are excluded from the
         </div>
 
         <div class="control-group ">
-            <label class="form-label" for="LastName"><img alt="Required information" src="/Images/required.gif"> Last name </label>
+            <label class="form-label" for="LastName"><img alt="Required information" src="/images/required.gif"> Last name </label>
 
             <input class="text-box single-line" id="LastName" name="LastName" type="text" value="">
         </div>
 
         <div class="noBottomMargin control-group ">
-            <div class="form-label"><img src="/Images/required.gif" alt="Required"> Date of birth</div>
+            <div class="form-label"><img src="/images/required.gif" alt="Required"> Date of birth</div>
 
 
             <div class="divForDOBDay">
@@ -262,25 +262,25 @@ These classes area input the wrong CSS file in the UXM, so are excluded from the
         </div>
 
         <div class="control-group ">
-            <label class="form-label" for="Username"><img alt="Required information" src="/Images/required.gif"> Your email address <span class="hint">Your email address will be used when signing in</span></label>
+            <label class="form-label" for="Username"><img alt="Required information" src="/images/required.gif"> Your email address <span class="hint">Your email address will be used when signing in</span></label>
 
             <input class="text-box single-line" id="Username" name="Username" type="email" value="">
         </div>
 
         <div class="control-group ">
-            <label class="form-label" for="ConfirmUsername"><img alt="Required information" src="/Images/required.gif"> Re-type your email address </label>
+            <label class="form-label" for="ConfirmUsername"><img alt="Required information" src="/images/required.gif"> Re-type your email address </label>
 
             <input class="text-box single-line" id="ConfirmUsername" name="ConfirmUsername" type="text" value="">
         </div>
 
         <div class="control-group ">
-            <label class="form-label" for="Password"><img alt="Required information" src="/Images/required.gif"> Create a password <span class="hint">Your password must be at least 8 characters, contain an uppercase letter, a lowercase letter and one number</span></label>
+            <label class="form-label" for="Password"><img alt="Required information" src="/images/required.gif"> Create a password <span class="hint">Your password must be at least 8 characters, contain an uppercase letter, a lowercase letter and one number</span></label>
 
             <input autocomplete="off" id="Password" name="Password" type="password">
         </div>
 
         <div class="control-group ">
-            <label class="form-label" for="ConfirmPassword"><img alt="Required information" src="/Images/required.gif"> Re-type your password </label>
+            <label class="form-label" for="ConfirmPassword"><img alt="Required information" src="/images/required.gif"> Re-type your password </label>
 
             <input autocomplete="off" id="ConfirmPassword" name="ConfirmPassword" type="password">
         </div>
