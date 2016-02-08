@@ -28,13 +28,13 @@
         </div>
 
         <div class="control-group ">
-            <label class="form-label" for="Username"><img alt="Required information" src="/Images/required.gif"> Email address </label>
+            <label class="form-label" for="Username"><img alt="Required information" src="/images/required.gif"> Email address </label>
 
             <input class="text-box single-line" id="Username" name="Username" type="text" value="">
         </div>
 
         <div class="control-group ">
-            <label class="form-label" for="Password"><img alt="Required information" src="/Images/required.gif"> Password </label>
+            <label class="form-label" for="Password"><img alt="Required information" src="/images/required.gif"> Password </label>
 
             <input autocomplete="off" id="Password" name="Password" type="password">
         </div>
