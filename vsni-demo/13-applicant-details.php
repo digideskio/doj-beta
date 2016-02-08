@@ -105,7 +105,7 @@
 
 
         <div class="button-group">
-            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="04-applicant-relationship.php" class="btn btn-primary arrowr">Next</a>
+            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="14-applicant-contact.php" class="btn btn-primary arrowr">Next</a>
         </div>
     </form>
 

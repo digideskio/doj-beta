@@ -88,7 +88,7 @@
                 <label class="form-label" for="txt_firstname">
                     National Insurance number
                 </label>
-                <span class="hint">It's on your National Insurance card, benefit letter, payslip or P60. <br>For example, 'QQ 12 34 56 C'</span>
+                <span class="hint">It's on your National Insurance card, benefit letter, payslip or P60. <br>For example, 'QQ123456C'</span>
                 <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
             </div>
 

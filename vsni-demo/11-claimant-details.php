@@ -12,7 +12,7 @@
     <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
 
 
-    <form action="post">
+    <form action="post" class="form">
         <fieldset>
             <div class="control-group">
                 <label class="form-label" for="ddl_title">
@@ -104,7 +104,7 @@
 
 
         <div class="button-group">
-            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="04-address.php" class="btn btn-primary arrowr">Next</a>
+            <a onclick="history.go(-1);" class="btn btn-secondary arrowl">Back</a> <a href="12-claimant-contact.php" class="btn btn-primary arrowr">Next</a>
         </div>
     </form>
 
