@@ -29,21 +29,21 @@
     <td><a href="08-case-detail.php">CI123/14</a></td>
     <td>12/03/2014</td>
     <td>Miss Anna Bloggs</td>
-    <td>Police Report received</td>
+    <td>Registered</td>
 </tr>
 
 <tr>
     <td><a href="08-case-detail.php">CD111/16</a></td>
     <td>12/01/2016</td>
     <td>Mr Jon Gold</td>
-    <td>Accepted</td>
+    <td>Police Report received</td>
 </tr>
 
 <tr>
-    <td><a href="08-case-detail.php">CD005/15</a></td>
+    <td><a href="08-case-detail-3.php">CD005/15</a></td>
     <td>12/07/2015</td>
     <td>Mrs Nuala O'Rawe</td>
-    <td>Rejected</td>
+    <td>Denied / Award issued</td>
 </tr>
 </table>
 
