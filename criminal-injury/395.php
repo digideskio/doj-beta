@@ -5,35 +5,14 @@
 ?>
 
 <div class="content container">
-    <h1>Reporting the incident to the police</h1>
+    <h1>Reporting the incident to an authority other than the police</h1>
     <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
 
 
     <form action="post" class="form">
 
         <div class="control-group">
-            <p class="form-label text">Did the claimant tell the police about the incident?</p>
-            <div class="form-group inline">
-              <label class="block-label" for="r1">
-                <input id="r1" name="radio-indent-group" value="1" type="radio">
-                Yes
-              </label>
-              <label class="block-label" data-target="permit-form" for="r2">
-                <input id="r2" name="radio-indent-group" value="2" type="radio">
-                No
-              </label>
-            </div>
-          </div>
-        <!-- /date time control group -->
-
-        <!-- /control-group incident range -->
-        <div class="control-group">
-          <label for="names" class="form-label">Why did the claimant not tell the police in person?</label>
-          <textarea name="names" id="names" cols="30" rows="5"></textarea>
-        </div>
-
-        <div class="control-group">
-            <p class="form-label text">Did the claimant tell the police about the incident in person?</p>
+            <p class="form-label text">Did the claimant report the incident in person?</p>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -46,7 +25,7 @@
             </div>
         </div>
 
-        <p class="form-label text">If 'No' was selected above, who reported the incident to the police? <br><br></p>
+        <p class="form-label text">If 'No' was selected above, who reported the incident to the other authority? <br><br></p>
 
         <div class="control-group">
             <label class="form-label" for="ddl_title">
@@ -82,12 +61,21 @@
         </div>
 
         <div class="control-group">
-          <label for="names" class="form-label">Why did the claimant not tell the police about the incident in person?</label>
+          <label for="names" class="form-label">Why did the claimant not tell the authority in person?</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
         <div class="control-group">
-            <div class="form-label">When were the police first told about the incident?</div>
+          <label for="names" class="form-label"><img src="/images/required.gif" class="required" alt="Required information"> Who was the incident reported to?</label>
+          <textarea name="names" id="names" cols="30" rows="5"></textarea>
+        </div>
+
+
+
+
+
+        <div class="control-group">
+            <div class="form-label">When was the incident first reported?</div>
             <!-- <span class="validation-error">date of birth can not be after incident date</span> -->
             <div class="form-date">
                 <div class="form-date-day">
@@ -255,36 +243,12 @@
         </div>
 
         <div class="control-group">
-          <label for="names" class="form-label">If the police were not told about the incident immediately, explain why</label>
+          <label for="names" class="form-label text">If the incident was not reported immediately after it happened, explain why</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
         <div class="control-group">
-            <label class="form-label" for="txt_firstname">
-                Which police station has details of the incident?
-            </label>
-            <!-- <span class="validation-error">name is required</span> -->
-            <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
-        </div>
-
-        <div class="control-group">
-            <label class="form-label" for="txt_firstname">
-                What is the name of the officer the incident was reported to
-            </label>
-            <!-- <span class="validation-error">name is required</span> -->
-            <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
-        </div>
-
-        <div class="control-group">
-            <label class="form-label" for="txt_firstname">
-                Police serial number for the incident
-            </label>
-            <!-- <span class="validation-error">name is required</span> -->
-            <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
-        </div>
-
-        <div class="control-group">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Did the claimant make a written statement to the police?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Did the claimant make a written statement?</p>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -296,25 +260,6 @@
               </label>
             </div>
           </div>
-
-          <div class="control-group">
-            <label for="names" class="form-label">Explain why the claimant has not made a statement to the police</label>
-            <textarea name="names" id="names" cols="30" rows="5"></textarea>
-          </div>
-
-          <div class="control-group">
-              <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Was the incident reported to any authority other than the police, such as a school principal, employer or prison governor?</p>
-              <div class="form-group inline">
-                <label class="block-label" for="r1">
-                  <input id="r1" name="radio-indent-group" value="1" type="radio">
-                  Yes
-                </label>
-                <label class="block-label" data-target="permit-form" for="r2">
-                  <input id="r2" name="radio-indent-group" value="2" type="radio">
-                  No
-                </label>
-              </div>
-            </div>
 
 
         <div class="button-group">

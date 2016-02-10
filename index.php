@@ -22,6 +22,8 @@
             <ul>
                 <li><a href="/criminal-injury/393.php" target="_blank">393 &middot; Incident details</a></li>
                 <li><a href="/criminal-injury/394.php" target="_blank">394 &middot; Reporting the incident</a></li>
+                <li><a href="/criminal-injury/395.php" target="_blank">395 &middot; Reporting the incident to an authority other than the police</a></li>
+                <li><a href="/criminal-injury/396.php" target="_blank">396 &middot; Injuries as a result of the incident</a></li>
                 <li><a href="/criminal-injury/403.php" target="_blank">403 &middot; Declaration</a></li>
                 <li><a href="/criminal-injury/405.php" target="_blank">405 &middot; Application type</a></li>
             </ul>
