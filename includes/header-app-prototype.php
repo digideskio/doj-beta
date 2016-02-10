@@ -44,13 +44,18 @@
 </head>
 <body class="no-js">
     <div class="page">
-        <div class="skipnav"><a href="/#skip-dest">Skip to content</a></div>
-
         <header>
 
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="container">
+
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="menu">Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
 
                         <a class="brand" href="http://www.nidirect.gov.uk">
                             <img src="/images/nidirect-logo-small-2x.png" alt="n i direct government services" width="120" height="28" />
@@ -59,18 +64,17 @@
                         <div class="nav-collapse collapse">
                             <nav class="topnav">
                                 <ul>
-                                    <li><a href="#0">Compensation Services</a></li>
+                                    <li class="current">Compensation Services</li>
                                 </ul>
                             </nav>
                         </div>
-                     </div>
+                    </div>
                 </div>
             </div>
-            <div class="branding <?php if (isset($submenu)) {
-    echo "no-bottom-margin";
-} ?>">
+
+            <div class="branding">
                 <a href="http://www.nidirect.gov.uk">
                     <img class="nidirectlogo" src="/images/nidirect-logo-2x.png" alt="n i direct government services" width="173" height="57" /></a>
-                <div class="service-name">Apply for compensation <span>Compensation Services</span></div>
+                <div class="service-name">Compensation Services <span>Apply for compensation</span></div>
             </div>
         </header>

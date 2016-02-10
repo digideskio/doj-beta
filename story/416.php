@@ -312,6 +312,7 @@
             </optgroup>
             </select>
             </div>
+            </fieldset>
             <div class="control-group not-required">
                 <label class="form-label"> Contact number </label>
                 <span class="hint">Include area / country code</span>
@@ -323,7 +324,7 @@
                 <span class="validation-error js-hidden">Enter a valid email address</span>
                 <input data-val="true" data-val-length="Contact number must be between 6 and 20 characters" data-val-length-max="20" data-val-length-min="6" id="ContactNumber" name="ContactNumber" type="text" value="">
             </div>
-        </fieldset>
+
 
 
 

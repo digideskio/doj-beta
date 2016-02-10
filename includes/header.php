@@ -60,7 +60,7 @@
                             <nav class="topnav">
                                 <ul>
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/story/">User Stories</a></li>
+                                    <li><a href="/index.php#stories">User Stories</a></li>
                                 </ul>
                             </nav>
                         </div>

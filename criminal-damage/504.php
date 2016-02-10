@@ -8,7 +8,9 @@
     <h1>Claimants</h1>
     <div class="info-notice">Mr Eddie Lagan has been removed from the application</div>
 
-    <p class="text">You have told us that you are applying for compensation on behalf of multiple applicants. Use this screen to tell us about all the claimants relative to your application.</p>
+    <p class="text">You have told us that you are applying for compensation on behalf of multiple claimants. Use this screen to tell us about all the claimants relative to your application.</p>
+
+    <p class="text">The first claimant added will become the 'Primary claimant' and will receive all correspondence relating to this application.</p>
 
     <form action="post" class="form">
         <input type="submit" value="Add a claimant" class="btn btn-success">
@@ -20,34 +22,14 @@
             <th colspan="2">Claimant</th>
         </tr>
         <!-- <tr>
-            <td>Mr Eddie Lagan</td>
+            <td>Mr Eddie Lagan <span class="label label-info">Primary claimant</span></td>
             <td class="text-right"><a href="#0">Remove</a></td>
         </tr> -->
         <tr>
-            <td>Mrs Nuala O'Rawe</td>
+            <td>Mrs Nuala O'Rawe <span class="label label-info">Primary claimant</span></td>
             <td class="text-right"><a href="#0">Remove</a></td>
         </tr>
         </table>
-
-        <!-- <form action="post" class="form">
-            <fieldset>
-                <div class="form-group form-group-compound">
-                  <label class="block-label" for="radio-indent-1" data-target="myself">
-                    <input id="radio-indent-1" name="radio-indent-group" value="L" type="radio">
-                    for an individual claimant
-                  </label>
-                  <label class="block-label" data-target="someone-else" for="radio-indent-2">
-                    <input id="radio-indent-2" name="radio-indent-group" value="P" type="radio">
-                    for a group of claimants
-                  </label>
-                  <label class="block-label" data-target="someone-else" for="radio-indent-2">
-                    <input id="radio-indent-2" name="radio-indent-group" value="P" type="radio">
-                    on behalf of a company
-                  </label>
-                </div>
-            </fieldset>
-
-        </form> -->
 
         <hr>
 

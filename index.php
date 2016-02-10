@@ -5,7 +5,48 @@
 ?>
 
 <div class="content container">
-    <h1>Kainos NICS Styleguide</h1>
+    <h1>Department of Justice CIDMIS Beta</h1>
+    <div class="row-fluid" id="stories">
+        <div class="span4">
+            <h3>Common</h3>
+            <ul>
+                <li><a href="/story/386.php" target="_blank">386 &middot; Applicant's details</a></li>
+                <li><a href="/story/387-representative-details.php" target="_blank">387 &middot; Representative details</a></li>
+                <li><a href="/story/416.php" target="_blank">416 &middot; Claimant's contact details</a></li>
+                <li><a href="/story/418.php" target="_blank">418 &middot; Applicant's contact details</a></li>
+                <li><a href="/story/449.php" target="_blank">449 &middot; Representative's contact details</a></li>
+            </ul>
+        </div>
+        <div class="span4">
+            <h3>Criminal Injury</h3>
+            <ul>
+                <li><a href="/criminal-injury/393.php" target="_blank">393 &middot; Incident details</a></li>
+                <li><a href="/criminal-injury/394.php" target="_blank">394 &middot; Reporting the incident</a></li>
+                <li><a href="/criminal-injury/403.php" target="_blank">403 &middot; Declaration</a></li>
+                <li><a href="/criminal-injury/405.php" target="_blank">405 &middot; Application type</a></li>
+            </ul>
+        </div>
+        <div class="span4">
+            <h3>Criminal Damage</h3>
+            <ul>
+                <li><a href="/criminal-damage/503.php" target="_blank">503 &middot; What type of application are you making?</a></li>
+                <li><a href="/criminal-damage/504.php" target="_blank">504 &middot; Claimant list screen</a></li>
+                <li><a href="/criminal-damage/505.php" target="_blank">505 &middot; Company details</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span4">
+            <h3>User flows</h3>
+            <ul>
+                <li><a href="/vsni-demo/" target="_blank">9/2/2016 &middot; VSNI - Authentication and user portal</a></li>
+            </ul>
+        </div>
+        <div class="span4"></div>
+        <div class="span4"></div>
+        <h4>Last updated: February 10, 2016</h4>
+    </div>
+    <hr>
     <div class="text">
     <p class="intro">The styles below have been used in various Kainos projects for the NICS, they are based on <a href="http://uxm.nidirect.gov.uk">nidirect's UXM</a></p>
     <p>Right click and inspect element to get element markup and ensure CSS and JavaScript files are being correctly imported.</p>
