@@ -12,7 +12,7 @@
     <form action="post" class="form">
 
         <div class="control-group">
-            <p class="form-label text">Did the claimant report the incident in person?</p>
+            <p class="form-label text">Did the injured person report the incident in person?</p>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -61,7 +61,7 @@
         </div>
 
         <div class="control-group">
-          <label for="names" class="form-label">Why did the claimant not tell the authority in person?</label>
+          <label for="names" class="form-label">Why did the injured person not tell the authority in person?</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
@@ -248,7 +248,7 @@
         </div>
 
         <div class="control-group">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Did the claimant make a written statement?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Was a written statement made?</p>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">

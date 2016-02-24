@@ -358,7 +358,7 @@
             <blockquote class="text">By using this service you agree that your details may be shared with other government parties solely to confirm your identity.</blockquote>
             <div class="control-group ">
 
-                    <label class="block-label" for="DeclarationAgreed"><input id="DeclarationAgreed" name="DeclarationAgreed" type="checkbox" value="true"><input name="DeclarationAgreed" type="hidden" value="false"> I agree</label>
+                    <label class="block-label" for="DeclarationAgreed"><input id="DeclarationAgreed" name="DeclarationAgreed" type="checkbox" value="true"> I agree</label>
             </div>
         </div>
     </fieldset>

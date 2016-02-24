@@ -13,7 +13,6 @@
 
       <div class="control-group">
             <div class="form-label"><img src="/images/required.gif" class="required" alt="Required information"> When did the incident happen?</div>
-            <!-- <span class="validation-error">date of birth can not be after incident date</span> -->
             <div class="form-date">
                 <div class="form-date-day">
                     <label class="form-label-sm" for="dob-day">Day</label>
@@ -180,7 +179,7 @@
         </div>
         <!-- /date time control group -->
         <div class="control-group">
-          <p class="form-label text">If the claimant's injuries are as a result of sexual abuse, domestic violence or harrassment over a period of time give the first and last dates of the incidents<br><br></p>
+          <p class="form-label text">If the injuries are as a result of sexual abuse, domestic violence or harrassment over a period of time give the first and last dates of the incidents<br><br></p>
           <div class="form-date">
               <div class="form-label">First date</div>
               <div class="form-date-day">
@@ -310,7 +309,7 @@
         </div>
         <!-- /control-group incident range -->
         <div class="control-group">
-          <label for="names" class="form-label">Address at the time of the incident if it is different from claimant's current address</label>
+          <label for="names" class="form-label">Address at the time of the incident if it is different from current address</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
@@ -320,7 +319,7 @@
         </div>
 
         <div class="control-group">
-          <label for="names" class="form-label">Who injured the claimant?</label>
+          <label for="names" class="form-label">Who caused the injury?</label>
           <span class="hint-text">Give the full names if known</span>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
@@ -332,12 +331,12 @@
         </div>
 
         <div class="control-group">
-          <label for="names" class="form-label text">If the incident happened more than two years ago, explain why the claimant has not applied for compensation before now</label>
+          <label for="names" class="form-label text">If the incident happened more than two years ago, explain why compensation has not been applied for before now</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
         <div class="control-group">
-          <p class="form-label text">Was the claimant and the person who caused injury living in the same household, as members of the same family?</p>
+          <p class="form-label text">Did the injured person and the person that caused the injury live in the same household as members of the same family?</p>
           <div class="form-group inline">
             <label class="block-label" for="r1">
               <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -351,7 +350,7 @@
         </div>
 
         <div class="control-group">
-          <p class="form-label text">Is the claimant and the person who caused injury still living in the same household as members of the same family?</p>
+          <p class="form-label text">Is the person who caused injury still living in the same household as the injured person as members of the same family?</p>
           <div class="form-group inline">
             <label class="block-label" for="r1-1">
               <input id="r1-1" name="radio-indent-group-1" value="1" type="radio">
@@ -365,7 +364,7 @@
         </div>
 
         <div class="control-group">
-          <p class="form-label text">Did anyone other than the claimant see the incident?</p>
+          <p class="form-label text">Did anyone other than the person injured see the incident?</p>
           <div class="form-group inline">
             <label class="block-label" for="r1-1-1">
               <input id="r1-1-1" name="radio-indent-group-1-1" value="1" type="radio">

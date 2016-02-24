@@ -1,6 +1,6 @@
 <?php
     $bodyclass = "";
-    $documenttitle = "Apply for compensation &middot; Reporting the incident";
+    $documenttitle = "Reporting the incident | Apply for compensation | nidirect";
     include_once("../includes/header-app-prototype.php");
 ?>
 
@@ -10,9 +10,8 @@
 
 
     <form action="post" class="form">
-
         <div class="control-group">
-            <p class="form-label text">Did the claimant tell the police about the incident?</p>
+            <p class="form-label text">Were the police told about the incident?</p>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -28,12 +27,12 @@
 
         <!-- /control-group incident range -->
         <div class="control-group">
-          <label for="names" class="form-label">Why did the claimant not tell the police in person?</label>
+          <label for="names" class="form-label">Why were the police not told?</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
         <div class="control-group">
-            <p class="form-label text">Did the claimant tell the police about the incident in person?</p>
+            <p class="form-label text">Did the injured person tell the police about the incident in person?</p>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -82,7 +81,7 @@
         </div>
 
         <div class="control-group">
-          <label for="names" class="form-label">Why did the claimant not tell the police about the incident in person?</label>
+          <label for="names" class="form-label">Why were the police not told about the incident in person?</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
@@ -255,7 +254,7 @@
         </div>
 
         <div class="control-group">
-          <label for="names" class="form-label">If the police were not told about the incident immediately, explain why</label>
+          <label for="names" class="form-label">If the police were not told about the incident immediately, explain why?</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
@@ -284,7 +283,7 @@
         </div>
 
         <div class="control-group">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Did the claimant make a written statement to the police?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Was a written statement made to the police?</p>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -298,7 +297,7 @@
           </div>
 
           <div class="control-group">
-            <label for="names" class="form-label">Explain why the claimant has not made a statement to the police</label>
+            <label for="names" class="form-label">If 'No' was selected above, explain why a statement was not made</label>
             <textarea name="names" id="names" cols="30" rows="5"></textarea>
           </div>
 

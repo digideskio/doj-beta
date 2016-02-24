@@ -100,7 +100,10 @@ input[type=number] {
     position: absolute;
     top: 18px;
     left: 15px;
-    cursor: pointer; }
+    cursor: pointer;
+    width: auto !important;
+    height: auto !important;
+     }
   .block-label:hover {
     border-color: #0b0c0c; }
 
@@ -534,6 +537,12 @@ fieldset.error-inner {
   font-size: 14px;
 }
 
+.form-date {
+  .form-label {
+    margin-bottom: 2px;
+  }
+}
+
 // ==========================================================================
 //  Fixing UXM max widths for responsive
 // ==========================================================================
@@ -607,4 +616,43 @@ p.ul {
 
 .margin-bottom {
   margin-bottom: 15px;
+}
+
+/*
+    Bootstrap Prepended Input for UXM
+*/
+
+.add-on {
+    float: left;
+}
+
+.input-prepend input[type="text"] {
+    min-height: 28px;
+}
+
+.add-on {
+    display: inline-block;
+    width: auto;
+    min-height: 22px;
+    min-width: 16px;
+    padding: 5px 5px 3px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #ffffff;
+    background-color: #eeeeee;
+}
+
+.add-on-valid {
+    border: 1px solid #999999;
+}
+
+.add-on-invalid {
+    border: 1px solid #b94a48;
+}
+
+.prepended-input {
+    border-left: none !important;
+    max-width: 312px;
 }

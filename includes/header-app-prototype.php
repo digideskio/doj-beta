@@ -64,7 +64,7 @@
                         <div class="nav-collapse collapse">
                             <nav class="topnav">
                                 <ul>
-                                    <li class="current">Compensation Services</li>
+                                    <li><a href="#0" target="_blank" class="elink" title="link opens in a new browser window">Guidance notes</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -75,6 +75,6 @@
             <div class="branding">
                 <a href="http://www.nidirect.gov.uk">
                     <img class="nidirectlogo" src="/images/nidirect-logo-2x.png" alt="n i direct government services" width="173" height="57" /></a>
-                <div class="service-name">Compensation Services <span>Apply for compensation</span></div>
+                <div class="service-name">Apply for compensation <span>Compensation Services</span></div>
             </div>
         </header>
