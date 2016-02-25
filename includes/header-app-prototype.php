@@ -10,15 +10,15 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
 
-    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen, projection" />
-    <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" media="screen, projection" />
-    <link href="/css/nidirect.css" rel="stylesheet" type="text/css" media="screen, projection" />
-    <link href="/css/nidirect-responsive.css" rel="stylesheet" type="text/css" media="screen, projection" />
-    <link href="/css/nidirect-uxm.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/css/nidirect.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/css/nidirect-responsive.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/css/nidirect-uxm.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="/jquery/jquery-ui.css" rel="stylesheet" />
 
     <!-- Kainos Specific CSS -->
-    <link href="/css/kainos-nics.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="/css/kainos-nics.css" rel="stylesheet" type="text/css" media="screen" />
 
     <script src="/js/jquery.min.js" type="text/javascript"></script>
     <script src="/js/bootstrap.min.js" type="text/javascript"></script>

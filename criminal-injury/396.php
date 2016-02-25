@@ -17,7 +17,7 @@
         </div>
 
         <div class="control-group">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Has the claimant fully recovered?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Has there been a full recovery?</p>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -36,7 +36,7 @@
         </div>
 
         <div class="control-group">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Is the claimant still receiving treatment for injuries?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Is treatment still being received for injuries?</p>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -64,7 +64,7 @@
         </div>
 
         <div class="control-group">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Did the claimant go to hospital?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Was a hospital visit required?</p>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
