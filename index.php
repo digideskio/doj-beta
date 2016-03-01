@@ -32,16 +32,25 @@
                 <li><a href="/criminal-injury/403.php" target="_blank">403 &middot; Declaration</a></li>
                 <li><a href="/criminal-injury/405.php" target="_blank">405 &middot; Application type</a></li>
             </ul>
+
+            <h3>Fatal</h3>
+            <ul>
+                <li><a href="/fatal/453.php" target="_blank">453 &middot; Incident details</a></li>
+                <li><a href="/fatal/454.php" target="_blank">454 &middot; Claiming for funeral expenses</a></li>
+                <li><a href="/fatal/455.php" target="_blank">455 &middot; Loss of dependency</a></li>
+            </ul>
         </div>
         <div class="span4">
             <h3>Criminal Damage</h3>
             <ul>
                 <li><a href="/criminal-damage/463.php" target="_blank">463 &middot; Vehicle details</a></li>
+                <li><a href="/criminal-damage/464.php" target="_blank">464 &middot; Building details</a></li>
                 <li><a href="/criminal-damage/503.php" target="_blank">503 &middot; What type of application are you making?</a></li>
                 <li><a href="/criminal-damage/504.php" target="_blank">504 &middot; Claimant list screen</a></li>
                 <li><a href="/criminal-damage/505.php" target="_blank">505 &middot; Company details</a></li>
                 <li><a href="/criminal-damage/508.php" target="_blank">508 &middot; Buildings and vehicles</a></li>
-                <li><a href="/criminal-damage/509.php" target="_blank">509 &middot; Incident details</a></li>
+                <li><a href="/criminal-damage/507.php" target="_blank">507 &middot; Incident details</a></li>
+                <li><a href="/criminal-damage/509.php" target="_blank">509 &middot; Details of interested parties</a></li>
             </ul>
         </div>
     </div>
@@ -54,7 +63,7 @@
         </div>
         <div class="span4"></div>
         <div class="span4"></div>
-        <h4>Last updated: February 25, 2016</h4>
+        <h4>Last updated: March 1, 2016</h4>
     </div>
     <hr>
     <div class="text">

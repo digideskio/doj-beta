@@ -6,7 +6,7 @@
 
 <div class="content container">
   <h1>Loss of earnings</h1>
-  <p></p>
+  <p class="text">As outlined in Paragraph 20 of The Scheme, it is the responsibility of the person seeking compensation to provide assumptions, calculations and supporting documents in support of their claim for loss of earnings. </p>
   <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
 
 
@@ -136,7 +136,7 @@
       </div>
 
       <div class="control-group" id="7">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Has compensation or damages been received or is there an expectation to receive them as a result of any Court Order?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Has compensation or damages been received or is there an expectation that you will receive compensation or damages at a Criminal Court as the result of a Court Order?</p>
             <span class="validation-error js-hidden"></span>
             <div class="form-group inline">
               <label class="block-label" for="result-1">
@@ -151,13 +151,13 @@
         </div>
 
         <div class="control-group" id="8">
-            <label for="if-yes" class="form-label text"> If ‘Yes’ was selected above, give the name, address and contact number of the court, person or organisation and full details of the compensation or damages</label>
+            <label for="if-yes" class="form-label text">  If 'Yes' was selected above, give the name of the Court dealing with this and details of the compensation or damages</label>
             <span class="validation-error js-hidden"></span>
             <textarea name="if-yes" id="if-yes" cols="30" rows="5"></textarea>
         </div>
 
         <div class="control-group" id="9">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Has the injured person applied before for another incident?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Has the injured person applied for criminal injury compensation before for another incident?</p>
             <span class="validation-error js-hidden"></span>
             <div class="form-group inline">
               <label class="block-label" for="yes-previous">

@@ -47,7 +47,8 @@
         <ul class="form-label text">
           <li>Certificate of Good Conduct</li>
           <li>Certificate of Good Standing</li>
-          <li>Extract du Casier Judicaire</li>
+          <li>Extrait du Casier Judicaire</li>
+          <li>Certificat de bonnes vies et moeurs</li>
           <li>other official evidence of a clear criminal record</li>
         </ul>
         <div class="control-group">
