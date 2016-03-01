@@ -426,6 +426,30 @@
             <textarea name="grants" id="grants" cols="30" rows="5"></textarea>
         </div>
 
+        <h2>Insurance</h2>
+
+        <div class="control-group" id="23">
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Have you made a claim with your insurance company?</p>
+            <span class="validation-error js-hidden" style="display: none;"></span>
+            <div class="form-group inline">
+              <label class="block-label" for="rep-yes">
+                <input id="rep-yes" name="rep-group" value="1" type="radio">
+                Yes
+              </label>
+              <label class="block-label" for="rep-no">
+                <input id="rep-no" name="rep-group" value="2" type="radio">
+                No
+              </label>
+              
+            </div>
+        </div>
+
+        <div class="control-group" id="24">
+            <label for="if-no-owner" class="form-label text"> If 'Yes' was selected above, provide the name and address of the insurance company and policy number</label>
+            <span class="validation-error js-hidden" style="display: none;"></span>
+            <textarea name="if-no-owner" id="if-no-owner" cols="30" rows="5"></textarea>
+        </div>
+
         <h2>Security</h2>
 
         <div class="control-group" id="28">

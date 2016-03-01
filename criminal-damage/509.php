@@ -16,12 +16,7 @@
             <span class="validation-error js-hidden"></span>
             <textarea name="int-par" id="int-par" cols="30" rows="10"></textarea>
         </div>
-        <h2>Previous addresses</h2>
-        <div class="control-group" id="1">
-            <label for="int-par" class="form-label">Enter any previous addresses within the last 5 years</label>
-            <span class="validation-error js-hidden"></span>
-            <textarea name="int-par" id="int-par" cols="30" rows="5"></textarea>
-        </div>
+        
         <h2>VAT</h2>
         <div class="control-group" id="3">
             <p class="form-label text"> Are you registered for VAT?</p>
@@ -103,7 +98,7 @@
         </div>
         </div>
         <div class="button-group">
-          <a href="index.php" class="btn btn-secondary arrowl">Back</a> <a href="" class="btn btn-primary arrowr">Next</a>
+          <a href="index.php" class="btn btn-secondary arrowl">Back</a> <a href="" class="btn btn-success">Submit</a>
         </div>
     </form>
 
