@@ -64,7 +64,7 @@
         </div>
         <div class="span4"></div>
         <div class="span4"></div>
-        <h4>Last updated: March 1, 2016</h4>
+        <h4>Last updated: March 2, 2016</h4>
     </div>
     <hr>
     <div class="text">

@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="control-group" id="4">
-            <label for="if-vat" class="form-label text"> If you selected ‘Partially registered’ above, give details including percentage of VAT recoverable from H.M. Customs and Excise</label>
+            <label for="if-vat" class="form-label text"> If you selected ‘Partially registered’ above, give details including percentage of VAT recoverable from HMRC</label>
             <span class="validation-error js-hidden"></span>
             <textarea name="if-vat" id="if-vat" cols="30" rows="5"></textarea>
         </div>
@@ -78,13 +78,13 @@
         </div>
         <h2>Declaration</h2>
         <div class="text">
-          <p>I / we intent to apply for to Department of Justice for NI for compensation for the loss which I / we have suffered and request an extension of time under Article 7(3) of The Order if this Notice is not received within 10 days from the date of the damage.</p>
+          <p>I / we intend to apply for to Department of Justice for NI for compensation for the loss which I / we have suffered and request an extension of time under Article 7(3) of The Order if this Notice is not received within 10 days from the date of the damage.</p>
 
           <p>I authorise DOJ Compensation Services and / or my legal representative to obtain:</p>
           <ul>
-            <li>From the police, all relevant information, including copies of my statement made in connection with this application</li>
-            <li>From the Social Security Agency, any information which is relevant to the application</li>
-            <li>From Inland Revenue, any information which is relevant to this application</li>
+            <li>from the police, all relevant information, including copies of my statement made in connection with this application</li>
+            <li>from the Social Security Agency, any information which is relevant to the application</li>
+            <li>from Inland Revenue, any information which is relevant to this application</li>
           </ul>
           <div class="control-group" id="">
             <p class="form-label text"> </p>

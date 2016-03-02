@@ -6,7 +6,7 @@
 
 <div class="content container">
   <h1>Loss of earnings</h1>
-  <p class="text">As outlined in Paragraph 20 of The Scheme, it is the responsibility of the person seeking compensation to provide assumptions, calculations and supporting documents in support of their claim for loss of earnings. </p>
+  <p class="text">As outlined in Paragraph 20 of The Scheme, it is the responsibility of the person seeking compensation to provide assumptions, calculations and documents in support of their claim for loss of earnings. </p>
   <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
 
 
@@ -93,7 +93,7 @@
       <h2>Special expenses</h2>
 
       <div class="form-group inline">
-      <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Is there an expectation to have to pay special expenses as a result of the injury?</p>
+      <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Is there an expectation that Special Expenses may be paid as a result of the injury?</p>
         <label class="block-label" for="radio-indent-1" data-target="myself">
           <input id="radio-indent-1" name="radio-indent-group" value="L" type="radio">
           Yes
