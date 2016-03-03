@@ -317,20 +317,6 @@
             <input name="model" type="text" id="model">
         </div>
 
-        <div class="control-group" id="9">
-            <label class="form-label" for="engine">
-                Engine size (cc)
-            </label>
-            <input name="engine" type="text" id="engine">
-        </div>
-        
-        <div class="control-group" id="10">
-            <label class="form-label" for="chassis">
-                Chassis number
-            </label>
-            <input name="chassis" type="text" id="chassis">
-        </div>
-
         <div class="control-group" id="11">
             <label class="form-label" for="yearofman">
                 Year of manufacture
@@ -339,7 +325,7 @@
         </div>
 
                 <div class="control-group" id="19">
-                    <label for="PreIncidentValueInput" class="form-label"><img class="required" src="../Images/required.gif" alt="Indicates a required field"> Value of the vehicle before the incident<span class="hint">Provide the value of the vehicle immediately before the incident</span></label> 
+                    <label for="PreIncidentValueInput" class="form-label"> Value of the vehicle before the incident<span class="hint">Provide the value of the vehicle immediately before the incident</span></label> 
                     <span class="add-on add-on-valid">£</span>
         <input class="prepended-input" data-val="true" data-val-regex="Invalid value pre-incident" data-val-regex-pattern="^\d{1,10}(\.\d{0,2})?$" data-val-required="Enter value pre-incident" id="PreIncidentValueInput" name="PreIncidentValueInput" type="text" value="">
 
@@ -463,7 +449,7 @@
         </div>
 
         <div class="control-group" id="15">
-            <label for="if-no-owner" class="form-label"> If 'No' was selected above, provide the name(s) and address(es) of the joint owner(s)</label>
+            <label for="if-no-owner" class="form-label"> If 'No' was selected above, provide the name(s) and address(es) of the owner(s)</label>
             <span class="validation-error js-hidden"></span>
             <textarea name="if-no-owner" id="if-no-owner" cols="30" rows="5"></textarea>
         </div>
@@ -602,7 +588,7 @@
         </div>
 
         <div class="control-group" id="23">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Have you made a claim with your insurance company?</p>
+            <p class="form-label text"> Have you made a claim with your insurance company?</p>
             <span class="validation-error js-hidden"></span>
             <div class="form-group inline">
               <label class="block-label" for="rep-yes">
@@ -630,7 +616,29 @@
         </div>
 
         <div class="control-group" id="23">
-            <p class="form-label text">Was the vehicle unlawfully removed?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Was the vehicle unlawfully removed?</p>
+            <span class="validation-error js-hidden"></span>
+            <div class="form-group inline">
+              <label class="block-label" for="rep-yes">
+                <input id="rep-yes" name="rep-group" value="1" type="radio">
+                Yes
+              </label>
+              <label class="block-label" for="rep-no">
+                <input id="rep-no" name="rep-group" value="2" type="radio">
+                No
+              </label>
+              
+            </div>
+        </div>
+
+        <div class="control-group" id="24">
+            <label for="if-no-owner" class="form-label text"> If 'Yes' was selected above, provide details</label>
+            <span class="validation-error js-hidden"></span>
+            <textarea name="if-no-owner" id="if-no-owner" cols="30" rows="5"></textarea>
+        </div>
+
+        <div class="control-group" id="23">
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Were any contents unlawfully removed from the vehicle?</p>
             <span class="validation-error js-hidden"></span>
             <div class="form-group inline">
               <label class="block-label" for="rep-yes">

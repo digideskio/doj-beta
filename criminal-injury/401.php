@@ -61,7 +61,7 @@
         Belfast<br>
         BT2 7AQ<br><br>
         </p>
-        <p class="form-label">* Your claim reference number is displayed after submission.</p>
+        <p class="form-label">* You will get the claim reference number when you submit the claim</p>
       </div>
     </div>
 

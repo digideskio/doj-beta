@@ -296,7 +296,7 @@
         </fieldset>
 
     
-        <h2>About the building</h2>
+        <h2 class="no-top-margin">About the building</h2>
         <div class="control-group" id="23">
             <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Is the property agricultural?</p>
             <span class="validation-error js-hidden"></span>
@@ -314,8 +314,7 @@
         </div>
 
         <div class="control-group" id="23">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Is the property exempt from rates?</p>
-            <span class="hint-text">Under Article 41 (2) (e) or Article 41A of the Rates (Northern Ireland) Order 1977</span>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Is the property exempt from rates under Article 41 (2) (e) or Article 41A of the Rates (Northern Ireland) Order 1977?</p>
             <div class="form-group inline">
               <label class="block-label" for="rep-yes">
                 <input id="rep-yes" name="rep-group" value="1" type="radio">
@@ -346,17 +345,6 @@
               </label>
               
             </div>
-        </div>
-
-        <div class="control-group">
-            <p class="form-label text">If 'Yes' was selected above, you will need to provide a room by room estimate of damage and details of the repair. This should be posted to us with your application form.</p>
-        </div>
-
-        <div class="control-group" id="21">
-            <label for="PreIncidentValueInput" class="form-label">If 'No' was selected above, enter the value of the building prior to the incident</label> 
-            <span class="add-on add-on-valid">£</span>
-<input class="prepended-input" data-val="true" data-val-regex="Invalid value pre-incident" data-val-regex-pattern="^\d{1,10}(\.\d{0,2})?$" data-val-required="Enter value pre-incident" id="PreIncidentValueInput" name="PreIncidentValueInput" type="text" value="">
-
         </div>
 
         <div class="control-group" id="24">
@@ -405,19 +393,6 @@
             <textarea name="mortgage-yes" id="mortgage-yes" cols="30" rows="5"></textarea>
         </div>
 
-        <h2>Stock</h2>
-
-        <p class="text">If you intend to claim for loss of stock, enter  details below. Claims will be reconciled with financial accounts.</p>
-
-        <p class="text">If you are <strong>not</strong> the absolute owner of all the items, give details of hire purchase, credit sale, rental or finance agreements on each item.</p>
-
-        <div class="control-group" id="26">
-            <label for="mortgage-yes" class="form-label text">Loss of stock details</label>
-            <span class="hint-text text"></span>
-            <span class="validation-error js-hidden"></span>
-            <textarea name="mortgage-yes" id="mortgage-yes" cols="30" rows="10"></textarea>
-        </div>
-
         <h2>Grants and loans</h2>
 
         <div class="control-group" id="27">
@@ -452,10 +427,20 @@
 
         <h2>Security</h2>
 
-        <div class="control-group" id="28">
-            <label for="security" class="form-label text"> Enter details of security precautions which were in force prior to the damage</label>
-            <span class="validation-error js-hidden"></span>
-            <textarea name="security" id="security" cols="30" rows="5"></textarea>
+        <div class="control-group" id="23">
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Was the property secured?</p>
+            <span class="validation-error js-hidden" style="display: none;"></span>
+            <div class="form-group inline">
+              <label class="block-label" for="rep-yes">
+                <input id="rep-yes" name="rep-group" value="1" type="radio">
+                Yes
+              </label>
+              <label class="block-label" for="rep-no">
+                <input id="rep-no" name="rep-group" value="2" type="radio">
+                No
+              </label>
+              
+            </div>
         </div>
 
 

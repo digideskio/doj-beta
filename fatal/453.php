@@ -187,7 +187,7 @@
   
 
         <div class="control-group">
-          <label for="names" class="form-label text">If the incident happened more than two years ago, explain why compensation has not been applied for before now</label>
+          <label for="names" class="form-label text">If it is more than two years since the incident happened why is application for compensation only being made now?</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 

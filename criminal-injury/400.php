@@ -5,7 +5,7 @@
 ?>
 
 <div class="content container">
-  <h1>Previous Criminal Injury applications</h1>
+  <h1>Previous criminal injury applications</h1>
   <form action="post" class="form">
     <div class="control-group" id="1">
       <label for="textarea" class="form-label"> Tell us about any previous applications for compensation. <br>Include the date of incident(s) and any reference number(s)</label>
