@@ -37,8 +37,8 @@
             <ul>
                 <li><a href="/fatal/453.php" target="_blank">453 &middot; Incident details</a></li>
                 <li><a href="/fatal/454.php" target="_blank">454 &middot; Claiming for funeral expenses</a></li>
-                <li><a href="/fatal/455.php" target="_blank">455 &middot; Claimant's employment details</a></li>
-                <li><a href="/fatal/456.php" target="_blank">456 &middot; Deceased's employment details</a></li>
+                <li><a href="/fatal/455.php" target="_blank">455 &middot; Claimant's details</a></li>
+                <li><a href="/fatal/456.php" target="_blank">456 &middot; Deceased's details</a></li>
             </ul>
         </div>
         <div class="span4">

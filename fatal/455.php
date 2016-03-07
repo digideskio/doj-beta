@@ -5,12 +5,133 @@
 ?>
 
 <div class="content container">
-    <h1>Claimant's employment details</h1>
+    <h1>Claimant's details</h1>
     <p class="text">As outlined in Paragraph 20 of The Scheme, it is the responsibility of the person seeking compensation to provide assumptions, calculations and supporting documents in support of their claim for loss of earnings.</p>
     <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
 
 
     <form action="post" class="form">
+    <h2 class="no-top-margin">Relationship to the deceased</h2>
+    <div class="control-group" id="01">
+          <label class="form-label" for="rel-dec">
+              <img src="/images/required.gif" class="required" alt="Required information"> Enter your relationship to the deceased
+          </label>
+          <input name="rel-dec" type="text" id="rel-dec">
+      </div>
+
+      <div class="control-group" id="02">
+          <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Were you and the deceased formally married and living together in the same household as husband and wife immediately before the date of death?</p>
+          <span class="validation-error js-hidden"></span>
+          <div class="form-group inline">
+            <label class="block-label" for="">
+              <input id="" name="" value="1" type="radio">
+              Yes
+            </label>
+            <label class="block-label" for="">
+              <input id="" name="" value="2" type="radio">
+              No
+            </label>
+          </div>
+      </div>
+
+      <div class="control-group">
+                  <div class="form-label text">If you were not formally married to the deceased but liviing together as husband and wife or partner, enter the date you started living together</div>
+                  <div class="form-date">
+                      <div class="form-date-day">
+                          <label class="form-label-sm" for="dob-day">Day</label>
+                          <select name="dob-day" id="dob-day" class="input-small" style="width: 70px">
+                              <option value="0">—</option>
+                              <option value="01">1</option>
+                              <option value="02">2</option>
+                              <option value="03">3</option>
+                              <option value="04">4</option>
+                              <option value="05">5</option>
+                              <option value="06">6</option>
+                              <option value="07">7</option>
+                              <option value="08">8</option>
+                              <option value="09">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                              <option value="21">21</option>
+                              <option value="22">22</option>
+                              <option value="23">23</option>
+                              <option value="24">24</option>
+                              <option value="25">25</option>
+                              <option value="26">26</option>
+                              <option value="27">27</option>
+                              <option value="28">28</option>
+                              <option value="29">29</option>
+                              <option value="30">30</option>
+                              <option value="31">31</option>
+                          </select>
+                      </div>
+                      <div class="form-date-month">
+                          <label class="form-label-sm" for="dob-month">Month</label>
+                          <select name="dob-month" id="dob-month" class="input-small" style="width: 120px">
+                              <option value="0">—</option>
+                              <option value="01">January</option>
+                              <option value="02">February</option>
+                              <option value="03">March</option>
+                              <option value="04">April</option>
+                              <option value="05">May</option>
+                              <option value="06">June</option>
+                              <option value="07">July</option>
+                              <option value="08">August</option>
+                              <option value="09">September</option>
+                              <option value="10">October</option>
+                              <option value="11">November</option>
+                              <option value="12">December</option>
+                          </select>
+                      </div>
+                      <div class="form-date-year">
+                          <label class="form-label-sm" for="dob-year">Year</label>
+                          <input autocomplete="off" id="dob-year" name="dob-year" type="text" maxlength="4" class="input-small" placeholder="YYYY" style="width: 90px; min-width: 90px">
+                      </div>
+                  </div>
+
+
+                  
+              </div>
+
+              <div class="control-group" id="02">
+                  <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Were you financially supported by the deceased?</p>
+                  <span class="validation-error js-hidden"></span>
+                  <div class="form-group inline">
+                    <label class="block-label" for="">
+                      <input id="" name="" value="1" type="radio">
+                      Yes
+                    </label>
+                    <label class="block-label" for="">
+                      <input id="" name="" value="2" type="radio">
+                      No
+                    </label>
+                  </div>
+              </div>
+
+              <div class="control-group" id="02">
+                  <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Were you under 18 years old at the time of the deceased's death?</p>
+                  <span class="validation-error js-hidden"></span>
+                  <div class="form-group inline">
+                    <label class="block-label" for="">
+                      <input id="" name="" value="1" type="radio">
+                      Yes
+                    </label>
+                    <label class="block-label" for="">
+                      <input id="" name="" value="2" type="radio">
+                      No
+                    </label>
+                  </div>
+              </div>
+    <h2 class="no-top-margin">Employment details</h2>
         <div class="control-group" id="1">
             <label class="form-label" for="n1">
                 <img src="/images/required.gif" class="required" alt="Required information"> Enter your occupation at the time of the deceased’s death
