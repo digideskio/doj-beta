@@ -3,12 +3,12 @@
 
 function validateInputs() {
     $('.control-group').addClass('validation');
-    $('.control-group .validation-error,.validation-summary').removeClass('js-hidden');
     $('.control-group.not-required').removeClass('validation');
+    $('.js-hidden').css('display', 'block');
 }
 function unvalidateInputs() {
     $('.control-group').removeClass('validation');
-    $('.control-group .validation-error,.validation-summary').addClass('js-hidden');
+    $('.js-hidden').css('display', 'none');
 }
     $(document).keypress(function(e) {
       if(e.which == 118) {

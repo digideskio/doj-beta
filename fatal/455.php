@@ -35,7 +35,7 @@
       </div>
 
       <div class="control-group">
-                  <div class="form-label text">If you were not formally married to the deceased but liviing together as husband and wife or partner, enter the date you started living together</div>
+                  <div class="form-label text">If you were not formally married to the deceased but living together as husband and wife or partner, enter the date you started living together</div>
                   <div class="form-date">
                       <div class="form-date-day">
                           <label class="form-label-sm" for="dob-day">Day</label>
@@ -444,7 +444,7 @@
         </div>
 
         <div class="control-group" id="8">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Have you claimed Social Security Benefit as a result of the victim’s death?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Have you claimed Social Security Benefit as a result of the deceased's death?</p>
             <span class="validation-error js-hidden"></span>
             <div class="form-group inline">
               <label class="block-label" for="">

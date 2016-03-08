@@ -93,13 +93,13 @@
             <div class="form-group inline">
               <label class="block-label" for="">
                 <input id="" name="" value="1" type="checkbox">
-                I agree
+                I agree to the declaration
               </label>
             </div>
         </div>
         </div>
         <div class="button-group">
-          <a href="index.php" class="btn btn-secondary arrowl">Back</a> <a href="" class="btn btn-success">Submit</a>
+          <a href="index.php" class="btn btn-secondary arrowl">Back</a> <a href="" class="btn btn-success">Submit application</a>
         </div>
     </form>
 

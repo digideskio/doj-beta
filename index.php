@@ -39,6 +39,7 @@
                 <li><a href="/fatal/454.php" target="_blank">454 &middot; Claiming for funeral expenses</a></li>
                 <li><a href="/fatal/455.php" target="_blank">455 &middot; Claimant's details</a></li>
                 <li><a href="/fatal/456.php" target="_blank">456 &middot; Deceased's details</a></li>
+                <li><a href="/fatal/457.php" target="_blank">457 &middot; Payments and compensation from other sources</a></li>
             </ul>
         </div>
         <div class="span4">
@@ -64,7 +65,7 @@
         </div>
         <div class="span4"></div>
         <div class="span4"></div>
-        <h4>Last updated: March 2, 2016</h4>
+        <h4>Last updated: March 8, 2016</h4>
     </div>
     <hr>
     <div class="text">

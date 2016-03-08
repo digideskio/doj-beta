@@ -194,7 +194,7 @@
                     </div>
 
         <div class="control-group dropdown-wide">
-          <label class="form-label"><img class="required" src="/images/required.gif"> Sex</label>
+          <label class="form-label"><img class="required" src="/images/required.gif"> Gender</label>
           <span class="validation-error js-hidden" style="display: none;">Country must be selected</span>
           <select data-val="true" data-val-required="Select a country" id="Country" name="Country"><option value="">-- Please select --</option>
           <option value="1">Female</option>
@@ -538,7 +538,7 @@
             <input id="ContactNumber" name="ContactNumber" type="text" value="">
         </div>
         <div class="control-group" id="3">
-            <p class="form-label text"> Was he or she the sole owner of the business?</p>
+            <p class="form-label text"> Was the deceased the sole owner of the business?</p>
             <span class="validation-error js-hidden"></span>
             <div class="form-group inline">
               <label class="block-label" for="sole-yes">
