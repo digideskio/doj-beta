@@ -114,6 +114,9 @@ input[type=number] {
 .inline .block-label:first-of-type {
   margin-left:3px;
 }
+.form-group.inline {
+  margin-bottom: 0;
+}
 
 .selected {
   background: #fff;

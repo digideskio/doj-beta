@@ -5,14 +5,37 @@
 ?>
 
 <div class="content container">
-    <h1>Reporting the incident to an authority other than the police</h1>
+    <h1 class="text">Reporting the incident to an authority other than the police</h1>
     <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
+    
+    <!--
+            Validation summary should only be displayed following server side validation.
+            It is displayed here to associate error messages with inputs
+    -->
 
+    <div class="validation-summary js-hidden">
+        <h2><img src="/images/error-icon.png" alt=""> Please review and correct the following errors</h2>
+        <ul>
+            <li><a href="#1"></a></li>
+            <li><a href="#2"></a></li>
+            <li><a href="#3"></a></li>
+            <li><a href="#4"></a></li>
+            <li><a href="#5"></a></li>
+            <li><a href="#6"></a></li>
+            <li><a href="#7"></a></li>
+            <li><a href="#8"></a></li>
+        </ul>
+    </div>
+
+    <!--
+            /End validation summary
+     -->
 
     <form action="post" class="form">
 
-        <div class="control-group">
+        <div class="control-group" id="1">
             <p class="form-label text">Did the injured person report the incident in person?</p>
+            <span class="validation-error js-hidden">Select if the injured person reported the incident in person</span>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -30,6 +53,7 @@
         <div class="control-group">
             <label class="form-label" for="ddl_title">
                 Title</label>
+                <span class="validation-error js-hidden">Select a title</span>
             <select name="ddl_title" id="ddl_title">
                 <option value="0">--- Please select ---</option>
                 <option value="Mr">Mr</option>
@@ -43,30 +67,32 @@
             <label class="form-label" for="txt_firstname">
                 Other title
             </label>
+            <span class="validation-error js-hidden">You selected 'Other' above, please provide title</span>
             <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
         </div>
         <div class="control-group">
             <label class="form-label" for="txt_firstname">
                 First name(s)
             </label>
-            <!-- <span class="validation-error">name is required</span> -->
+            <span class="validation-error js-hidden">Enter first name(s)</span>
             <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
         </div>
         <div class="control-group">
             <label class="form-label" for="txt_firstname">
                 Surname
             </label>
-            <!-- <span class="validation-error">name is required</span> -->
+            <span class="validation-error js-hidden">Enter a surname</span>
             <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
         </div>
 
-        <div class="control-group">
+        <div class="control-group not-required">
           <label for="names" class="form-label">Why did the injured person not tell the authority in person?</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
         <div class="control-group">
           <label for="names" class="form-label"><img src="/images/required.gif" class="required" alt="Required information"> Who was the incident reported to?</label>
+          <span class="validation-error js-hidden">Enter to whom the incident was reported</span>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
@@ -74,7 +100,7 @@
 
 
 
-        <div class="control-group">
+        <div class="control-group not-required">
             <div class="form-label">When was the incident first reported?</div>
             <!-- <span class="validation-error">date of birth can not be after incident date</span> -->
             <div class="form-date">
@@ -242,13 +268,14 @@
             </div>
         </div>
 
-        <div class="control-group">
+        <div class="control-group not-required">
           <label for="names" class="form-label text">If the incident was not reported immediately after it happened, explain why</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
         <div class="control-group">
             <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Was a written statement made?</p>
+            <span class="validation-error js-hidden">Select if a written statement was made</span>
             <div class="form-group inline">
               <label class="block-label" for="r1">
                 <input id="r1" name="radio-indent-group" value="1" type="radio">
@@ -273,3 +300,4 @@
 </div>
 
 <?php include_once("../includes/footer.php"); ?>
+<script src="/js/togglevalidation.js"></script>
