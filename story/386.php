@@ -17,12 +17,7 @@
     <div class="validation-summary js-hidden">
         <h2><img src="/images/error-icon.png" alt=""> Please review and correct the following errors</h2>
         <ul>
-            <li><a href="#1">Select a title from the menu</a></li>
-            <li><a href="#2">You selected 'Other' above, enter a title *** You selected a title above, you can't have more than one title</a></li>
-            <li><a href="#3">Enter first name(s)</a></li>
-            <li><a href="#4">Enter a surname</a></li>
-            <li><a href="#5">Enter your relationship to the claimant</a></li>
-            <li><a href="#8">You must tell us why you are making an application on behalf of the claimant</a></li>
+            
         </ul>
     </div>
 

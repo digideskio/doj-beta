@@ -15,11 +15,7 @@
     <div class="validation-summary js-hidden">
         <h2><img src="/images/error-icon.png" alt=""> Please review and correct the following errors</h2>
         <ul>
-            <li><a href="#1">Address line 1 must be between 2 and 100 characters</a></li>
-            <li><a href="#2">Address line 2 must be between 2 and 100 characters</a></li>
-            <li><a href="#4">Postcode must be less than 10 characters</a></li>
-            <li><a href="#5">Country must be selected</a></li>
-            <li><a href="#email">Enter a valid email address</a></li>
+              
         </ul>
     </div>
 

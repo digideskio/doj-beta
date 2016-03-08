@@ -16,14 +16,7 @@
     <div class="validation-summary js-hidden">
         <h2><img src="/images/error-icon.png" alt=""> Please review and correct the following errors</h2>
         <ul>
-            <li><a href="#1"></a></li>
-            <li><a href="#2"></a></li>
-            <li><a href="#3"></a></li>
-            <li><a href="#4"></a></li>
-            <li><a href="#5"></a></li>
-            <li><a href="#6"></a></li>
-            <li><a href="#7"></a></li>
-            <li><a href="#8"></a></li>
+
         </ul>
     </div>
 
@@ -50,7 +43,7 @@
 
         <p class="form-label text">If 'No' was selected above, who reported the incident to the other authority? <br><br></p>
 
-        <div class="control-group">
+        <div class="control-group" id="2">
             <label class="form-label" for="ddl_title">
                 Title</label>
                 <span class="validation-error js-hidden">Select a title</span>
@@ -63,21 +56,21 @@
                 <option value="Dr">Dr</option>
             </select>
         </div>
-        <div class="control-group">
+        <div class="control-group" id="3">
             <label class="form-label" for="txt_firstname">
                 Other title
             </label>
             <span class="validation-error js-hidden">You selected 'Other' above, please provide title</span>
             <input name="txt_firstname" type="email" maxlength="50" id="txt_firstname">
         </div>
-        <div class="control-group">
+        <div class="control-group" id="4">
             <label class="form-label" for="txt_firstname">
                 First name(s)
             </label>
             <span class="validation-error js-hidden">Enter first name(s)</span>
             <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
         </div>
-        <div class="control-group">
+        <div class="control-group" id="5">
             <label class="form-label" for="txt_firstname">
                 Surname
             </label>
@@ -85,12 +78,12 @@
             <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
         </div>
 
-        <div class="control-group not-required">
+        <div class="control-group not-required" id="6">
           <label for="names" class="form-label">Why did the injured person not tell the authority in person?</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
-        <div class="control-group">
+        <div class="control-group" id="7">
           <label for="names" class="form-label"><img src="/images/required.gif" class="required" alt="Required information"> Who was the incident reported to?</label>
           <span class="validation-error js-hidden">Enter to whom the incident was reported</span>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
@@ -100,7 +93,7 @@
 
 
 
-        <div class="control-group not-required">
+        <div class="control-group not-required" id="8">
             <div class="form-label">When was the incident first reported?</div>
             <!-- <span class="validation-error">date of birth can not be after incident date</span> -->
             <div class="form-date">
@@ -268,12 +261,12 @@
             </div>
         </div>
 
-        <div class="control-group not-required">
+        <div class="control-group not-required" id="9">
           <label for="names" class="form-label text">If the incident was not reported immediately after it happened, explain why</label>
           <textarea name="names" id="names" cols="30" rows="5"></textarea>
         </div>
 
-        <div class="control-group">
+        <div class="control-group" id="10">
             <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Was a written statement made?</p>
             <span class="validation-error js-hidden">Select if a written statement was made</span>
             <div class="form-group inline">
