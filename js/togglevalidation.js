@@ -10,6 +10,7 @@ function unvalidateInputs() {
     $('.control-group').removeClass('validation');
     $('.js-hidden').css('display', 'none');
 }
+
 $(document).keypress(function(e) {
   if(e.which == 118) {
     // v pressed
@@ -30,6 +31,5 @@ $('.validation-error').each(function() {
   var MessageString = $(this).text();
   var anchor = $(this).parent('[id]').attr('id');
   $('.validation-summary ul').append('<li><a href="#' + anchor + '">' + MessageString + '</a></li>');
-   console.log(MessageString);
 });
   

@@ -51,7 +51,6 @@
         </div>
         <div class="control-group" id="5">
             <label class="form-label" for="txt_firstname">
-                <img src="/images/required.gif" class="required" alt="Required information">
                 Other surnames
             </label>
             <input name="txt_firstname" type="text" maxlength="50" id="txt_firstname">
@@ -585,6 +584,27 @@
               </label>
               <label class="block-label" for="grat-no">
                 <input id="grat-no" name="grat-group" value="2" type="radio">
+                No
+              </label>
+            </div>
+        </div>
+
+        <div class="control-group" id="111">
+            <label for="name-org" class="form-label text"> If 'Yes' was selected above, enter the name and address of the organisation making the payments</label>
+            <span class="validation-error js-hidden"></span>
+            <textarea name="name-org" id="name-org" cols="30" rows="5"></textarea>
+        </div>
+
+        <div class="control-group" id="1111">
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Was the deceased receiving any Social Security benefits, including Unemployment Benefit?</p>
+            <span class="validation-error js-hidden"></span>
+            <div class="form-group inline">
+              <label class="block-label" for="ben-yes">
+                <input id="ben-yes" name="bens" value="1" type="radio">
+                Yes
+              </label>
+              <label class="block-label" for="ben-no">
+                <input id="ben-no" name="bens" value="2" type="radio">
                 No
               </label>
             </div>

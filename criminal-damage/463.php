@@ -332,7 +332,7 @@
                 </div>
 
                 <div class="control-group" id="20">
-                  <div class="form-label"><img src="/images/required.gif" class="required" alt="Required information"> Purchase date</div>
+                  <div class="form-label">Purchase date</div>
                   <div class="form-date">
                       <div class="form-date-day">
                           <label class="form-label-sm" for="dob-day">Day</label>
