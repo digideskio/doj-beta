@@ -39,6 +39,7 @@
                     <li><a href="/fatal/456.php" target="_blank">456 &middot; Deceased's details</a></li>
                     <li><a href="/fatal/457.php" target="_blank">457 &middot; Payments and compensation from other sources</a></li>
                     <li><a href="/criminal-injury/401-fatal.php" target="_blank">401 &middot; Criminal convictions</a></li>
+                    <li><a href="/fatal/459.php" target="_blank">459 &middot; Criminal convictions</a></li>
                 </ul>
             </div>
             <div class="span4">
@@ -53,6 +54,11 @@
                     <li><a href="/criminal-damage/507.php" target="_blank">507 &middot; Incident details</a></li>
                     <li><a href="/criminal-damage/509.php" target="_blank">509 &middot; Details of interested parties</a></li>
                 </ul>
+                <h3>Error screens</h3>
+                <ul>
+                    <li><a href="/errors/440-session.php">440 &middot; Session error</a></li>
+                    <li><a href="/errors/440-technical-error.php">440 &middot; Technical error</a></li>
+                </ul>
             </div>
         </div>
         <div class="row-fluid">
@@ -64,7 +70,7 @@
             </div>
             <div class="span4"></div>
             <div class="span4"></div>
-            <h4>Last updated: March 9, 2016</h4>
+            <h4>Last updated: March 23, 2016</h4>
         </div>
         <hr>
         <div class="text">

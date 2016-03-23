@@ -134,7 +134,7 @@
     <h2 class="no-top-margin">Employment details</h2>
         <div class="control-group" id="1">
             <label class="form-label" for="n1">
-                <img src="/images/required.gif" class="required" alt="Required information"> Enter your occupation at the time of the deceased’s death
+                Enter your occupation at the time of the deceased’s death
             </label>
             <input name="n1" type="text" id="n1">
         </div>
@@ -432,19 +432,19 @@
         </div>
 
         <div class="control-group" id="6">
-            <label for="emp-6" class="form-label"><img src="/images/required.gif" class="required" alt="Required information"> In what way were you financially dependent on the deceased?</label>
+            <label for="emp-6" class="form-label">In what way were you financially dependent on the deceased?</label>
             <span class="validation-error js-hidden"></span>
             <textarea name="emp-6" id="emp-6" cols="30" rows="5"></textarea>
         </div>
 
         <div class="control-group" id="7">
-            <label for="emp-6" class="form-label"><img src="/images/required.gif" class="required" alt="Required information"> What financial contribution was made by the deceased?</label>
+            <label for="emp-6" class="form-label">What financial contribution was made by the deceased?</label>
             <span class="hint-text">Specify if the contributon was weekly or monthly</span>
             <textarea name="emp-6" id="emp-6" cols="30" rows="5"></textarea>
         </div>
 
         <div class="control-group" id="8">
-            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Have you claimed Social Security Benefit as a result of the deceased's death?</p>
+            <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Have you claimed social security benefit as a result of the deceased's death?</p>
             <span class="validation-error js-hidden"></span>
             <div class="form-group inline">
               <label class="block-label" for="">

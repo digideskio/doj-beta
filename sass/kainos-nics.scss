@@ -114,9 +114,6 @@ input[type=number] {
 .inline .block-label:first-of-type {
   margin-left:3px;
 }
-.form-group.inline {
-  margin-bottom: 0;
-}
 
 .selected {
   background: #fff;
@@ -467,12 +464,18 @@ fieldset.error-inner {
   }
 }
 
+.control-group.validation {
+  .form-label {
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .validation {
     padding: .5em 0em 1em 10px;
   }
 
-  input,
+  input[type="text"],
   select,
   textarea {
 
@@ -663,3 +666,39 @@ p.ul {
 .no-top-margin {
   margin-top: 0;
 }
+
+// Responsive tables without javascript
+
+@media (max-width: 480px) {
+    table {
+      border: 0;
+      font-size: 0.9em;
+    }
+    table th,
+    table thead {
+      display: none;
+    }
+    table tr {
+      display: block;
+      border-bottom: 3px solid white;
+      border-top:none;
+    }
+    table tr:last-of-type {
+      border-bottom: none;
+    }
+    table td {
+      margin-top: 0;
+      display: block;
+      //width: 100%;
+      text-align: right;
+    }
+    table td:before {
+      content: attr(data-label);
+      float: left;
+      display: inline-block;
+      font-weight: bold;
+      width: 40%;
+      text-align: left;
+    }
+}
+

@@ -420,8 +420,7 @@
         </div>
 
         <div class="control-group" id="24">
-            <label for="if-no-owner" class="form-label text"> If 'Yes' was selected above, provide the name and address of the insurance company and policy number</label>
-            <span class="validation-error js-hidden" style="display: none;"></span>
+            <label for="if-no-owner" class="form-label text"> If 'Yes' was selected above and there is a mortgage or charge on the property, enter the name and address of the mortgage provider or details of who holds the charge</label>
             <textarea name="if-no-owner" id="if-no-owner" cols="30" rows="5"></textarea>
         </div>
 

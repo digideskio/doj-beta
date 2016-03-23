@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="control-group" id="3">
-            <p class="form-label text"> If 'Yes' was selected above, do you wish to apply for a Chief Constable Certificate for this incident under Article 5 (2) of The Order?</p>
+            <p class="form-label text"> If 'Yes' was selected above, have you applied for a Chief Constable's Certificate for this incident under Article 5 (2) of The Order?</p>
             <span class="validation-error js-hidden"></span>
             <div class="form-group inline">
               <label class="block-label" for="vat-1">

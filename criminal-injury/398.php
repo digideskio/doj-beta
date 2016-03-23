@@ -9,12 +9,28 @@
   <p class="text">As outlined in Paragraph 20 of The Scheme, it is the responsibility of the person seeking compensation to provide assumptions, calculations and documents in support of their claim for loss of earnings. </p>
   <p><img src="/images/required.gif" class="required" alt="Required information"> Indicates a required field</p>
 
+      <!--
+            Validation summary should only be displayed following server side validation.
+            It is displayed here to associate error messages with inputs
+    -->
+
+    <div class="validation-summary js-hidden">
+        <h2><img src="/images/error-icon.png" alt=""> Please review and correct the following errors</h2>
+        <ul>
+
+        </ul>
+    </div>
+
+    <!--
+            /End validation summary
+     -->
+
 
   <form action="post" class="form">
 
+  <div class="control-group inline" id="1-1">
   <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Has there been or is it expected that earnings will be lost for more than 28 full weeks as a result of the injury?</p>
-
-  <div class="form-group inline">
+  <span class="validation-error js-hidden">Select if an application for loss of earnings is being made</span>
     <label class="block-label" for="radio-indent-1" data-target="myself">
       <input id="radio-indent-1" name="radio-indent-group" value="L" type="radio">
       Yes
@@ -25,75 +41,77 @@
     </label>
   </div>
 
-  <div class="form-date">
-        <div class="form-label">If 'Yes' was selected above, tell us when a return to work is expected</div>
-        <div class="form-date-day">
-            <label class="form-label-sm" for="day2">Day</label>
-            <select name="dob-day" id="day2" class="input-small" style="width: 70px">
-                <option value="0">—</option>
-                <option value="01">1</option>
-                <option value="02">2</option>
-                <option value="03">3</option>
-                <option value="04">4</option>
-                <option value="05">5</option>
-                <option value="06">6</option>
-                <option value="07">7</option>
-                <option value="08">8</option>
-                <option value="09">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-            </select>
+  <div class="control-group" id="1-2">
+    <div class="form-date">
+          <div class="form-label">If 'Yes' was selected above, tell us when a return to work is expected</div>
+          <span class="validation-error js-hidden">Enter a date when a return to work is expected</span>
+          <div class="form-date-day">
+              <label class="form-label-sm" for="day2">Day</label>
+              <select name="dob-day" id="day2" class="input-small" style="width: 70px">
+                  <option value="0">—</option>
+                  <option value="01">1</option>
+                  <option value="02">2</option>
+                  <option value="03">3</option>
+                  <option value="04">4</option>
+                  <option value="05">5</option>
+                  <option value="06">6</option>
+                  <option value="07">7</option>
+                  <option value="08">8</option>
+                  <option value="09">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+              </select>
+          </div>
+          <div class="form-date-month">
+              <label class="form-label-sm" for="month2">Month</label>
+              <select name="dob-month" id="month2" class="input-small" style="width: 120px">
+                  <option value="0">—</option>
+                  <option value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03">March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+              </select>
+          </div>
+          <div class="form-date-year">
+              <label class="form-label-sm" for="year3">Year</label>
+              <input autocomplete="off" id="year3" name="dob-year" type="text" maxlength="4" class="input-small" placeholder="YYYY" style="width: 90px; min-width: 90px">
+          </div>
         </div>
-        <div class="form-date-month">
-            <label class="form-label-sm" for="month2">Month</label>
-            <select name="dob-month" id="month2" class="input-small" style="width: 120px">
-                <option value="0">—</option>
-                <option value="01">January</option>
-                <option value="02">February</option>
-                <option value="03">March</option>
-                <option value="04">April</option>
-                <option value="05">May</option>
-                <option value="06">June</option>
-                <option value="07">July</option>
-                <option value="08">August</option>
-                <option value="09">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-            </select>
-        </div>
-        <div class="form-date-year">
-            <label class="form-label-sm" for="year3">Year</label>
-            <input autocomplete="off" id="year3" name="dob-year" type="text" maxlength="4" class="input-small" placeholder="YYYY" style="width: 90px; min-width: 90px">
-        </div>
-      </div>
-      
-      <div class="clearfix"></div>
-      
+  </div>
+            
       <h2>Special expenses</h2>
 
-      <div class="form-group inline">
+      <div class="control-group inline" id="1-33">
       <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Is there an expectation that Special Expenses may be paid as a result of the injury?</p>
+      <span class="validation-error js-hidden">Select the expectation that special expenses will be paid</span>
         <label class="block-label" for="radio-indent-1" data-target="myself">
           <input id="radio-indent-1" name="radio-indent-group" value="L" type="radio">
           Yes
@@ -109,7 +127,7 @@
       <div class="control-group" id="4">
             <p class="form-label text"><img src="/images/required.gif" class="required" alt="Required information"> Has compensation been applied for or is there an intention to apply for compensation from another person or organisation?</p>
             <span class="hint-text">This does <strong>not</strong> include compensation received from a criminal court</span>
-            <span class="validation-error js-hidden"></span>
+            <span class="validation-error js-hidden">Select if compensation is being applied for from another source</span>
             <div class="form-group inline">
               <label class="block-label" for="4-yes">
                 <input id="4-yes" name="yes-no-4" value="1" type="radio">
@@ -124,7 +142,7 @@
       
       <div class="control-group" id="5">
             <label for="other-source" class="form-label text"> If ‘Yes’ was selected above, give the name, address and contact number of the person or organisation</label>
-            <span class="validation-error js-hidden"></span>
+            <span class="validation-error js-hidden">Enter the details of the person or organisation from which compensation is being sought</span>
             <textarea name="other-source" id="other-source" cols="30" rows="5"></textarea>
         </div>
 
@@ -183,3 +201,4 @@
 </div>
 
 <?php include_once("../includes/footer.php"); ?>
+<script src="/js/togglevalidation.js"></script>
