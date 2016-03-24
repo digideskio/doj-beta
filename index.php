@@ -9,6 +9,7 @@
             <div class="span4">
                 <h3>Common</h3>
                 <ul>
+                    <li><a href="/story/382.php" target="_blank">382 &middot; Create a case</a></li>
                     <li><a href="/story/386.php" target="_blank">386 &middot; Applicant's details</a></li>
                     <li><a href="/story/387-representative-details.php" target="_blank">387 &middot; Representative details</a></li>
                     <li><a href="/story/416.php" target="_blank">416 &middot; Claimant's contact details</a></li>
@@ -70,7 +71,7 @@
             </div>
             <div class="span4"></div>
             <div class="span4"></div>
-            <h4>Last updated: March 23, 2016</h4>
+            <h4>Last updated: March 24, 2016</h4>
         </div>
         <hr>
         <div class="text">
