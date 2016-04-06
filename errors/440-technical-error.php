@@ -7,7 +7,7 @@
 <div class="content container">
   <h1>Technical issue</h1>
   <p class="text">An error occurred.</p>
-  <p>If the problem keeps happening, use the <a href="#0">feedback form</a> to tell us:</p>
+  <p>If the problem keeps happening, use the <a href="#0" class="elink">feedback form</a> to tell us:</p>
   <ul>
     <li>what you were trying to do</li>
     <li>what browser you are using</li>
