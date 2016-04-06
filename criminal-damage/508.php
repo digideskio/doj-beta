@@ -20,19 +20,19 @@
             <th colspan="2">Building</th>
         </tr>
         <tr>
-            <td style="width: 100%;">
+            <td data-label="Building" class="actionable-item">
                 Address line 1, Address line 2, Address line 3, Country, Post code
             </td>
             <td class="text-right"><a href="#0">Remove</a></td>
         </tr>
         <tr>
-            <td style="width: 100%;">
+            <td data-label="Building" class="actionable-item">
                 Address line 1, Address line 2, Address line 3, Country, Post code
             </td>
             <td class="text-right"><a href="#0">Remove</a></td>
         </tr>
         <tr>
-            <td style="width: 100%;">
+            <td data-label="Building" class="actionable-item">
                 Address line 1, Address line 2, Address line 3, Country, Post code
             </td>
             <td class="text-right"><a href="#0">Remove</a></td>
@@ -46,25 +46,25 @@
             <th colspan="2">Vehicle</th>
         </tr>
         <tr>
-            <td style="width: 100%;">
+            <td data-label="Vehicle" class="actionable-item">
                 IAZ 6969 - Ford Mustang
             </td>
             <td class="text-right"><a href="#0">Remove</a></td>
         </tr>
         <tr>
-            <td style="width: 100%;">
+            <td data-label="Vehicle" class="actionable-item">
                 IAZ 6969 - Lexus IS200
             </td>
             <td class="text-right"><a href="#0">Remove</a></td>
         </tr>
         <tr>
-            <td style="width: 100%;">
+            <td data-label="Vehicle" class="actionable-item">
                 IAZ 6969 - BMW 525i
             </td>
             <td class="text-right"><a href="#0">Remove</a></td>
         </tr>
         <tr>
-            <td style="width: 100%;">
+            <td data-label="Vehicle" class="actionable-item">
                 IAZ 6969 - BMW 740i
             </td>
             <td class="text-right"><a href="#0">Remove</a></td>

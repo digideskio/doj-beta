@@ -475,6 +475,10 @@ fieldset.error-inner {
     padding: .5em 0em 1em 10px;
   }
 
+  .control-group.validation {
+    width: auto !important;
+  }
+
   input[type="text"],
   select,
   textarea {
@@ -636,10 +640,14 @@ p.ul {
     min-height: 28px;
 }
 
+span + .add-on {
+    border-bottom-width: 2px;
+}
+
 .add-on {
     display: inline-block;
     width: auto;
-    min-height: 22px;
+    height: 22px;
     min-width: 16px;
     padding: 5px 5px 3px;
     font-size: 14px;
@@ -661,6 +669,17 @@ p.ul {
 .prepended-input {
     border-left: none !important;
     max-width: 312px;
+}
+
+@media (max-width: 480px) {
+    .prepended-input {
+      max-width: 85% !important;
+    }
+
+    .add-on {
+      padding-top: 9px;
+      padding-bottom: 7px;
+    }
 }
 
 .no-top-margin {
@@ -699,6 +718,9 @@ p.ul {
       width: 40%;
       text-align: left;
     }
+    .actionable-item {
+      width: auto !important;
+    } 
 }
 
 // stop the uxm setting a 100% width on well divs >:(
@@ -707,3 +729,6 @@ form .well {
   width: auto !important;
 }
 
+.actionable-item {
+  width: 100%;
+}

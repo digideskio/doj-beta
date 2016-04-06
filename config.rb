@@ -10,5 +10,5 @@ javascripts_dir = "js"
 
 relative_assets = true
 line_comments = false
-output_style = :compressed
+#output_style = :compressed
 #sourcemap = true
